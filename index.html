@@ -1,0 +1,616 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beachboyz Detailing | Miami Mobile Auto Detailing</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #071018;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 12, 18, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #19d3c5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #19d3c5;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background:
+        linear-gradient(90deg, rgba(4,10,15,0.92), rgba(4,10,15,0.55), rgba(4,10,15,0.25)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 130px 25px 80px;
+}
+
+.small-title {
+    color: #19d3c5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 92px);
+    line-height: 0.95;
+    max-width: 850px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #19d3c5;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 25px 0;
+    font-size: 19px;
+    color: #d5dde2;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #19d3c5;
+    color: #061016;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #071018;
+}
+
+/* GENERAL */
+section {
+    padding: 90px 25px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title small {
+    color: #19d3c5;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    margin-top: 8px;
+}
+
+/* INTRO */
+.intro {
+    background: #0a151e;
+    text-align: center;
+}
+
+.intro p {
+    max-width: 850px;
+    margin: auto;
+    color: #b9c5cb;
+    font-size: 18px;
+}
+
+/* SERVICES */
+.services {
+    background: #071018;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #101d27;
+    border: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #19d3c5;
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-child(1) .card-image {
+    background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85");
+}
+
+.card:nth-child(2) .card-image {
+    background-image: url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=85");
+}
+
+.card:nth-child(3) .card-image {
+    background-image: url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=85");
+}
+
+.card-content {
+    padding: 28px;
+}
+
+.card-content h3 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #19d3c5;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.card-content ul {
+    list-style: none;
+    color: #c7d0d5;
+}
+
+.card-content li {
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.card-content li::before {
+    content: "✓ ";
+    color: #19d3c5;
+    font-weight: bold;
+}
+
+/* FEATURE */
+.feature {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(4,10,15,0.95), rgba(4,10,15,0.65)),
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=90")
+        center/cover;
+}
+
+.feature-content {
+    max-width: 650px;
+}
+
+.feature h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1;
+    margin: 12px 0 25px;
+}
+
+.feature p {
+    color: #d1d9dd;
+    font-size: 18px;
+}
+
+/* ADDONS */
+.addons {
+    background: #0a151e;
+}
+
+.addon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.addon {
+    padding: 25px;
+    background: #101d27;
+    border-left: 3px solid #19d3c5;
+}
+
+.addon h3 {
+    margin-bottom: 6px;
+}
+
+.addon p {
+    color: #aebbc1;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    background:
+        linear-gradient(rgba(5,12,18,0.88), rgba(5,12,18,0.94)),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=90")
+        center/cover;
+}
+
+.contact h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.phone {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: #19d3c5;
+    margin: 20px 0 30px;
+}
+
+.contact p {
+    color: #c5cdd1;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #040a0f;
+    padding: 35px 25px;
+    text-align: center;
+    color: #7f8b91;
+}
+
+footer strong {
+    color: white;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+    .nav-links {
+        display: none;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .addon-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 850px;
+    }
+
+    .hero-content {
+        padding-top: 150px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">BEACHBOYZ<span> DETAILING</span></div>
+
+        <div class="nav-links">
+            <a href="#services">SERVICES</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="small-title">Miami Mobile Auto Detailing</div>
+
+        <h1>
+            We Don't Just Detail.<br>
+            We Create The <span>Experience.</span>
+        </h1>
+
+        <p>
+            Premium mobile auto detailing with a Miami state of mind.
+            From daily drivers to exotics and classics, we treat every
+            vehicle like it deserves to be treated.
+        </p>
+
+        <div class="buttons">
+            <a class="btn btn-primary" href="#services">VIEW SERVICES</a>
+            <a class="btn btn-outline" href="tel:3054674744">CALL 305-467-4744</a>
+        </div>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+    <div class="container">
+        <div class="section-title">
+            <small>The Beachboyz Difference</small>
+            <h2>DETAILS MATTER.</h2>
+        </div>
+
+        <p>
+            We go above and beyond the basic wash. Using professional
+            techniques, quality products, the two-bucket method and fresh
+            microfiber towels, Beachboyz Detailing brings the Miami
+            experience directly to your driveway.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <div class="container">
+
+        <div class="section-title">
+            <small>Our Services</small>
+            <h2>CHOOSE YOUR EXPERIENCE</h2>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="card">
+                <div class="card-image"></div>
+
+                <div class="card-content">
+                    <h3>Beach Wash</h3>
+                    <div class="price">$150</div>
+
+                    <ul>
+                        <li>Professional exterior wash</li>
+                        <li>Wheels & tires cleaned</li>
+                        <li>Two-bucket method</li>
+                        <li>Fresh microfiber towels</li>
+                        <li>Professional finish</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image"></div>
+
+                <div class="card-content">
+                    <h3>Sunset Detail</h3>
+                    <div class="price">$200</div>
+
+                    <ul>
+                        <li>Everything in Beach Wash</li>
+                        <li>Clay treatment</li>
+                        <li>Paint decontamination</li>
+                        <li>Premium sealant</li>
+                        <li>Enhanced gloss & protection</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image"></div>
+
+                <div class="card-content">
+                    <h3>Miami Experience</h3>
+                    <div class="price">TOP PACKAGE</div>
+
+                    <ul>
+                        <li>Complete exterior detail</li>
+                        <li>Engine bay service</li>
+                        <li>Top-of-the-line protection</li>
+                        <li>3+ months of protection</li>
+                        <li>Seat shampoo included</li>
+                        <li>Exotic wheel protection</li>
+                        <li>Windshield protection</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="feature" id="experience">
+    <div class="container">
+        <div class="feature-content">
+            <div class="small-title">The Miami Experience</div>
+
+            <h2>
+                YOUR CAR.<br>
+                OUR CRAFT.
+            </h2>
+
+            <p>
+                Whether it's an exotic, luxury vehicle, truck, SUV,
+                fleet vehicle or a classic with years of history —
+                we believe every detail matters.
+            </p>
+
+            <br>
+
+            <p>
+                We bring professional detailing to you while delivering
+                the level of care you'd expect from a luxury automotive
+                experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ADDONS -->
+<section class="addons">
+    <div class="container">
+
+        <div class="section-title">
+            <small>Available Add-Ons</small>
+            <h2>MAKE IT YOURS</h2>
+        </div>
+
+        <div class="addon-grid">
+
+            <div class="addon">
+                <h3>Carpet Treatment</h3>
+                <p>
+                    Three-step carpet cleaning and treatment available
+                    with the Miami Experience.
+                </p>
+            </div>
+
+            <div class="addon">
+                <h3>Odor Treatment</h3>
+                <p>
+                    Professional odor treatment for vehicles that need
+                    that extra level of freshness.
+                </p>
+            </div>
+
+            <div class="addon">
+                <h3>Sand & Hair Removal</h3>
+                <p>
+                    Included with the Ultimate-level experience or
+                    available as an additional service.
+                </p>
+            </div>
+
+            <div class="addon">
+                <h3>No Water or Power?</h3>
+                <p>
+                    Let us know before booking. Additional equipment
+                    may be required for mobile service.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+
+        <div class="small-title">Ready When You Are</div>
+
+        <h2>
+            LET'S GET YOUR<br>
+            RIDE RIGHT.
+        </h2>
+
+        <p>
+            Serving Miami-Dade, Broward and surrounding areas.
+        </p>
+
+        <a class="phone" href="tel:3054674744">
+            305-467-4744
+        </a>
+
+        <br>
+
+        <a class="btn btn-primary" href="tel:3054674744">
+            BOOK YOUR DETAIL
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        © 2026 <strong>Beachboyz Detailing</strong> — Miami, Florida
+    </p>
+
+    <p>
+        We don't provide the service. We provide the experience.
+    </p>
+</footer>
+
+</body>
+</html>
