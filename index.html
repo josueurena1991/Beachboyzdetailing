@@ -3,403 +3,695 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Beachboyz Detailing | Miami Mobile Auto Detailing</title>
+
 <meta name="description"
 content="Beachboyz Detailing — premium mobile auto detailing serving Sunny Isles Beach, North Miami, Bal Harbour, Golden Beach and surrounding South Florida areas.">
 
 <style>
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
- scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
- font-family: Arial, Helvetica, sans-serif;
- background: #05080d;
- color: #f5f7f7;
- line-height: 1.6;
- overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #05080d;
+  color: #f5f7f7;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
- color: inherit;
- text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* ================= HEADER ================= */
 
 header {
- position: fixed;
- top: 0;
- width: 100%;
- z-index: 1000;
- padding: 17px 6%;
- background: rgba(3,7,12,.88);
- backdrop-filter: blur(15px);
- border-bottom: 1px solid rgba(25,211,197,.18);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 17px 6%;
+  background: rgba(3,7,12,.88);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(25,211,197,.18);
 }
 
 nav {
- max-width: 1250px;
- margin: auto;
- display: flex;
- justify-content: space-between;
- align-items: center;
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
- font-size: 21px;
- font-weight: 900;
- letter-spacing: 2px;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .logo span {
- color: #19d3c5;
+  color: #19d3c5;
 }
 
 .nav-links {
- display: flex;
- gap: 28px;
- font-size: 13px;
- font-weight: 800;
- text-transform: uppercase;
- letter-spacing: 1px;
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nav-links a:hover {
- color: #19d3c5;
+  color: #19d3c5;
 }
 
 /* ================= HERO ================= */
 
 .hero {
- min-height: 100vh;
- display: flex;
- align-items: center;
- padding: 155px 7% 90px;
- position: relative;
- background:
- linear-gradient(
- 110deg,
- rgba(2,8,13,.94),
- rgba(2,8,13,.65),
- rgba(2,8,13,.84)
- ),
- url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=90")
- center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 155px 7% 90px;
+  position: relative;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(2,8,13,.94),
+      rgba(2,8,13,.65),
+      rgba(2,8,13,.84)
+    ),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=90")
+    center/cover no-repeat;
 }
 
 .hero::after {
- content: "";
- position: absolute;
- inset: auto 0 0;
- height: 180px;
- background: linear-gradient(transparent,#05080d);
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 180px;
+  background: linear-gradient(transparent,#05080d);
 }
 
 .hero-content {
- max-width: 950px;
- position: relative;
- z-index: 2;
+  max-width: 950px;
+  position: relative;
+  z-index: 2;
 }
 
 .eyebrow {
- color: #19d3c5;
- font-size: 12px;
- font-weight: 900;
- letter-spacing: 5px;
- text-transform: uppercase;
- margin-bottom: 20px;
+  color: #19d3c5;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
- font-size: clamp(55px,9vw,115px);
- line-height: .88;
- text-transform: uppercase;
- letter-spacing: -5px;
- margin-bottom: 30px;
- text-shadow: 0 8px 35px rgba(0,0,0,.55);
+  font-size: clamp(55px,9vw,115px);
+  line-height: .88;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  margin-bottom: 30px;
+  text-shadow: 0 8px 35px rgba(0,0,0,.55);
 }
 
 .hero h1 span {
- color: #19d3c5;
- text-shadow: 0 0 30px rgba(25,211,197,.35);
+  color: #19d3c5;
+  text-shadow: 0 0 30px rgba(25,211,197,.35);
 }
 
 .hero h2 {
- font-size: clamp(21px,3vw,35px);
- text-transform: uppercase;
- letter-spacing: 1px;
- margin-bottom: 18px;
+  font-size: clamp(21px,3vw,35px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
 }
 
 .hero p {
- max-width: 720px;
- color: #d4dddd;
- font-size: 18px;
- margin-bottom: 32px;
+  max-width: 720px;
+  color: #d4dddd;
+  font-size: 18px;
+  margin-bottom: 32px;
 }
 
 .buttons {
- display: flex;
- gap: 15px;
- flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn {
- display: inline-block;
- padding: 15px 25px;
- border-radius: 3px;
- font-weight: 900;
- text-transform: uppercase;
- letter-spacing: 1px;
- font-size: 12px;
- transition: .25s;
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 3px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  transition: .25s;
 }
 
 .btn-primary {
- background: #19d3c5;
- color: #041014;
- box-shadow: 0 0 25px rgba(25,211,197,.18);
+  background: #19d3c5;
+  color: #041014;
+  box-shadow: 0 0 25px rgba(25,211,197,.18);
 }
 
 .btn-primary:hover {
- transform: translateY(-3px);
- background: #65eee5;
- box-shadow: 0 0 35px rgba(25,211,197,.35);
+  transform: translateY(-3px);
+  background: #65eee5;
+  box-shadow: 0 0 35px rgba(25,211,197,.35);
 }
 
 .btn-outline {
- border: 1px solid rgba(25,211,197,.75);
- background: rgba(0,0,0,.18);
+  border: 1px solid rgba(25,211,197,.75);
+  background: rgba(0,0,0,.18);
 }
 
 .btn-outline:hover {
- background: #19d3c5;
- color: #041014;
+  background: #19d3c5;
+  color: #041014;
 }
 
 /* ================= CINEMATIC FERRARI MOMENT ================= */
 
 .cinematic {
- position: relative;
- height: 430px;
- overflow: hidden;
- background: #030609;
+  position: relative;
+  height: 430px;
+  overflow: hidden;
+
+  background: #030609;
 }
 
 .cinematic-image {
- position: absolute;
- inset: 0;
- background:
- linear-gradient(
- 90deg,
- rgba(3,7,12,.72),
- rgba(3,7,12,.18),
- rgba(3,7,12,.72)
- ),
- url("https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=2200&q=90")
- center/cover no-repeat;
- transform: scale(1.08);
- animation: cinematicZoom 8s ease-in-out forwards;
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,7,12,.55),
+      rgba(3,7,12,.05),
+      rgba(3,7,12,.6)
+    ),
+    url("ferrari-miami.png")
+    center/cover no-repeat;
+
+  transform: scale(1.08);
+  animation: cinematicZoom 8s ease-in-out forwards;
 }
 
 @keyframes cinematicZoom {
- 0% {
-  transform: scale(1.12);
- }
- 100% {
-  transform: scale(1);
- }
+  0% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .cinematic-overlay {
- position: absolute;
- inset: 0;
- display: flex;
- align-items: center;
- justify-content: center;
- text-align: center;
- background:
- linear-gradient(
- transparent 20%,
- rgba(3,7,12,.22),
- rgba(3,7,12,.82)
- text-transform: uppercase;
- margin-bottom: 10px;
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      transparent 20%,
+      rgba(3,7,12,.3),
+      rgba(3,7,12,.85)
+    );
+}
+
+.cinematic-content {
+  position: relative;
+  z-index: 2;
+  animation: cinematicText 7s ease forwards;
+}
+
+@keyframes cinematicText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.cinematic-title {
+  font-size: clamp(38px,6vw,75px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.cinematic-title span {
+  color: #19d3c5;
+}
+
+.cinematic-subtitle {
+  margin-top: 8px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.cinematic-badge {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 6px 12px;
+
+  border: 1px solid #19d3c5;
+  color: #19d3c5;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding: 100px 7%;
+}
+
+.section-inner {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: clamp(38px,5vw,64px);
+  text-transform: uppercase;
+  line-height: .95;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.section-title span {
+  color: #19d3c5;
+}
+
+/* ================= INTRO ================= */
+
+.intro {
+  background:
+    linear-gradient(135deg,#071318,#081116 60%,#0b1018);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.intro p {
+  color: #c3cecf;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.experience-box {
+  border: 1px solid rgba(25,211,197,.25);
+  border-left: 3px solid #19d3c5;
+  padding: 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(25,211,197,.08),
+    rgba(255,40,150,.035)
+  );
+}
+
+.experience-box strong {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.experience-box p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.service-area {
+  margin-top: 45px;
+  padding: 25px;
+  background: rgba(25,211,197,.045);
+  border: 1px solid rgba(25,211,197,.18);
+}
+
+.service-area strong {
+  color: #19d3c5;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.service-area p {
+  margin-top: 7px;
+  font-size: 15px;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+  background: #05080d;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 55px;
+}
+
+.section-heading p {
+  color: #aebabb;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.card {
+  background: linear-gradient(145deg,#0c171d,#071015);
+  border: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(25,211,197,.55);
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+}
+
+.card-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  padding: 29px;
+}
+
+.card h3 {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.price {
+  color: #19d3c5;
+  font-size: 31px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #b7c2c3;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card li {
+  color: #e0e6e6;
+  font-size: 14px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,.045);
+}
+
+.card li::before {
+  content: "✓";
+  color: #19d3c5;
+  font-weight: bold;
+  margin-right: 9px;
+}
+
+.featured {
+  border-color: rgba(25,211,197,.7);
+  box-shadow: 0 0 45px rgba(25,211,197,.08);
+}
+
+.badge {
+  display: inline-block;
+  color: #071014;
+  background: #19d3c5;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.disclaimer {
+  margin: 32px auto 0;
+  max-width: 900px;
+  text-align: center;
+  color: #7f8d8f;
+  font-size: 12px;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.why {
+  background:
+    linear-gradient(
+      rgba(3,9,14,.84),
+      rgba(3,9,14,.96)
+    ),
+    url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2200&q=85")
+    center/cover no-repeat;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.why-box {
+  padding: 32px;
+  background: rgba(5,13,18,.82);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(8px);
+}
+
+.why-box h3 {
+  color: #19d3c5;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .why-box p {
- color: #c0cbcc;
- font-size: 14px;
+  color: #c0cbcc;
+  font-size: 14px;
 }
 
 /* ================= CONTACT ================= */
 
 .contact {
- background:
- radial-gradient(
- circle at 50% 0%,
- rgba(25,211,197,.08),
- transparent 35%
- ),
- #071015;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(25,211,197,.08),
+      transparent 35%
+    ),
+    #071015;
 }
 
 .contact-box {
- max-width: 1050px;
- margin: auto;
- text-align: center;
- padding: 70px 30px;
- border: 1px solid rgba(25,211,197,.3);
- background:
- linear-gradient(
- 135deg,
- rgba(25,211,197,.045),
- rgba(255,40,150,.035)
- );
- box-shadow: 0 30px 90px rgba(0,0,0,.3);
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+  padding: 70px 30px;
+
+  border: 1px solid rgba(25,211,197,.3);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(25,211,197,.045),
+      rgba(255,40,150,.035)
+    );
+
+  box-shadow: 0 30px 90px rgba(0,0,0,.3);
 }
 
 .contact-box h2 {
- font-size: clamp(40px,6vw,75px);
- text-transform: uppercase;
- line-height: .95;
- margin-bottom: 22px;
- letter-spacing: -3px;
+  font-size: clamp(40px,6vw,75px);
+  text-transform: uppercase;
+  line-height: .95;
+  margin-bottom: 22px;
+  letter-spacing: -3px;
 }
 
 .contact-box h2 span {
- color: #19d3c5;
+  color: #19d3c5;
 }
 
 .contact-box > p {
- color: #bac5c6;
- max-width: 680px;
- margin: 0 auto 38px;
+  color: #bac5c6;
+  max-width: 680px;
+  margin: 0 auto 38px;
 }
 
 .contact-info {
- display: flex;
- justify-content: center;
- gap: 65px;
- flex-wrap: wrap;
- margin-bottom: 38px;
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
 }
 
 .contact-item small {
- display: block;
- color: #19d3c5;
- font-size: 10px;
- font-weight: bold;
- letter-spacing: 3px;
- margin-bottom: 5px;
+  display: block;
+  color: #19d3c5;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
 }
 
 .contact-item a {
- font-size: 21px;
- font-weight: bold;
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .contact-item a:hover {
- color: #19d3c5;
+  color: #19d3c5;
 }
 
 .contact-area {
- margin-top: 32px;
- color: #879597;
- font-size: 13px;
+  margin-top: 32px;
+  color: #879597;
+  font-size: 13px;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
- padding: 38px 7%;
- text-align: center;
- background: #030609;
- color: #778587;
- font-size: 13px;
- border-top: 1px solid rgba(25,211,197,.08);
+  padding: 38px 7%;
+  text-align: center;
+  background: #030609;
+  color: #778587;
+  font-size: 13px;
+  border-top: 1px solid rgba(25,211,197,.08);
 }
 
 footer strong {
- color: #19d3c5;
+  color: #19d3c5;
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width:900px) {
 
- .cards,
- .why-grid {
-  grid-template-columns: 1fr;
- }
+  .cards,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
 
- .intro-grid {
-  grid-template-columns: 1fr;
- }
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
 
- .nav-links {
-  gap: 12px;
-  font-size: 10px;
- }
+  .nav-links {
+    gap: 12px;
+    font-size: 10px;
+  }
 
- .cinematic {
-  height: 330px;
- }
+  .cinematic {
+    height: 330px;
+  }
 }
 
 @media (max-width:600px) {
 
- header {
-  padding: 14px 5%;
- }
+  header {
+    padding: 14px 5%;
+  }
 
- .logo {
-  font-size: 16px;
- }
+  .logo {
+    font-size: 16px;
+  }
 
- .nav-links {
-  gap: 8px;
- }
+  .nav-links {
+    gap: 8px;
+  }
 
- .hero {
-  padding-left: 6%;
-  padding-right: 6%;
- }
+  .hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
 
- .hero h1 {
-  letter-spacing: -3px;
- }
+  .hero h1 {
+    letter-spacing: -3px;
+  }
 
- .hero p {
-  font-size: 16px;
- }
+  .hero p {
+    font-size: 16px;
+  }
 
- section {
-  padding: 72px 6%;
- }
+  section {
+    padding: 72px 6%;
+  }
 
- .contact-info {
-  gap: 28px;
- }
+  .contact-info {
+    gap: 28px;
+  }
 
- .contact-item a {
-  font-size: 17px;
- }
+  .contact-item a {
+    font-size: 17px;
+  }
 
- .cinematic {
-  height: 300px;
- }
+  .cinematic {
+    height: 300px;
+  }
 
- .cinematic-title {
-  font-size: 38px;
- }
+  .cinematic-title {
+    font-size: 38px;
+  }
 }
 </style>
 </head>
@@ -465,26 +757,179 @@ Call / Text 786-474-4880
 </div>
 
 </div>
+
 </section>
 
+<!-- 360° MIAMI FERRARI SHOWCASE -->
+<section class="ferrari-showcase">
+  <div class="ferrari-content">
+    <span class="ferrari-kicker">THE MIAMI EXPERIENCE</span>
+    <h2>BUILT FOR CARS<br><span>THAT DESERVE MORE.</span></h2>
+    <p>
+      From everyday drivers to exotic icons, we treat every vehicle
+      like it belongs under the lights of Miami.
+    </p>
+  </div>
 
-<!-- CINEMATIC MIAMI FERRARI MOMENT -->
+  <div class="ferrari-stage">
+    <div class="ferrari-glow"></div>
 
-<section class="cinematic">
+    <img
+      class="ferrari-car"
+      src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1600&q=85"
+      alt="Ferrari sports car"
+    />
 
-<div class="cinematic-image"></div>
+    <div class="ferrari-badge">
+      <strong>360°</strong>
+      <small>MIAMI</small>
+    </div>
+  </div>
+</section>
 
-<div class="cinematic-overlay">
+<style>
+.ferrari-showcase {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 7%;
+  background:
+    radial-gradient(circle at 75% 50%, rgba(255, 90, 60, .18), transparent 35%),
+    linear-gradient(135deg, #070707, #111 55%, #050505);
+  color: white;
+}
 
-<div class="cinematic-content">
+.ferrari-content {
+  position: relative;
+  z-index: 3;
+  max-width: 470px;
+}
 
-<div class="cinematic-badge">
-AFTER THE DETAIL • MIAMI BEACH
-</div>
+.ferrari-kicker {
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  opacity: .7;
+}
 
-<div class="cinematic-title">
-360° <span>MIAMI</span>
-</div>
+.ferrari-content h2 {
+  margin: 15px 0;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: .95;
+  letter-spacing: -2px;
+}
+
+.ferrari-content h2 span {
+  opacity: .65;
+}
+
+.ferrari-content p {
+  max-width: 430px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.ferrari-stage {
+  position: relative;
+  width: min(620px, 55vw);
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ferrari-glow {
+  position: absolute;
+  width: 420px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 80, 40, .22);
+  filter: blur(70px);
+}
+
+.ferrari-car {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 620px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 25px 70px rgba(0,0,0,.65);
+  animation: ferrariReveal 3s ease-in-out infinite alternate;
+}
+
+.ferrari-badge {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  z-index: 4;
+  width: 78px;
+  height: 78px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(8px);
+}
+
+.ferrari-badge strong {
+  font-size: 24px;
+}
+
+.ferrari-badge small {
+  font-size: 8px;
+  letter-spacing: 2px;
+  opacity: .7;
+}
+
+@keyframes ferrariReveal {
+  from {
+    transform: scale(1) translateX(0);
+  }
+  to {
+    transform: scale(1.035) translateX(-8px);
+  }
+}
+
+@media (max-width: 800px) {
+  .ferrari-showcase {
+    min-height: auto;
+    flex-direction: column;
+    padding: 65px 20px;
+    text-align: center;
+  }
+
+  .ferrari-content {
+    max-width: 100%;
+  }
+
+  .ferrari-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ferrari-stage {
+    width: 100%;
+    height: 270px;
+  }
+
+  .ferrari-car {
+    width: 100%;
+  }
+
+  .ferrari-badge {
+    right: 5px;
+    bottom: 0;
+  }
+}
+</style>
 
 <div class="cinematic-subtitle">
 Clean. Protected. Ready For The Night.
@@ -613,7 +1058,6 @@ vehicle and bring back that clean Beachboyz finish.
 </p>
 
 <ul>
-
 <li>Two-bucket contact wash</li>
 <li>Professional exterior wash</li>
 <li>Hand dried with dedicated drying towels</li>
@@ -628,7 +1072,6 @@ vehicle and bring back that clean Beachboyz finish.
 <li>Door jambs cleaned</li>
 <li>Trunk cleaned</li>
 <li>Final exterior inspection</li>
-
 </ul>
 
 </div>
@@ -655,7 +1098,6 @@ interior care for a deeper, more refined finish.
 </p>
 
 <ul>
-
 <li>Everything in Beach Wash</li>
 <li>Clay treatment</li>
 <li>Paint decontamination</li>
@@ -668,17 +1110,13 @@ interior care for a deeper, more refined finish.
 <li>Door jambs and trunk detailed</li>
 <li>Brush cleaning of hard-to-reach areas</li>
 <li>Final inspection</li>
-
 </ul>
 
 <p style="margin-top:18px;">
-
 <strong style="color:#19d3c5;">
 Optional Add-Ons:
 </strong>
-
 Sand Removal • Pet Hair Removal
-
 </p>
 
 </div>
@@ -709,7 +1147,6 @@ customers who want their vehicle taken to the next level.
 </p>
 
 <ul>
-
 <li>Everything in Sunset Detail</li>
 <li>Complete interior deep cleaning</li>
 <li>Full carpet shampoo</li>
@@ -725,7 +1162,6 @@ customers who want their vehicle taken to the next level.
 <li>Windshield protection</li>
 <li>Exotic wheel protection</li>
 <li>Final showroom-style inspection</li>
-
 </ul>
 
 </div>
@@ -735,13 +1171,11 @@ customers who want their vehicle taken to the next level.
 
 
 <p class="disclaimer">
-
 Additional fees may apply for vehicles requiring excessive cleaning
 due to heavy dirt, severe stains, excessive pet hair, excessive sand,
 heavy odors, neglected interiors, or other conditions outside normal
 condition. Final pricing will be discussed before any additional
 work is performed.
-
 </p>
 
 </div>
@@ -766,7 +1200,6 @@ More Than A<br>
 
 
 <div class="why-grid">
-
 
 <div class="why-box">
 
@@ -809,8 +1242,8 @@ vehicle you're proud to drive.
 
 </div>
 
-
 </div>
+
 </div>
 
 </section>
@@ -841,7 +1274,6 @@ Schedule your detail and let us take care of the rest.
 
 <div class="contact-info">
 
-
 <div class="contact-item">
 
 <small>
@@ -866,7 +1298,6 @@ info@beachboyzdetailing.com
 </a>
 
 </div>
-
 
 </div>
 
@@ -893,6 +1324,7 @@ Golden Beach and surrounding South Florida areas.
 </div>
 
 </div>
+
 </div>
 
 </section>
