@@ -1,1570 +1,1106 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
 <title>Beachboyz Detailing | The Miami Experience</title>
 
+
+
 <style>
+
 * {
+
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
 }
+
+
 
 html {
+
   scroll-behavior: smooth;
-  background: #050709;
+
 }
+
+
 
 body {
-  background: #050709;
+
+  background: #050505;
+
   color: white;
+
   font-family: Arial, Helvetica, sans-serif;
+
   overflow-x: hidden;
+
 }
+
+
 
 /* =========================
-   NAVIGATION
+
+   CINEMATIC INTRO
+
 ========================= */
 
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 6vw;
-}
 
-.logo {
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: 4px;
-}
-
-.logo span {
-  display: block;
-  font-size: 9px;
-  font-weight: 300;
-  letter-spacing: 5px;
-  margin-top: 3px;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.phone {
-  border: 1px solid rgba(255,255,255,.5);
-  border-radius: 50px;
-  padding: 10px 15px;
-}
-
-/* =========================
-   CINEMATIC SECTION
-========================= */
 
 .movie {
-  height: 720vh;
+
   position: relative;
+
+  height: 500vh;
+
+  background: #050505;
+
 }
 
-.sticky {
+
+
+.scene {
+
   position: sticky;
+
   top: 0;
+
   height: 100vh;
+
   overflow: hidden;
-  background: #071016;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
 }
 
-.background {
+
+
+/* Miami atmosphere */
+
+
+
+.sky {
+
   position: absolute;
+
   inset: 0;
 
   background:
-    radial-gradient(
-      ellipse at 50% 75%,
-      rgba(53,155,190,.20),
-      transparent 40%
-    ),
-    linear-gradient(
-      #0a1c27 0%,
-      #071016 52%,
-      #030405 100%
-    );
+
+    radial-gradient(circle at 50% 35%, #25394d 0%, #101820 35%, #050505 75%);
+
 }
 
-/* Miami skyline */
 
-.city {
+
+.sun {
+
   position: absolute;
-  bottom: 22%;
-  left: 0;
-  right: 0;
-  height: 28%;
-  opacity: .65;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.9),
-      transparent 70%
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 6%,
-      #0d1d25 6.2% 7%,
-      transparent 7.2% 11%,
-      #101f27 11.2% 13%,
-      transparent 13.2% 17%
-    );
+  width: 240px;
+
+  height: 240px;
+
+  border-radius: 50%;
+
+  background: #f5c56b;
+
+  filter: blur(2px);
+
+  top: 20%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  opacity: .75;
+
 }
+
+
 
 /* Garage */
 
+
+
 .garage {
+
   position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: 17%;
+
+  width: 90%;
+
+  max-width: 1100px;
+
   height: 55%;
 
-  border: 1px solid rgba(255,255,255,.12);
+  bottom: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      #0a0d0f,
-      #11181c,
-      #090b0d
-    );
+  background: linear-gradient(90deg, #090909, #151515, #090909);
 
-  box-shadow:
-    0 0 90px rgba(0,0,0,.8) inset;
+  border-top: 2px solid rgba(255,255,255,.15);
+
 }
 
-.door {
+
+
+.garage-door {
+
   position: absolute;
-  left: 20%;
-  right: 20%;
+
+  width: 65%;
+
+  height: 75%;
+
+  left: 17.5%;
+
   bottom: 0;
-  height: 90%;
+
+  background:
+
+    repeating-linear-gradient(
+
+      0deg,
+
+      #111 0px,
+
+      #111 18px,
+
+      #191919 19px,
+
+      #191919 21px
+
+    );
+
+  box-shadow: inset 0 0 80px #000;
 
   transform-origin: bottom;
 
-  background:
-    repeating-linear-gradient(
-      0deg,
-      #151b1e 0 20px,
-      #20282c 21px 23px
-    );
-
-  box-shadow:
-    0 0 80px #000 inset;
 }
 
-.door-label {
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  transform: translateX(-50%);
 
-  letter-spacing: 6px;
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.light {
-  position: absolute;
-  top: 9%;
-  left: 50%;
-
-  width: 220px;
-  height: 3px;
-
-  transform: translateX(-50%);
-
-  background: #dffaff;
-
-  box-shadow:
-    0 0 40px 14px rgba(210,245,255,.18);
-}
 
 /* =========================
-   FLOOR
+
+   CAR
+
 ========================= */
 
-.floor {
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  bottom: -18%;
-  height: 48%;
 
-  transform:
-    perspective(500px)
-    rotateX(58deg);
-
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(255,255,255,.045) 0 1px,
-      transparent 1px 110px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,.04) 0 1px,
-      transparent 1px 90px
-    ),
-    #080b0d;
-}
-
-/* =========================
-   CINEMATIC CAR
-========================= */
 
 .car {
-  position: absolute;
-  z-index: 20;
 
-  width: min(760px,82vw);
+  position: absolute;
+
+  width: min(760px, 85vw);
+
   height: 190px;
 
-  left: 50%;
-  bottom: 20%;
+  bottom: 18%;
 
-  transform:
-    translateX(-170vw)
-    scale(.92);
+  left: -80%;
 
-  filter:
-    drop-shadow(
-      0 35px 25px rgba(0,0,0,.75)
-    );
+  z-index: 5;
+
+  transition: transform .1s linear;
+
 }
 
+
+
 .car-body {
+
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 35px;
+
+  width: 100%;
 
   height: 100px;
 
-  border-radius:
-    150px
-    180px
-    35px
-    45px;
+  bottom: 35px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #d9e3e6 0%,
-      #7d8b91 42%,
-      #1b2225 100%
-    );
+  background: linear-gradient(
 
-  box-shadow:
-    inset 0 7px 20px
-    rgba(255,255,255,.25);
-}
+    180deg,
 
-.car-body:after {
-  content: "";
+    #d7d7d7 0%,
 
-  position: absolute;
-  right: 7%;
-  top: 34px;
+    #777 45%,
 
-  width: 28%;
-  height: 3px;
+    #222 100%
 
-  background: rgba(255,255,255,.75);
+  );
+
+  border-radius: 120px 170px 30px 35px;
 
   box-shadow:
-    0 0 16px
-    rgba(255,255,255,.7);
+
+    0 25px 40px rgba(0,0,0,.8),
+
+    inset 0 8px 20px rgba(255,255,255,.25);
+
 }
 
-.roof {
+
+
+.car-roof {
+
   position: absolute;
 
-  left: 27%;
+  width: 45%;
+
+  height: 85px;
+
+  left: 28%;
+
   bottom: 105px;
 
-  width: 47%;
-  height: 86px;
+  background: linear-gradient(135deg, #333, #090909);
 
-  border-radius:
-    100px
-    115px
-    0
-    0;
+  border-radius: 90px 100px 0 0;
 
-  background:
-    linear-gradient(
-      145deg,
-      #303d43,
-      #080a0b
-    );
 }
+
+
 
 .window {
-  position: absolute;
 
-  left: 10%;
-  top: 10px;
+  position: absolute;
 
   width: 80%;
-  height: 58px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #34505c,
-      #030607
-    );
+  height: 55px;
 
-  clip-path:
-    polygon(
-      15% 0,
-      100% 0,
-      82% 100%,
-      0 100%
-    );
+  left: 10%;
+
+  top: 10px;
+
+  background: linear-gradient(135deg, #263947, #050505);
+
+  clip-path: polygon(15% 0, 100% 0, 82% 100%, 0 100%);
+
 }
 
+
+
 .wheel {
+
   position: absolute;
+
+  width: 70px;
+
+  height: 70px;
 
   bottom: 0;
 
-  width: 72px;
-  height: 72px;
+  background: #050505;
+
+  border: 10px solid #292929;
 
   border-radius: 50%;
 
-  background: #030405;
+  box-shadow: inset 0 0 0 8px #111;
 
-  border: 10px solid #343a3d;
-
-  box-shadow:
-    inset 0 0 0 8px #101214;
 }
+
+
 
 .wheel.one {
-  left: 14%;
+
+  left: 15%;
+
 }
+
+
 
 .wheel.two {
-  right: 14%;
+
+  right: 15%;
+
 }
 
+
+
 /* =========================
-   WATER / FOAM
+
+   TEXT
+
 ========================= */
 
-.foam {
+
+
+.logo {
+
   position: absolute;
-  z-index: 25;
+
+  top: 45px;
+
+  left: 50px;
+
+  z-index: 20;
+
+  font-size: 18px;
+
+  letter-spacing: 5px;
+
+  font-weight: 700;
+
+}
+
+
+
+.logo span {
+
+  font-weight: 300;
+
+}
+
+
+
+.chapter {
+
+  position: absolute;
+
+  z-index: 15;
+
+  text-align: center;
+
+  width: 90%;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition: .5s ease;
+
+}
+
+
+
+.chapter.active {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+
+
+.chapter small {
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  opacity: .7;
+
+}
+
+
+
+.chapter h1 {
+
+  margin-top: 15px;
+
+  font-size: clamp(42px, 7vw, 100px);
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+
+}
+
+
+
+.chapter p {
+
+  margin: 20px auto;
+
+  max-width: 550px;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #ccc;
+
+}
+
+
+
+/* =========================
+
+   WATER / POLISH EFFECTS
+
+========================= */
+
+
+
+.water {
+
+  position: absolute;
 
   inset: 0;
 
+  pointer-events: none;
+
   opacity: 0;
 
   background:
-    radial-gradient(
-      circle at 38% 60%,
-      rgba(255,255,255,.8) 0 2px,
-      transparent 4px
-    ),
-    radial-gradient(
-      circle at 62% 45%,
-      rgba(255,255,255,.75) 0 3px,
-      transparent 5px
-    );
 
-  background-size:
-    70px 70px,
-    95px 95px;
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,.3) 0 2px, transparent 3px),
 
-  mix-blend-mode: screen;
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,.25) 0 3px, transparent 4px);
+
+  background-size: 80px 80px, 110px 110px;
+
+  transition: opacity .5s;
+
 }
 
-.water-spray {
+
+
+.polish-glow {
+
   position: absolute;
 
-  z-index: 24;
+  width: 600px;
 
-  width: 55vw;
-  height: 4px;
-
-  left: -60vw;
-  top: 58%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #d9fbff,
-      transparent
-    );
-
-  box-shadow:
-    0 0 25px 8px
-    rgba(150,230,255,.2);
-
-  transform: rotate(-8deg);
-
-  opacity: 0;
-}
-
-/* =========================
-   POLISH EFFECT
-========================= */
-
-.polish {
-  position: absolute;
-
-  z-index: 26;
-
-  width: 230px;
-  height: 230px;
+  height: 600px;
 
   border-radius: 50%;
 
-  left: 65%;
-  top: 43%;
+  background: radial-gradient(
 
-  opacity: 0;
+    circle,
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,.55),
-      rgba(100,210,255,.12) 30%,
-      transparent 65%
-    );
+    rgba(255,255,255,.25),
 
-  mix-blend-mode: screen;
-}
+    transparent 65%
 
-/* =========================
-   SCENE TEXT
-========================= */
-
-.scene-title {
-  position: absolute;
-
-  z-index: 40;
-
-  left: 7%;
-  top: 48%;
-
-  max-width: 650px;
-
-  transform:
-    translateY(35px);
-
-  opacity: 0;
-}
-
-.kicker {
-  font-size: 11px;
-  letter-spacing: 5px;
-
-  color: #c7d6db;
-
-  text-transform: uppercase;
-}
-
-.scene-title h1 {
-  margin-top: 14px;
-
-  font-size:
-    clamp(
-      42px,
-      8vw,
-      108px
-    );
-
-  line-height: .86;
-
-  letter-spacing: -4px;
-
-  text-transform: uppercase;
-}
-
-.scene-title p {
-  margin-top: 22px;
-
-  color: #b8c2c6;
-
-  max-width: 510px;
-
-  line-height: 1.65;
-
-  font-size: 16px;
-}
-
-/* =========================
-   PROGRESS
-========================= */
-
-.progress {
-  position: absolute;
-
-  z-index: 80;
-
-  right: 35px;
-  top: 50%;
-
-  transform:
-    translateY(-50%);
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 10px;
-}
-
-.progress i {
-  display: block;
-
-  width: 2px;
-  height: 20px;
-
-  background:
-    rgba(255,255,255,.22);
-
-  transition: .2s;
-}
-
-.progress i.on {
-  height: 42px;
-  background: white;
-}
-
-.counter {
-  position: absolute;
-
-  right: 35px;
-  bottom: 35px;
-
-  z-index: 80;
-
-  font-size: 11px;
-
-  letter-spacing: 3px;
-
-  color: #bfc9cc;
-}
-
-.scroll-hint {
-  position: absolute;
-
-  left: 50%;
-  bottom: 30px;
-
-  z-index: 70;
-
-  transform:
-    translateX(-50%);
-
-  font-size: 9px;
-
-  letter-spacing: 4px;
-
-  opacity: .7;
-}
-
-/* =========================
-   PACKAGES
-========================= */
-
-.packages {
-  min-height: 100vh;
-
-  padding:
-    110px
-    7vw;
-
-  background: #06090b;
-}
-
-.inner {
-  width: min(
-    1150px,
-    100%
   );
 
-  margin: auto;
+  opacity: 0;
+
+  transition: opacity .5s;
+
 }
 
-.eyebrow {
-  font-size: 10px;
 
-  letter-spacing: 5px;
 
-  color: #8fa4ab;
+/* =========================
+
+   FINAL CTA
+
+========================= */
+
+
+
+.final {
+
+  min-height: 100vh;
+
+  background:
+
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)),
+
+    linear-gradient(135deg, #152631, #050505);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 50px 20px;
+
 }
 
-.packages h2 {
-  font-size:
-    clamp(
-      42px,
-      7vw,
-      82px
-    );
+
+
+.final-content {
+
+  max-width: 850px;
+
+}
+
+
+
+.final small {
+
+  letter-spacing: 6px;
+
+  opacity: .7;
+
+}
+
+
+
+.final h2 {
+
+  font-size: clamp(48px, 9vw, 110px);
 
   line-height: .9;
 
-  margin:
-    15px
-    0
-    50px;
+  margin: 20px 0;
 
-  letter-spacing: -3px;
+  text-transform: uppercase;
+
 }
 
-.grid {
-  display: grid;
 
-  grid-template-columns:
-    repeat(3,1fr);
 
-  gap: 18px;
+.final p {
+
+  color: #ccc;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  max-width: 600px;
+
+  margin: auto;
+
 }
 
-.card {
-  border:
-    1px solid
-    rgba(255,255,255,.13);
 
-  padding: 28px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #0d1519,
-      #080b0d
-    );
-}
+.button {
 
-.card h3 {
-  font-size: 17px;
-
-  letter-spacing: 2px;
-}
-
-.price {
-  font-size: 34px;
-
-  color: #56d9ff;
-
-  margin:
-    16px
-    0
-    22px;
-}
-
-.card li {
-  list-style: none;
-
-  color: #adb9bd;
-
-  font-size: 13px;
-
-  padding: 8px 0;
-
-  border-bottom:
-    1px solid
-    rgba(255,255,255,.07);
-}
-
-.btn {
   display: inline-block;
 
-  margin-top: 25px;
+  margin-top: 35px;
 
-  padding:
-    14px
-    20px;
+  padding: 18px 35px;
 
-  border:
-    1px solid
-    rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.5);
 
   color: white;
 
   text-decoration: none;
 
-  font-size: 10px;
-
   letter-spacing: 3px;
+
+  font-size: 13px;
+
+  transition: .3s;
+
 }
 
-/* =========================
-   FINAL
-========================= */
 
-.final {
-  min-height: 100vh;
 
-  display: grid;
+.button:hover {
 
-  place-items: center;
+  background: white;
 
-  text-align: center;
+  color: black;
 
-  padding: 80px 20px;
-
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(67,181,216,.18),
-      transparent 38%
-    ),
-    linear-gradient(
-      #071016,
-      #030405
-    );
 }
 
-.final h2 {
-  font-size:
-    clamp(
-      50px,
-      10vw,
-      130px
-    );
 
-  line-height: .82;
 
-  letter-spacing: -5px;
+/* Mobile */
 
-  margin: 20px 0;
-}
 
-.final p {
-  max-width: 600px;
 
-  color: #aeb8bc;
+@media(max-width:700px) {
 
-  line-height: 1.7;
 
-  margin: auto;
-}
 
-.final .btn {
-  margin-top: 35px;
-}
+  .logo {
 
-/* =========================
-   MOBILE
-========================= */
+    left: 25px;
 
-@media(max-width:760px) {
+    top: 25px;
 
-  .nav {
-    padding: 20px;
+    font-size: 14px;
+
   }
 
-  .nav-right a {
-    display: none;
-  }
 
-  .phone {
-    font-size: 8px;
-  }
 
   .garage {
-    left: 0;
-    right: 0;
+
+    width: 100%;
+
   }
 
-  .door {
-    left: 8%;
-    right: 8%;
+
+
+  .garage-door {
+
+    width: 85%;
+
+    left: 7.5%;
+
   }
 
-  .scene-title {
-    left: 25px;
-    right: 25px;
-    top: 58%;
-  }
 
-  .scene-title h1 {
-    font-size: 52px;
-  }
-
-  .progress {
-    right: 15px;
-  }
-
-  .counter {
-    right: 15px;
-  }
 
   .car {
-    width: 680px;
-    max-width: none;
+
+    transform: scale(.72);
+
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+
+
+  .chapter h1 {
+
+    letter-spacing: -1px;
+
   }
+
 }
+
 </style>
+
 </head>
+
+
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
 
-<header class="nav">
-
-  <div class="logo">
-    BEACHBOYZ
-    <span>DETAILING</span>
-  </div>
-
-  <div class="nav-right">
-
-    <span>PACKAGES</span>
-
-    <span>SERVICE AREA</span>
-
-    <div class="phone">
-      786-474-4880
-    </div>
-
-  </div>
-
-</header>
-
-
-<!-- =========================
-     CINEMATIC MOVIE
-========================= -->
 
 <section class="movie">
 
-  <div class="sticky">
 
-    <div class="background"></div>
 
-    <div class="city"></div>
+  <div class="scene">
 
-    <div class="garage">
 
-      <div class="light"></div>
 
-      <div class="door">
+    <div class="sky"></div>
 
-        <div class="door-label">
-          BEACHBOYZ DETAILING
-        </div>
+    <div class="sun"></div>
 
-      </div>
+
+
+    <div class="logo">
+
+      BEACHBOYZ <span>DETAILING</span>
 
     </div>
 
-    <div class="floor"></div>
 
 
-    <!-- CAR -->
+    <div class="garage">
 
-    <div class="car" id="car">
+      <div class="garage-door"></div>
 
-      <div class="roof">
+    </div>
+
+
+
+    <div class="water"></div>
+
+    <div class="polish-glow"></div>
+
+
+
+    <div class="car">
+
+
+
+      <div class="car-roof">
 
         <div class="window"></div>
 
       </div>
 
+
+
       <div class="car-body"></div>
+
+
 
       <div class="wheel one"></div>
 
       <div class="wheel two"></div>
 
+
+
     </div>
 
 
-    <!-- WATER -->
 
-    <div
-      class="foam"
-      id="foam">
-    </div>
+    <div class="chapter active" id="chapter1">
 
-    <div
-      class="water-spray"
-      id="spray">
-    </div>
+      <small>Miami, Florida</small>
 
+      <h1>The Experience</h1>
 
-    <!-- POLISH -->
+      <p>
 
-    <div
-      class="polish"
-      id="polish">
-    </div>
+        Where your vehicle comes in looking good
 
+        and leaves looking unforgettable.
 
-    <!-- TEXT -->
-
-    <div
-      class="scene-title"
-      id="title">
-
-      <div
-        class="kicker"
-        id="kicker">
-        Miami, Florida
-      </div>
-
-      <h1 id="headline">
-        The<br>
-        Experience
-      </h1>
-
-      <p id="copy">
-        Your vehicle doesn't just come in
-        for a detail. It enters the Beachboyz
-        experience.
       </p>
 
     </div>
 
 
-    <!-- PROGRESS -->
 
-    <div
-      class="progress"
-      id="progress">
+    <div class="chapter" id="chapter2">
 
-      <i class="on"></i>
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
+      <small>Scene 02</small>
 
-    </div>
+      <h1>The Wash</h1>
 
+      <p>
 
-    <div
-      class="counter"
-      id="counter">
+        Every surface gets the attention it deserves.
 
-      01 / 07
+        Two-bucket contact wash. Careful. Controlled. Clean.
+
+      </p>
 
     </div>
 
 
-    <div class="scroll-hint">
 
-      SCROLL TO DRIVE THE STORY ↓
+    <div class="chapter" id="chapter3">
+
+      <small>Scene 03</small>
+
+      <h1>The Finish</h1>
+
+      <p>
+
+        Paint. Glass. Wheels. Interior.
+
+        Every detail gets finished the Beachboyz way.
+
+      </p>
 
     </div>
+
+
+
+    <div class="chapter" id="chapter4">
+
+      <small>Scene 04</small>
+
+      <h1>Showroom</h1>
+
+      <p>
+
+        The final reveal.
+
+        Deep gloss. Clean surfaces. Every detail handled.
+
+      </p>
+
+    </div>
+
+
 
   </div>
+
+
 
 </section>
 
 
-<!-- =========================
-     PACKAGES
-========================= -->
-
-<section
-  class="packages"
-  id="packages">
-
-  <div class="inner">
-
-    <div class="eyebrow">
-      THE NEXT STOP
-    </div>
-
-    <h2>
-      Choose Your<br>
-      Experience.
-    </h2>
 
 
-    <div class="grid">
-
-
-      <!-- BEACH WASH -->
-
-      <article class="card">
-
-        <h3>
-          BEACH WASH
-        </h3>
-
-        <div class="price">
-          $150
-        </div>
-
-        <ul>
-
-          <li>
-            Exterior hand wash
-          </li>
-
-          <li>
-            Two-bucket contact wash
-          </li>
-
-          <li>
-            Wheels & tires
-          </li>
-
-          <li>
-            Glass cleaned
-          </li>
-
-          <li>
-            Basic interior wipe-down
-          </li>
-
-        </ul>
-
-        <a
-          class="btn"
-          href="tel:17864744880">
-
-          BOOK NOW
-
-        </a>
-
-      </article>
-
-
-      <!-- SUNSET -->
-
-      <article class="card">
-
-        <h3>
-          SUNSET DETAIL
-        </h3>
-
-        <div class="price">
-          $200
-        </div>
-
-        <ul>
-
-          <li>
-            Everything in Beach Wash
-          </li>
-
-          <li>
-            Clay treatment
-          </li>
-
-          <li>
-            Paint decontamination
-          </li>
-
-          <li>
-            Sealant protection
-          </li>
-
-          <li>
-            Full interior detail
-          </li>
-
-        </ul>
-
-        <a
-          class="btn"
-          href="tel:17864744880">
-
-          BOOK NOW
-
-        </a>
-
-      </article>
-
-
-      <!-- MIAMI EXPERIENCE -->
-
-      <article class="card">
-
-        <h3>
-          MIAMI EXPERIENCE
-        </h3>
-
-        <div class="price">
-          $300
-        </div>
-
-        <ul>
-
-          <li>
-            Everything in Sunset Detail
-          </li>
-
-          <li>
-            Paint correction
-          </li>
-
-          <li>
-            Premium protection
-          </li>
-
-          <li>
-            Engine bay detail
-          </li>
-
-          <li>
-            Full interior conditioning
-          </li>
-
-        </ul>
-
-        <a
-          class="btn"
-          href="tel:17864744880">
-
-          BOOK NOW
-
-        </a>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FINAL CTA
-========================= -->
 
 <section class="final">
 
-  <div>
 
-    <div class="eyebrow">
-      BEACHBOYZ DETAILING · MIAMI
-    </div>
+
+  <div class="final-content">
+
+
+
+    <small>WELCOME TO BEACHBOYZ</small>
+
+
 
     <h2>
-      WE DON'T<br>
-      JUST DETAIL.
+
+      We Don't Just<br>
+
+      Detail.
+
     </h2>
+
+
 
     <p>
 
-      We provide the experience.
-      Professional detailing with attention
-      to every detail, from Sunny Isles Beach
-      and North Miami throughout our
-      South Florida service area.
+      We provide the Miami experience.
+
+      Professional detailing, honest pricing,
+
+      and attention to every detail — even if it's a classic.
 
     </p>
 
-    <a
-      class="btn"
-      href="tel:17864744880">
 
-      BOOK YOUR DETAIL ·
-      786-474-4880
+
+    <a href="#packages" class="button">
+
+      BOOK YOUR EXPERIENCE
 
     </a>
 
+
+
   </div>
 
+
+
 </section>
+
+
+
 
 
 <script>
 
-/* =========================
-   CINEMATIC ENGINE
-========================= */
-
-const movie =
-  document.querySelector(".movie");
-
-const car =
-  document.getElementById("car");
-
-const door =
-  document.querySelector(".door");
-
-const title =
-  document.getElementById("title");
-
-const kicker =
-  document.getElementById("kicker");
-
-const headline =
-  document.getElementById("headline");
-
-const copy =
-  document.getElementById("copy");
-
-const foam =
-  document.getElementById("foam");
-
-const spray =
-  document.getElementById("spray");
-
-const polish =
-  document.getElementById("polish");
-
-const counter =
-  document.getElementById("counter");
-
-const bars =
-  [
-    ...document.querySelectorAll(
-      "#progress i"
-    )
-  ];
 
 
-/* =========================
-   SCENES
-========================= */
+const movie = document.querySelector(".movie");
 
-const scenes = [
+const car = document.querySelector(".car");
 
-  [
-    "Miami, Florida",
-    "The<br>Experience",
-    "Your vehicle doesn't just come in for a detail. It enters the Beachboyz experience."
-  ],
 
-  [
-    "Scene 02",
-    "Pull<br>Inside",
-    "The garage opens. The transformation begins."
-  ],
 
-  [
-    "Scene 03",
-    "The<br>Wash",
-    "Safe. Thorough. Professional. Every panel gets attention."
-  ],
+const chapters = [
 
-  [
-    "Scene 04",
-    "The<br>Polish",
-    "Flawless finish. Deep gloss. Next-level shine."
-  ],
+  document.querySelector("#chapter1"),
 
-  [
-    "Scene 05",
-    "The<br>Interior",
-    "Clean inside. Complete inside. Every surface gets treated."
-  ],
+  document.querySelector("#chapter2"),
 
-  [
-    "Scene 06",
-    "The<br>Reveal",
-    "Same car. Totally different vibe."
-  ],
+  document.querySelector("#chapter3"),
 
-  [
-    "Beachboyz Detailing",
-    "Your Miami<br>Experience",
-    "We don't just detail. We provide the experience."
-  ]
+  document.querySelector("#chapter4")
 
 ];
 
 
-/* =========================
-   HELPERS
-========================= */
 
-function clamp(
-  number,
-  minimum = 0,
-  maximum = 1
-) {
+const water = document.querySelector(".water");
 
-  return Math.max(
-    minimum,
-    Math.min(
-      maximum,
-      number
-    )
-  );
+const polishGlow = document.querySelector(".polish-glow");
 
-}
+const garageDoor = document.querySelector(".garage-door");
 
 
-/* =========================
-   MAIN ANIMATION
-========================= */
 
-function animate() {
-
-  const rect =
-    movie.getBoundingClientRect();
-
-  const total =
-    movie.offsetHeight -
-    window.innerHeight;
-
-  let progress =
-    -rect.top / total;
-
-  progress =
-    clamp(progress);
+function updateMovie() {
 
 
-  /* CAR MOVEMENT */
+
+  const rect = movie.getBoundingClientRect();
+
+
+
+  const total = movie.offsetHeight - window.innerHeight;
+
+
+
+  let progress = -rect.top / total;
+
+
+
+  progress = Math.max(0, Math.min(1, progress));
+
+
+
+  /*
+
+    CAR MOVEMENT
+
+    0 → enters
+
+    .25 → inside
+
+    .75 → finished
+
+    1 → exits
+
+  */
+
+
 
   let carX;
 
-  if (progress < .18) {
 
-    carX =
-      -170 +
-      (progress / .18) * 155;
+
+  if (progress < .25) {
+
+
+
+    carX = progress / .25 * 120;
+
+
+
+  } else if (progress < .75) {
+
+
+
+    carX = 120;
+
+
+
+  } else {
+
+
+
+    carX = 120 + ((progress - .75) / .25 * 120);
+
+
+
+  }
+
+
+
+  car.style.transform =
+
+    `translateX(${carX}vw)`;
+
+
+
+  /*
+
+    GARAGE OPENS
+
+  */
+
+
+
+  const doorProgress =
+
+    Math.min(progress / .2, 1);
+
+
+
+  garageDoor.style.transform =
+
+    `scaleY(${1 - doorProgress})`;
+
+
+
+  /*
+
+    CHAPTERS
+
+  */
+
+
+
+  chapters.forEach(chapter => {
+
+    chapter.classList.remove("active");
+
+  });
+
+
+
+  if (progress < .22) {
+
+    chapters[0].classList.add("active");
+
+  }
+
+  else if (progress < .48) {
+
+    chapters[1].classList.add("active");
 
   }
 
   else if (progress < .73) {
 
-    carX = -15;
+    chapters[2].classList.add("active");
 
   }
 
   else {
 
-    carX =
-      -15 +
-      ((progress - .73) / .27) * 175;
+    chapters[3].classList.add("active");
 
   }
 
 
-  const scale =
-    .88 +
-    Math.sin(
-      progress * Math.PI
-    ) * .08;
+
+  /*
+
+    WATER EFFECT
+
+  */
 
 
-  car.style.transform =
-    `
-      translateX(${carX}vw)
-      translateX(-50%)
-      scale(${scale})
-    `;
 
+  if (progress > .22 && progress < .48) {
 
-  /* GARAGE DOOR */
+    water.style.opacity =
 
-  let doorScale;
+      Math.min((progress - .22) * 8, 1);
 
-  if (progress < .22) {
+  } else {
 
-    doorScale =
-      1 -
-      clamp(
-        progress / .22
-      );
-
-  }
-
-  else if (progress < .75) {
-
-    doorScale = 0;
-
-  }
-
-  else {
-
-    doorScale =
-      clamp(
-        (progress - .75) / .25
-      );
+    water.style.opacity = 0;
 
   }
 
 
-  door.style.transform =
-    `scaleY(${doorScale})`;
+
+  /*
+
+    POLISH GLOW
+
+  */
 
 
-  /* WATER / FOAM */
 
-  foam.style.opacity =
-    clamp(
-      (progress - .25) / .10
-    ) *
-    .85 *
-    (
-      1 -
-      clamp(
-        (progress - .48) / .08
-      )
-    );
+  if (progress > .48 && progress < .75) {
 
+    polishGlow.style.opacity =
 
-  spray.style.opacity =
-    clamp(
-      (progress - .27) / .07
-    ) *
-    .9 *
-    (
-      1 -
-      clamp(
-        (progress - .47) / .08
-      )
-    );
+      Math.min((progress - .48) * 6, .8);
+
+  } else {
+
+    polishGlow.style.opacity = 0;
+
+  }
 
 
-  spray.style.left =
-    (
-      -60 +
-      clamp(
-        (progress - .27) / .20
-      ) *
-      120
-    ) +
-    "vw";
-
-
-  /* POLISH */
-
-  polish.style.opacity =
-    clamp(
-      (progress - .47) / .08
-    ) *
-    .8 *
-    (
-      1 -
-      clamp(
-        (progress - .68) / .10
-      )
-    );
-
-
-  /* CURRENT SCENE */
-
-  let index =
-    Math.min(
-      6,
-      Math.floor(
-        progress * 7
-      )
-    );
-
-
-  const local =
-    progress * 7 -
-    index;
-
-
-  const scene =
-    scenes[index];
-
-
-  kicker.textContent =
-    scene[0];
-
-  headline.innerHTML =
-    scene[1];
-
-  copy.textContent =
-    scene[2];
-
-
-  counter.textContent =
-    String(index + 1)
-      .padStart(2,"0")
-    +
-    " / 07";
-
-
-  /* TEXT FADE */
-
-  const visible =
-    local < .82
-      ? 1
-      : clamp(
-          (1 - local) / .18
-        );
-
-
-  title.style.opacity =
-    visible;
-
-
-  title.style.transform =
-    `
-      translateY(
-        ${(1 - visible) * 28}px
-      )
-    `;
-
-
-  /* PROGRESS BARS */
-
-  bars.forEach(
-    (bar,indexNumber) => {
-
-      bar.classList.toggle(
-        "on",
-        indexNumber === index
-      );
-
-    }
-  );
 
 }
 
 
-/* =========================
-   EVENTS
-========================= */
 
-window.addEventListener(
-  "scroll",
-  animate,
-  {
-    passive:true
-  }
-);
+window.addEventListener("scroll", updateMovie);
 
-window.addEventListener(
-  "resize",
-  animate
-);
+window.addEventListener("resize", updateMovie);
 
 
-animate();
+
+updateMovie();
+
+
 
 </script>
 
-</body>
-</html>
