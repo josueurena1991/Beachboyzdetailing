@@ -4,3542 +4,1655 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <title>Beachboyz Detailing | Miami Mobile Auto Detailing</title>
 
-<meta name="description" content="Beachboyz Detailing — premium mobile auto detailing serving Sunny Isles Beach, North Miami, Bal Harbour, Golden Beach and surrounding South Florida areas.">
 
-<meta name="theme-color" content="#050608">
+<meta name="description"
+content="Beachboyz Detailing — premium mobile auto detailing serving Sunny Isles Beach, North Miami, Bal Harbour, Golden Beach and surrounding South Florida areas.">
+
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
-html{
-  background:#050608;
-  color:#f4f0e7;
-}
 
-body{
-  margin:0;
-  background:#050608;
-  color:#f4f0e7;
-  font-family:Arial,Helvetica,sans-serif;
-  overflow-x:hidden;
+html {
+ scroll-behavior: smooth;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
 
-::selection{
-  background:#c9b57e;
-  color:#050608;
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ background: #05080d;
+ color: #f5f7f7;
+ line-height: 1.6;
+ overflow-x: hidden;
 }
 
-/* =========================
-   NAV
-========================= */
 
-.nav{
-  position:fixed;
-  z-index:100;
-  top:0;
-  left:0;
-  width:100%;
-  height:82px;
+a {
+ color: inherit;
+ text-decoration: none;
+}
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
 
-  padding:0 5vw;
+/* ================= HEADER ================= */
 
-  pointer-events:none;
 
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,.65),
-    transparent
-  );
+header {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 1000;
+ padding: 17px 6%;
+ background: rgba(3,7,12,.88);
+ backdrop-filter: blur(15px);
+ border-bottom: 1px solid rgba(25,211,197,.18);
 }
 
-.brand{
-  pointer-events:auto;
-
-  font-size:15px;
-  font-weight:900;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
 
-.brand span{
-  color:#c9b57e;
+nav {
+ max-width: 1250px;
+ margin: auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:27px;
 
-  pointer-events:auto;
+.logo {
+ font-size: 21px;
+ font-weight: 900;
+ letter-spacing: 2px;
 }
 
-.nav-links a{
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.18em;
-  text-transform:uppercase;
 
-  color:rgba(244,240,231,.68);
-
-  transition:.3s ease;
+.logo span {
+ color: #19d3c5;
 }
 
-.nav-links a:hover{
-  color:#c9b57e;
-}
 
-.nav-book{
-  padding:12px 18px;
-  border:1px solid rgba(244,240,231,.28);
+.nav-links {
+ display: flex;
+ gap: 28px;
+ font-size: 13px;
+ font-weight: 800;
+ text-transform: uppercase;
+ letter-spacing: 1px;
 }
 
-@media(max-width:700px){
 
-  .nav{
-    height:68px;
-    padding:0 20px;
-  }
-
-  .nav-links a:not(.nav-book){
-    display:none;
-  }
-
-  .brand{
-    font-size:12px;
-  }
+.nav-links a:hover {
+ color: #19d3c5;
 }
 
-/* =========================
-   CINEMATIC HERO
-========================= */
 
-.hero{
-  position:relative;
-  height:470vh;
-}
+/* ================= HERO ================= */
 
-.hero-stage{
-  position:sticky;
-  top:0;
 
-  width:100%;
-  height:100vh;
+.hero {
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ padding: 155px 7% 90px;
+ position: relative;
 
-  overflow:hidden;
 
-  background:#050608;
+ background:
+   linear-gradient(
+     110deg,
+     rgba(2,8,13,.94),
+     rgba(2,8,13,.65),
+     rgba(2,8,13,.84)
+   ),
+   url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=90")
+   center/cover no-repeat;
 }
 
-#scene{
-  position:absolute;
-  inset:0;
 
-  width:100%;
-  height:100%;
-
-  display:block;
+.hero::after {
+ content: "";
+ position: absolute;
+ inset: auto 0 0;
+ height: 180px;
+ background: linear-gradient(transparent,#05080d);
 }
-
-/* overlays */
 
-.hero-vignette{
-  position:absolute;
-  inset:0;
-  z-index:4;
-  pointer-events:none;
 
-  background:
-    radial-gradient(
-      ellipse at center,
-      transparent 18%,
-      rgba(0,0,0,.22) 57%,
-      rgba(0,0,0,.84) 100%
-    );
+.hero-content {
+ max-width: 950px;
+ position: relative;
+ z-index: 2;
 }
 
-.hero-scan{
-  position:absolute;
-  inset:0;
-  z-index:5;
-  pointer-events:none;
 
-  opacity:.2;
-
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0px,
-      transparent 3px,
-      rgba(255,255,255,.018) 4px
-    );
+.eyebrow {
+ color: #19d3c5;
+ font-size: 12px;
+ font-weight: 900;
+ letter-spacing: 5px;
+ text-transform: uppercase;
+ margin-bottom: 20px;
 }
-
-.hero-noise{
-  position:absolute;
-  inset:-50%;
-  z-index:6;
-  pointer-events:none;
-
-  opacity:.035;
 
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
-  animation:noise .2s steps(2) infinite;
+.hero h1 {
+ font-size: clamp(55px,9vw,115px);
+ line-height: .88;
+ text-transform: uppercase;
+ letter-spacing: -5px;
+ margin-bottom: 30px;
+ text-shadow: 0 8px 35px rgba(0,0,0,.55);
 }
 
-@keyframes noise{
-  0%{transform:translate(0,0)}
-  25%{transform:translate(2%,-1%)}
-  50%{transform:translate(-1%,2%)}
-  75%{transform:translate(1%,1%)}
-  100%{transform:translate(-2%,-2%)}
+
+.hero h1 span {
+ color: #19d3c5;
+ text-shadow: 0 0 30px rgba(25,211,197,.35);
 }
 
-/* =========================
-   HERO COPY
-========================= */
 
-.hero-copy{
-  position:absolute;
-  z-index:20;
+.hero h2 {
+ font-size: clamp(21px,3vw,35px);
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ margin-bottom: 18px;
+}
 
-  left:6vw;
-  top:50%;
 
-  width:min(700px,80vw);
+.hero p {
+ max-width: 720px;
+ color: #d4dddd;
+ font-size: 18px;
+ margin-bottom: 32px;
+}
 
-  transform:translateY(-50%);
 
-  pointer-events:none;
+.buttons {
+ display: flex;
+ gap: 15px;
+ flex-wrap: wrap;
 }
 
-.hero-kicker{
-  margin-bottom:18px;
 
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.34em;
-  text-transform:uppercase;
-
-  color:#c9b57e;
+.btn {
+ display: inline-block;
+ padding: 15px 25px;
+ border-radius: 3px;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ font-size: 12px;
+ transition: .25s;
 }
 
-.hero-title{
-  font-size:clamp(58px,9.7vw,155px);
 
-  line-height:.79;
-
-  letter-spacing:-.075em;
+.btn-primary {
+ background: #19d3c5;
+ color: #041014;
+ box-shadow: 0 0 25px rgba(25,211,197,.18);
+}
 
-  font-weight:950;
 
-  text-transform:uppercase;
+.btn-primary:hover {
+ transform: translateY(-3px);
+ background: #65eee5;
+ box-shadow: 0 0 35px rgba(25,211,197,.35);
 }
 
-.hero-title span{
-  display:block;
+
+.btn-outline {
+ border: 1px solid rgba(25,211,197,.75);
+ background: rgba(0,0,0,.18);
 }
 
-.hero-title .ghost{
-  color:transparent;
 
-  -webkit-text-stroke:
-    1px rgba(244,240,231,.7);
+.btn-outline:hover {
+ background: #19d3c5;
+ color: #041014;
 }
-
-.hero-description{
-  margin-top:30px;
 
-  width:min(480px,80vw);
 
-  font-size:14px;
-  line-height:1.7;
+/* ================= CINEMATIC FERRARI MOMENT ================= */
 
-  color:rgba(244,240,231,.64);
-}
 
-.hero-buttons{
-  display:flex;
-  gap:10px;
+.cinematic {
+ position: relative;
+ height: 430px;
+ overflow: hidden;
 
-  margin-top:28px;
 
-  pointer-events:auto;
+ background: #030609;
 }
 
-.btn{
-  display:inline-flex;
 
-  align-items:center;
-  justify-content:center;
+.cinematic-image {
+ position: absolute;
+ inset: 0;
 
-  min-height:48px;
 
-  padding:0 22px;
+ background:
+   linear-gradient(
+     90deg,
+     rgba(3,7,12,.55),
+     rgba(3,7,12,.05),
+     rgba(3,7,12,.6)
+   ),
+   url("ferrari-miami.png")
+   center/cover no-repeat;
 
-  border:1px solid rgba(244,240,231,.28);
 
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-
-  transition:.3s ease;
+ transform: scale(1.08);
+ animation: cinematicZoom 8s ease-in-out forwards;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-}
 
-.btn-light{
-  background:#f4f0e7;
-  color:#050608;
-  border-color:#f4f0e7;
-}
+@keyframes cinematicZoom {
+ 0% {
+   transform: scale(1.12);
+ }
+
 
-.btn-dark:hover{
-  color:#c9b57e;
-  border-color:#c9b57e;
+ 100% {
+   transform: scale(1);
+ }
 }
 
-@media(max-width:700px){
 
-  .hero-copy{
-    left:20px;
-    right:20px;
-    top:auto;
-    bottom:72px;
+.cinematic-overlay {
+ position: absolute;
+ inset: 0;
 
-    width:auto;
 
-    transform:none;
-  }
+ display: flex;
+ align-items: center;
+ justify-content: center;
 
-  .hero-title{
-    font-size:18vw;
-  }
 
-  .hero-description{
-    font-size:12px;
-    margin-top:20px;
-  }
+ text-align: center;
 
-  .hero-buttons{
-    margin-top:20px;
-  }
 
-  .btn{
-    min-height:44px;
-    padding:0 15px;
-    font-size:9px;
-  }
+ background:
+   linear-gradient(
+     transparent 20%,
+     rgba(3,7,12,.3),
+     rgba(3,7,12,.85)
+   );
 }
 
-/* =========================
-   HUD
-========================= */
 
-.scene-status{
-  position:absolute;
-  z-index:20;
+.cinematic-content {
+ position: relative;
+ z-index: 2;
+ animation: cinematicText 7s ease forwards;
+}
 
-  left:6vw;
-  bottom:35px;
 
-  display:flex;
-  align-items:center;
-  gap:10px;
+@keyframes cinematicText {
+ 0% {
+   opacity: 0;
+   transform: translateY(20px);
+ }
 
-  font-size:9px;
-  letter-spacing:.24em;
-  text-transform:uppercase;
 
-  color:rgba(244,240,231,.45);
+ 15% {
+   opacity: 1;
+   transform: translateY(0);
+ }
 
-  pointer-events:none;
-}
 
-.scene-status strong{
-  color:#c9b57e;
-}
+ 75% {
+   opacity: 1;
+ }
 
-.scene-line{
-  width:34px;
-  height:1px;
-  background:#c9b57e;
+
+ 100% {
+   opacity: 0;
+ }
 }
 
-.scene-progress{
-  position:absolute;
-  z-index:20;
 
-  right:5vw;
-  bottom:35px;
+.cinematic-title {
+ font-size: clamp(38px,6vw,75px);
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: -2px;
+}
 
-  width:130px;
-  height:1px;
 
-  background:rgba(244,240,231,.2);
+.cinematic-title span {
+ color: #19d3c5;
 }
 
-.scene-progress i{
-  display:block;
 
-  width:0;
-  height:100%;
-
-  background:#c9b57e;
+.cinematic-subtitle {
+ margin-top: 8px;
+ color: white;
+ font-size: 12px;
+ letter-spacing: 5px;
+ text-transform: uppercase;
 }
 
-.scroll-prompt{
-  position:absolute;
-  z-index:20;
 
-  right:5vw;
-  top:50%;
+.cinematic-badge {
+ display: inline-block;
+ margin-bottom: 15px;
+ padding: 6px 12px;
 
-  transform:
-    translateY(-50%)
-    rotate(90deg);
 
-  transform-origin:right center;
+ border: 1px solid #19d3c5;
+ color: #19d3c5;
 
-  font-size:9px;
-  letter-spacing:.32em;
-  text-transform:uppercase;
 
-  color:rgba(244,240,231,.4);
+ font-size: 10px;
+ font-weight: 900;
+ letter-spacing: 3px;
 }
 
-@media(max-width:700px){
 
-  .scene-status{
-    left:20px;
-    bottom:22px;
-  }
+/* ================= SECTIONS ================= */
 
-  .scene-progress{
-    right:20px;
-    bottom:22px;
-    width:80px;
-  }
 
-  .scroll-prompt{
-    display:none;
-  }
+section {
+ padding: 100px 7%;
 }
 
-/* =========================
-   CONTENT
-========================= */
 
-.site-content{
-  position:relative;
-  z-index:30;
-
-  background:#08090b;
+.section-inner {
+ max-width: 1250px;
+ margin: auto;
 }
 
-.section{
-  padding:130px 6vw;
-}
 
-.section-label{
-  margin-bottom:18px;
+.section-title {
+ font-size: clamp(38px,5vw,64px);
+ text-transform: uppercase;
+ line-height: .95;
+ margin-bottom: 20px;
+ letter-spacing: -2px;
+}
 
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.3em;
-  text-transform:uppercase;
 
-  color:#c9b57e;
+.section-title span {
+ color: #19d3c5;
 }
 
-.section-title{
-  font-size:clamp(46px,7vw,105px);
 
-  line-height:.86;
+/* ================= INTRO ================= */
 
-  letter-spacing:-.065em;
 
-  font-weight:950;
-
-  text-transform:uppercase;
+.intro {
+ background:
+   linear-gradient(135deg,#071318,#081116 60%,#0b1018);
 }
-
-.section-copy{
-  max-width:600px;
 
-  margin-top:28px;
 
-  font-size:14px;
-  line-height:1.75;
-
-  color:rgba(244,240,231,.55);
+.intro-grid {
+ display: grid;
+ grid-template-columns: 1.2fr .8fr;
+ gap: 65px;
+ align-items: center;
 }
 
-/* =========================
-   EXPERIENCE
-========================= */
 
-.experience{
-  min-height:90vh;
+.intro p {
+ color: #c3cecf;
+ font-size: 18px;
+ margin-top: 20px;
+}
 
-  display:grid;
 
-  grid-template-columns:
-    minmax(0,1.15fr)
-    minmax(300px,.85fr);
+.experience-box {
+ border: 1px solid rgba(25,211,197,.25);
+ border-left: 3px solid #19d3c5;
+ padding: 32px;
+ background: linear-gradient(
+   135deg,
+   rgba(25,211,197,.08),
+   rgba(255,40,150,.035)
+ );
+}
 
-  align-items:center;
 
-  gap:100px;
+.experience-box strong {
+ display: block;
+ font-size: 23px;
+ margin-bottom: 10px;
+ text-transform: uppercase;
 }
 
-.experience-headline{
-  font-size:clamp(50px,7vw,105px);
 
-  line-height:.86;
+.experience-box p {
+ font-size: 15px;
+ margin: 0;
+}
 
-  letter-spacing:-.065em;
 
-  text-transform:uppercase;
+.service-area {
+ margin-top: 45px;
+ padding: 25px;
+ background: rgba(25,211,197,.045);
+ border: 1px solid rgba(25,211,197,.18);
 }
 
-.experience-headline span{
-  color:#c9b57e;
-}
 
-.experience-list{
-  border-top:
-    1px solid
-    rgba(244,240,231,.12);
+.service-area strong {
+ color: #19d3c5;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ font-size: 12px;
 }
 
-.experience-item{
-  display:grid;
 
-  grid-template-columns:40px 1fr;
+.service-area p {
+ margin-top: 7px;
+ font-size: 15px;
+}
 
-  gap:18px;
 
-  padding:23px 0;
+/* ================= SERVICES ================= */
 
-  border-bottom:
-    1px solid
-    rgba(244,240,231,.1);
-}
 
-.experience-number{
-  font-size:9px;
-  color:#c9b57e;
+.services {
+ background: #05080d;
 }
 
-.experience-item h3{
-  margin-bottom:7px;
 
-  font-size:12px;
-  letter-spacing:.13em;
-  text-transform:uppercase;
+.section-heading {
+ text-align: center;
+ max-width: 780px;
+ margin: 0 auto 55px;
 }
 
-.experience-item p{
-  font-size:12px;
-  line-height:1.6;
 
-  color:rgba(244,240,231,.43);
+.section-heading p {
+ color: #aebabb;
 }
 
-@media(max-width:850px){
 
-  .experience{
-    grid-template-columns:1fr;
-    gap:60px;
-  }
+.cards {
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 24px;
 }
 
-/* =========================
-   PACKAGES
-========================= */
 
-.packages-section{
-  background:#11100d;
+.card {
+ background: linear-gradient(145deg,#0c171d,#071015);
+ border: 1px solid rgba(255,255,255,.08);
+ overflow: hidden;
+ transition: .3s;
 }
-
-.packages-intro{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
 
-  gap:50px;
 
-  margin-bottom:70px;
+.card:hover {
+ transform: translateY(-8px);
+ border-color: rgba(25,211,197,.55);
+ box-shadow: 0 20px 50px rgba(0,0,0,.35);
 }
 
-.packages-intro-copy{
-  max-width:460px;
-}
-
-.packages{
-  display:grid;
 
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:1px;
-
-  background:
-    rgba(244,240,231,.14);
+.card-image {
+ height: 220px;
+ background-size: cover;
+ background-position: center;
 }
 
-.package{
-  position:relative;
 
-  min-height:560px;
+.card-content {
+ padding: 29px;
+}
 
-  padding:38px 32px;
 
-  background:#090a0c;
+.card h3 {
+ font-size: 26px;
+ text-transform: uppercase;
+}
 
-  display:flex;
-  flex-direction:column;
 
-  transition:.4s ease;
+.price {
+ color: #19d3c5;
+ font-size: 31px;
+ font-weight: 900;
+ margin-bottom: 15px;
 }
 
-.package:hover{
-  background:#111317;
-}
 
-.package.featured{
-  background:#14120d;
+.card p {
+ color: #b7c2c3;
+ font-size: 14px;
+ margin-bottom: 18px;
 }
 
-.package-feature{
-  position:absolute;
 
-  top:0;
-  left:0;
-
-  padding:8px 12px;
+.card ul {
+ list-style: none;
+}
 
-  background:#c9b57e;
-  color:#08090b;
 
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase;
+.card li {
+ color: #e0e6e6;
+ font-size: 14px;
+ padding: 7px 0;
+ border-bottom: 1px solid rgba(255,255,255,.045);
 }
 
-.package-index{
-  color:#c9b57e;
 
-  font-size:9px;
-  letter-spacing:.25em;
-  text-transform:uppercase;
+.card li::before {
+ content: "✓";
+ color: #19d3c5;
+ font-weight: bold;
+ margin-right: 9px;
 }
+
 
-.package-bottom{
-  margin-top:auto;
+.featured {
+ border-color: rgba(25,211,197,.7);
+ box-shadow: 0 0 45px rgba(25,211,197,.08);
 }
 
-.package h3{
-  margin-bottom:8px;
 
-  font-size:30px;
+.badge {
+ display: inline-block;
+ color: #071014;
+ background: #19d3c5;
+ padding: 5px 10px;
+ font-size: 10px;
+ font-weight: 900;
+ letter-spacing: 1px;
+ margin-bottom: 12px;
+}
 
-  letter-spacing:-.04em;
 
-  text-transform:uppercase;
+.disclaimer {
+ margin: 32px auto 0;
+ max-width: 900px;
+ text-align: center;
+ color: #7f8d8f;
+ font-size: 12px;
 }
 
-.package-price{
-  margin-bottom:28px;
 
-  font-size:52px;
+/* ================= EXPERIENCE ================= */
 
-  line-height:1;
 
-  letter-spacing:-.06em;
-
-  font-weight:950;
+.why {
+ background:
+   linear-gradient(
+     rgba(3,9,14,.84),
+     rgba(3,9,14,.96)
+   ),
+   url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2200&q=85")
+   center/cover no-repeat;
 }
-
-.package-price small{
-  font-size:9px;
-  font-weight:500;
 
-  letter-spacing:.14em;
 
-  color:rgba(244,240,231,.38);
+.why-grid {
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 24px;
+ margin-top: 50px;
 }
 
-.package-list{
-  list-style:none;
 
-  border-top:
-    1px solid
-    rgba(244,240,231,.1);
+.why-box {
+ padding: 32px;
+ background: rgba(5,13,18,.82);
+ border: 1px solid rgba(255,255,255,.08);
+ backdrop-filter: blur(8px);
 }
 
-.package-list li{
-  padding:10px 0;
 
-  border-bottom:
-    1px solid
-    rgba(244,240,231,.065);
+.why-box h3 {
+ color: #19d3c5;
+ text-transform: uppercase;
+ margin-bottom: 10px;
+}
 
-  font-size:11px;
 
-  color:rgba(244,240,231,.62);
+.why-box p {
+ color: #c0cbcc;
+ font-size: 14px;
 }
 
-.package-list li::before{
-  content:"—";
 
-  color:#c9b57e;
+/* ================= CONTACT ================= */
 
-  margin-right:8px;
-}
 
-.package .btn{
-  margin-top:26px;
-  width:max-content;
+.contact {
+ background:
+   radial-gradient(
+     circle at 50% 0%,
+     rgba(25,211,197,.08),
+     transparent 35%
+   ),
+   #071015;
 }
 
-.package-note{
-  margin-top:22px;
 
-  font-size:10px;
-  line-height:1.7;
+.contact-box {
+ max-width: 1050px;
+ margin: auto;
+ text-align: center;
+ padding: 70px 30px;
 
-  color:rgba(244,240,231,.34);
-}
 
-@media(max-width:950px){
+ border: 1px solid rgba(25,211,197,.3);
 
-  .packages-intro{
-    display:block;
-  }
 
-  .packages-intro-copy{
-    margin-top:25px;
-  }
+ background:
+   linear-gradient(
+     135deg,
+     rgba(25,211,197,.045),
+     rgba(255,40,150,.035)
+   );
 
-  .packages{
-    grid-template-columns:1fr;
-  }
 
-  .package{
-    min-height:auto;
-  }
+ box-shadow: 0 30px 90px rgba(0,0,0,.3);
 }
 
-/* =========================
-   SERVICE AREA
-========================= */
 
-.area-section{
-  background:#08090b;
+.contact-box h2 {
+ font-size: clamp(40px,6vw,75px);
+ text-transform: uppercase;
+ line-height: .95;
+ margin-bottom: 22px;
+ letter-spacing: -3px;
 }
 
-.area-grid{
-  display:grid;
 
-  grid-template-columns:
-    1.15fr .85fr;
-
-  gap:100px;
-
-  align-items:end;
+.contact-box h2 span {
+ color: #19d3c5;
 }
 
-.area-list{
-  display:flex;
-  flex-wrap:wrap;
 
-  gap:7px;
-
-  margin-top:35px;
+.contact-box > p {
+ color: #bac5c6;
+ max-width: 680px;
+ margin: 0 auto 38px;
 }
-
-.area-pill{
-  padding:13px 16px;
-
-  border:
-    1px solid
-    rgba(244,240,231,.13);
 
-  font-size:9px;
-  letter-spacing:.15em;
-  text-transform:uppercase;
 
-  color:rgba(244,240,231,.6);
+.contact-info {
+ display: flex;
+ justify-content: center;
+ gap: 65px;
+ flex-wrap: wrap;
+ margin-bottom: 38px;
 }
 
-.area-side{
-  max-width:430px;
 
-  font-size:14px;
-  line-height:1.8;
-
-  color:rgba(244,240,231,.5);
-}
-
-.area-side strong{
-  color:#f4f0e7;
+.contact-item small {
+ display: block;
+ color: #19d3c5;
+ font-size: 10px;
+ font-weight: bold;
+ letter-spacing: 3px;
+ margin-bottom: 5px;
 }
 
-@media(max-width:850px){
 
-  .area-grid{
-    grid-template-columns:1fr;
-    gap:55px;
-  }
+.contact-item a {
+ font-size: 21px;
+ font-weight: bold;
 }
 
-/* =========================
-   CTA
-========================= */
 
-.cta-section{
-  position:relative;
+.contact-item a:hover {
+ color: #19d3c5;
+}
 
-  min-height:80vh;
 
-  display:flex;
+.contact-area {
+ margin-top: 32px;
+ color: #879597;
+ font-size: 13px;
+}
 
-  align-items:center;
-  justify-content:center;
 
-  text-align:center;
+/* ================= FOOTER ================= */
 
-  overflow:hidden;
 
-  background:
-    radial-gradient(
-      circle at center,
-      #17150f 0%,
-      #08090b 58%
-    );
+footer {
+ padding: 38px 7%;
+ text-align: center;
+ background: #030609;
+ color: #778587;
+ font-size: 13px;
+ border-top: 1px solid rgba(25,211,197,.08);
 }
 
-.cta-watermark{
-  position:absolute;
 
-  left:50%;
-  top:50%;
-
-  transform:
-    translate(-50%,-50%);
-
-  font-size:22vw;
+footer strong {
+ color: #19d3c5;
+}
 
-  line-height:1;
 
-  font-weight:950;
+/* ================= MOBILE ================= */
 
-  letter-spacing:-.09em;
 
-  color:
-    rgba(244,240,231,.025);
+@media (max-width:900px) {
 
-  white-space:nowrap;
 
-  pointer-events:none;
-}
+ .cards,
+ .why-grid {
+   grid-template-columns: 1fr;
+ }
 
-.cta-inner{
-  position:relative;
-  z-index:2;
-}
 
-.cta-title{
-  font-size:
-    clamp(60px,9vw,145px);
+ .intro-grid {
+   grid-template-columns: 1fr;
+ }
 
-  line-height:.82;
 
-  letter-spacing:-.075em;
+ .nav-links {
+   gap: 12px;
+   font-size: 10px;
+ }
 
-  font-weight:950;
 
-  text-transform:uppercase;
+ .cinematic {
+   height: 330px;
+ }
 }
 
-.cta-title span{
-  color:#c9b57e;
-}
 
-.cta-copy{
-  max-width:510px;
+@media (max-width:600px) {
 
-  margin:30px auto;
 
-  font-size:14px;
-  line-height:1.7;
+ header {
+   padding: 14px 5%;
+ }
 
-  color:rgba(244,240,231,.5);
-}
 
-.cta-buttons{
-  display:flex;
+ .logo {
+   font-size: 16px;
+ }
 
-  justify-content:center;
 
-  gap:10px;
-}
+ .nav-links {
+   gap: 8px;
+ }
 
-@media(max-width:600px){
 
-  .cta-buttons{
-    flex-direction:column;
-    align-items:center;
-  }
-}
+ .hero {
+   padding-left: 6%;
+   padding-right: 6%;
+ }
 
-/* =========================
-   FOOTER
-========================= */
 
-.footer{
-  display:flex;
+ .hero h1 {
+   letter-spacing: -3px;
+ }
 
-  justify-content:space-between;
 
-  gap:20px;
+ .hero p {
+   font-size: 16px;
+ }
 
-  padding:28px 6vw;
 
-  border-top:
-    1px solid
-    rgba(244,240,231,.1);
+ section {
+   padding: 72px 6%;
+ }
 
-  background:#08090b;
 
-  color:rgba(244,240,231,.35);
+ .contact-info {
+   gap: 28px;
+ }
 
-  font-size:9px;
 
-  letter-spacing:.14em;
+ .contact-item a {
+   font-size: 17px;
+ }
 
-  text-transform:uppercase;
-}
+
+ .cinematic {
+   height: 300px;
+ }
 
-@media(max-width:600px){
 
-  .footer{
-    flex-direction:column;
-  }
+ .cinematic-title {
+   font-size: 38px;
+ }
 }
 </style>
 </head>
 
+
 <body>
 
-<!-- =======================================================
-     NAV
-======================================================= -->
 
-<nav class="nav">
+<!-- HEADER -->
 
-  <a href="#home" class="brand">
-    Beachboyz <span>Detailing</span>
-  </a>
 
-  <div class="nav-links">
+<header>
+<nav>
 
-    <a href="#experience">
-      Experience
-    </a>
 
-    <a href="#packages">
-      Packages
-    </a>
+<div class="logo">
+BEACHBOYZ <span>DETAILING</span>
+</div>
 
-    <a href="#area">
-      Service Area
-    </a>
 
-    <a href="#book" class="nav-book">
-      Book
-    </a>
+<div class="nav-links">
+<a href="#services">Services</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
 
-  </div>
 
 </nav>
+</header>
 
 
-<!-- =======================================================
-     CINEMATIC HERO
-======================================================= -->
-
-<section class="hero" id="home">
-
-  <div class="hero-stage">
-
-    <canvas id="scene"></canvas>
-
-    <div class="hero-vignette"></div>
-
-    <div class="hero-scan"></div>
-
-    <div class="hero-noise"></div>
 
 
-    <div class="hero-copy">
-
-      <div class="hero-kicker">
-        Miami Mobile Auto Detailing
-      </div>
-
-      <h1 class="hero-title">
-
-        <span>
-          Made
-        </span>
-
-        <span class="ghost">
-          To Shine.
-        </span>
-
-      </h1>
-
-      <p class="hero-description">
-        Premium mobile detailing for exotics, classics,
-        daily drivers, trucks and everything in between.
-        We don't provide the service.
-        We provide the experience.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          href="#packages"
-          class="btn btn-light">
-          Explore Packages
-        </a>
-
-        <a
-          href="#book"
-          class="btn btn-dark">
-          Book Beachboyz
-        </a>
-
-      </div>
-
-    </div>
+<!-- HERO -->
 
 
-    <div class="scene-status">
-
-      <strong id="sceneNumber">
-        01
-      </strong>
-
-      <span class="scene-line"></span>
-
-      <span id="sceneName">
-        Arrival
-      </span>
-
-    </div>
+<section class="hero">
 
 
-    <div class="scene-progress">
-
-      <i id="progressBar"></i>
-
-    </div>
+<div class="hero-content">
 
 
-    <div class="scroll-prompt">
-      Scroll to drive
-    </div>
+<div class="eyebrow">
+Miami • South Florida • Mobile Detailing
+</div>
 
-  </div>
+
+<h1>
+The Miami<br>
+<span>Detailing</span><br>
+Experience
+</h1>
+
+
+<h2>
+We Don't Just Detail. We Create The Experience.
+</h2>
+
+
+<p>
+Premium mobile auto detailing for the vehicles you take pride in.
+From daily drivers to exotics and classics, Beachboyz Detailing
+brings meticulous care, professional detailing methods, and a
+showroom-inspired finish directly to you.
+</p>
+
+
+<div class="buttons">
+
+
+<a class="btn btn-primary" href="#contact">
+Book Your Detail
+</a>
+
+
+<a class="btn btn-outline" href="tel:7864744880">
+Call / Text 786-474-4880
+</a>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
-<!-- =======================================================
-     EXPERIENCE
-======================================================= -->
-
-<main class="site-content">
-
-<section
-  class="section experience"
-  id="experience">
-
-  <div>
-
-    <div class="section-label">
-      The Beachboyz Standard
-    </div>
-
-    <h2 class="experience-headline">
-
-      Not just<br>
-
-      <span>clean.</span><br>
-
-      Dialed in.
-
-    </h2>
-
-    <p class="section-copy">
-      Every vehicle gets treated like it deserves to be
-      noticed. From the first wash to the final inspection,
-      we focus on the details most people skip.
-    </p>
-
-  </div>
+<!-- MIAMI FERRARI SHOWCASE -->
+<section class="ferrari-showcase">
+ <div class="ferrari-content">
+   <span class="ferrari-kicker">THE MIAMI EXPERIENCE</span>
+   <h2>BUILT FOR CARS<br><span>THAT DESERVE MORE.</span></h2>
+   <p>
+     From everyday drivers to exotic icons, we treat every vehicle
+     like it belongs under the lights of Miami.
+   </p>
+ </div>
 
 
-  <div class="experience-list">
-
-    <div class="experience-item">
-
-      <div class="experience-number">
-        01
-      </div>
-
-      <div>
-
-        <h3>
-          Two-Bucket Method
-        </h3>
-
-        <p>
-          A controlled contact wash designed to
-          keep the finish looking its best.
-        </p>
-
-      </div>
-
-    </div>
+ <div class="ferrari-stage">
+   <div class="ferrari-glow"></div>
 
 
-    <div class="experience-item">
-
-      <div class="experience-number">
-        02
-      </div>
-
-      <div>
-
-        <h3>
-          Fresh Microfibers
-        </h3>
-
-        <p>
-          Dedicated clean microfiber towels
-          throughout the detail.
-        </p>
-
-      </div>
-
-    </div>
+   <img
+     class="ferrari-car"
+     src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1600&q=85"
+     alt="Ferrari sports car"
+   />
 
 
-    <div class="experience-item">
-
-      <div class="experience-number">
-        03
-      </div>
-
-      <div>
-
-        <h3>
-          Every Detail
-        </h3>
-
-        <p>
-          Wheels, glass, jambs, trim, leather,
-          carpet and the areas people forget.
-        </p>
-
-      </div>
-
-    </div>
+   <div class="ferrari-badge">
+     <strong></strong>
+     <small>MIAMI</small>
+   </div>
+ </div>
+</section>
 
 
-    <div class="experience-item">
+<style>
+.ferrari-showcase {
+ position: relative;
+ min-height: 520px;
+ overflow: hidden;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 40px;
+ padding: 80px 7%;
+ background:
+   radial-gradient(circle at 75% 50%, rgba(255, 90, 60, .18), transparent 35%),
+   linear-gradient(135deg, #070707, #111 55%, #050505);
+ color: white;
+}
 
-      <div class="experience-number">
-        04
-      </div>
 
-      <div>
+.ferrari-content {
+ position: relative;
+ z-index: 3;
+ max-width: 470px;
+}
 
-        <h3>
-          Final Inspection
-        </h3>
 
-        <p>
-          We don't leave until the vehicle
-          gets the Beachboyz look.
-        </p>
+.ferrari-kicker {
+ font-size: 12px;
+ letter-spacing: 4px;
+ font-weight: 700;
+ opacity: .7;
+}
 
-      </div>
 
-    </div>
+.ferrari-content h2 {
+ margin: 15px 0;
+ font-size: clamp(38px, 5vw, 68px);
+ line-height: .95;
+ letter-spacing: -2px;
+}
 
-  </div>
+
+.ferrari-content h2 span {
+ opacity: .65;
+}
+
+
+.ferrari-content p {
+ max-width: 430px;
+ line-height: 1.7;
+ color: #ccc;
+}
+
+
+.ferrari-stage {
+ position: relative;
+ width: min(620px, 55vw);
+ height: 360px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+.ferrari-glow {
+ position: absolute;
+ width: 420px;
+ height: 180px;
+ border-radius: 50%;
+ background: rgba(255, 80, 40, .22);
+ filter: blur(70px);
+}
+
+
+.ferrari-car {
+ position: relative;
+ z-index: 2;
+ width: 100%;
+ max-width: 620px;
+ border-radius: 18px;
+ object-fit: cover;
+ box-shadow: 0 25px 70px rgba(0,0,0,.65);
+ animation: ferrariReveal 3s ease-in-out infinite alternate;
+}
+
+
+.ferrari-badge {
+ position: absolute;
+ right: 15px;
+ bottom: 10px;
+ z-index: 4;
+ width: 78px;
+ height: 78px;
+ border: 1px solid rgba(255,255,255,.35);
+ border-radius: 50%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background: rgba(0,0,0,.55);
+ backdrop-filter: blur(8px);
+}
+
+
+.ferrari-badge strong {
+ font-size: 24px;
+}
+
+
+.ferrari-badge small {
+ font-size: 8px;
+ letter-spacing: 2px;
+ opacity: .7;
+}
+
+
+@keyframes ferrariReveal {
+ from {
+   transform: scale(1) translateX(0);
+ }
+ to {
+   transform: scale(1.035) translateX(-8px);
+ }
+}
+
+
+@media (max-width: 800px) {
+ .ferrari-showcase {
+   min-height: auto;
+   flex-direction: column;
+   padding: 65px 20px;
+   text-align: center;
+ }
+
+
+ .ferrari-content {
+   max-width: 100%;
+ }
+
+
+ .ferrari-content p {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+
+ .ferrari-stage {
+   width: 100%;
+   height: 270px;
+ }
+
+
+ .ferrari-car {
+   width: 100%;
+ }
+
+
+ .ferrari-badge {
+   right: 5px;
+   bottom: 0;
+ }
+}
+</style>
+
+
+<div class="cinematic-subtitle">
+Clean. Protected. Ready For The Night.
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
-<!-- =======================================================
-     PACKAGES
-======================================================= -->
-
-<section
-  class="section packages-section"
-  id="packages">
-
-  <div class="packages-intro">
-
-    <div>
-
-      <div class="section-label">
-        The Menu
-      </div>
-
-      <h2 class="section-title">
-        Choose<br>
-        Your Experience.
-      </h2>
-
-    </div>
 
 
-    <div class="packages-intro-copy">
-
-      <p class="section-copy">
-        Starting prices for our core mobile detailing
-        experiences. Final pricing may vary depending
-        on vehicle size and condition.
-      </p>
-
-    </div>
-
-  </div>
+<!-- INTRO -->
 
 
-  <div class="packages">
-
-    <!-- BEACH WASH -->
-
-    <article class="package">
-
-      <div class="package-index">
-        01 / Essential
-      </div>
-
-      <div class="package-bottom">
-
-        <h3>
-          Beach Wash
-        </h3>
-
-        <div class="package-price">
-          $150
-          <small>
-            starting
-          </small>
-        </div>
-
-        <ul class="package-list">
-
-          <li>Exterior hand wash</li>
-          <li>Two-bucket contact wash</li>
-          <li>Wheels inside & out</li>
-          <li>Paint-safe drying</li>
-          <li>Windows</li>
-          <li>Door jambs</li>
-          <li>Exterior trim</li>
-          <li>Final inspection</li>
-
-        </ul>
-
-        <a
-          href="#book"
-          class="btn btn-dark">
-          Choose Beach Wash
-        </a>
-
-      </div>
-
-    </article>
+<section class="intro">
 
 
-    <!-- SUNSET DETAIL -->
-
-    <article class="package featured">
-
-      <div class="package-feature">
-        Most Popular
-      </div>
-
-      <div class="package-index">
-        02 / Enhanced
-      </div>
-
-      <div class="package-bottom">
-
-        <h3>
-          Sunset Detail
-        </h3>
-
-        <div class="package-price">
-          $200
-          <small>
-            starting
-          </small>
-        </div>
-
-        <ul class="package-list">
-
-          <li>Everything in Beach Wash</li>
-          <li>Clay decontamination</li>
-          <li>Paint enhancement</li>
-          <li>Premium sealant</li>
-          <li>Interior vacuum</li>
-          <li>Interior surface cleaning</li>
-          <li>Glass inside & out</li>
-          <li>Final finish inspection</li>
-
-        </ul>
-
-        <a
-          href="#book"
-          class="btn btn-light">
-          Choose Sunset
-        </a>
-
-      </div>
-
-    </article>
+<div class="section-inner">
 
 
-    <!-- MIAMI EXPERIENCE -->
-
-    <article class="package">
-
-      <div class="package-index">
-        03 / Signature
-      </div>
-
-      <div class="package-bottom">
-
-        <h3>
-          Miami Experience
-        </h3>
-
-        <div class="package-price">
-          $300
-          <small>
-            starting
-          </small>
-        </div>
-
-        <ul class="package-list">
-
-          <li>Complete exterior detail</li>
-          <li>Complete interior detail</li>
-          <li>Clay decontamination</li>
-          <li>Premium paint protection</li>
-          <li>Engine bay detail</li>
-          <li>Seat shampoo</li>
-          <li>Carpet shampoo</li>
-          <li>Dog & sand removal</li>
-          <li>Windshield protection</li>
-          <li>Exotic wheel protection</li>
-          <li>Showroom inspection</li>
-
-        </ul>
-
-        <a
-          href="#book"
-          class="btn btn-dark">
-          Choose Miami Experience
-        </a>
-
-      </div>
-
-    </article>
-
-  </div>
+<div class="intro-grid">
 
 
-  <p class="package-note">
-    Sand, excessive pet hair, heavily soiled vehicles
-    and unusual conditions may require an additional fee
-    where applicable.
-  </p>
+<div>
+
+
+<div class="eyebrow">
+The Beachboyz Standard
+</div>
+
+
+<h2 class="section-title">
+Every Detail<br>
+<span>Matters.</span>
+</h2>
+
+
+<p>
+Your vehicle deserves more than a quick wash. We take our time,
+use professional detailing methods, and treat every surface
+with the attention it deserves.
+</p>
+
+
+<p>
+Our goal is simple: leave your vehicle looking, feeling, and
+smelling its best while giving you an experience worth coming back for.
+</p>
+
+
+</div>
+
+
+
+
+<div class="experience-box">
+
+
+<strong>
+Professional. Meticulous. Personal.
+</strong>
+
+
+<p>
+We believe quality detailing is about the little things —
+the areas most people overlook, the finish you notice when
+you walk back to your vehicle, and the pride you feel when it's done.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="service-area">
+
+
+<strong>
+Proudly Serving South Florida
+</strong>
+
+
+<p>
+Sunny Isles Beach • North Miami • Bal Harbour • Golden Beach
+• Surrounding areas within approximately 15–20 miles
+</p>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
-<!-- =======================================================
-     SERVICE AREA
-======================================================= -->
-
-<section
-  class="section area-section"
-  id="area">
-
-  <div class="area-grid">
-
-    <div>
-
-      <div class="section-label">
-        Where We Roll
-      </div>
-
-      <h2 class="section-title">
-        Miami<br>
-        Comes To You.
-      </h2>
-
-      <div class="area-list">
-
-        <div class="area-pill">
-          Sunny Isles Beach
-        </div>
-
-        <div class="area-pill">
-          North Miami
-        </div>
-
-        <div class="area-pill">
-          Bal Harbour
-        </div>
-
-        <div class="area-pill">
-          Golden Beach
-        </div>
-
-        <div class="area-pill">
-          Aventura
-        </div>
-
-        <div class="area-pill">
-          Surrounding South Florida
-        </div>
-
-      </div>
-
-    </div>
 
 
-    <div class="area-side">
+<!-- SERVICES -->
 
-      <p>
-        Beachboyz brings the detail directly to
-        your home, condo, office or wherever
-        your vehicle is parked.
-      </p>
 
-      <br>
+<section class="services" id="services">
 
-      <p>
-        Serving our core area within roughly a
-        <strong>15–20 mile radius</strong>, with the
-        same attention whether it's an exotic,
-        classic, SUV, truck or daily driver.
-      </p>
 
-    </div>
+<div class="section-inner">
 
-  </div>
+
+<div class="section-heading">
+
+
+<div class="eyebrow">
+Choose Your Experience
+</div>
+
+
+<h2 class="section-title">
+Our <span>Services</span>
+</h2>
+
+
+<p>
+Every package is designed to give your vehicle the attention
+it deserves. Additional services are available when your
+vehicle needs a little more.
+</p>
+
+
+</div>
+
+
+
+
+<div class="cards">
+
+
+
+
+<!-- BEACH WASH -->
+
+
+<div class="card">
+
+
+<div class="card-image"
+style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85');">
+</div>
+
+
+<div class="card-content">
+
+
+<h3>Beach Wash</h3>
+
+
+<div class="price">$150</div>
+
+
+<p>
+A complete inside-and-out clean designed to refresh your
+vehicle and bring back that clean Beachboyz finish.
+</p>
+
+
+<ul>
+<li>Two-bucket contact wash</li>
+<li>Professional exterior wash</li>
+<li>Hand dried with dedicated drying towels</li>
+<li>Rims cleaned inside and out</li>
+<li>Tires cleaned</li>
+<li>Exterior windows cleaned</li>
+<li>Interior windows cleaned</li>
+<li>Full interior vacuum</li>
+<li>Seats and interior surfaces cleaned</li>
+<li>Dashboard and console cleaned</li>
+<li>Door panels cleaned</li>
+<li>Door jambs cleaned</li>
+<li>Trunk cleaned</li>
+<li>Final exterior inspection</li>
+</ul>
+
+
+</div>
+</div>
+
+
+
+
+<!-- SUNSET -->
+
+
+<div class="card">
+
+
+<div class="card-image"
+style="background-image:url('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=85');">
+</div>
+
+
+<div class="card-content">
+
+
+<h3>Sunset Detail</h3>
+
+
+<div class="price">$200</div>
+
+
+<p>
+Everything in the Beach Wash with additional paint and
+interior care for a deeper, more refined finish.
+</p>
+
+
+<ul>
+<li>Everything in Beach Wash</li>
+<li>Clay treatment</li>
+<li>Paint decontamination</li>
+<li>Enhanced exterior cleaning</li>
+<li>Premium paint sealant</li>
+<li>Exterior glass polished</li>
+<li>Interior glass cleaned</li>
+<li>Leather cleaned and reconditioned</li>
+<li>Interior surfaces deep cleaned</li>
+<li>Door jambs and trunk detailed</li>
+<li>Brush cleaning of hard-to-reach areas</li>
+<li>Final inspection</li>
+</ul>
+
+
+<p style="margin-top:18px;">
+<strong style="color:#19d3c5;">
+Optional Add-Ons:
+</strong>
+Sand Removal • Pet Hair Removal
+</p>
+
+
+</div>
+</div>
+
+
+
+
+<!-- MIAMI EXPERIENCE -->
+
+
+<div class="card featured">
+
+
+<div class="card-image"
+style="background-image:url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=85');">
+</div>
+
+
+<div class="card-content">
+
+
+<div class="badge">
+MOST COMPLETE
+</div>
+
+
+<h3>Miami Experience</h3>
+
+
+<div class="price">$300</div>
+
+
+<p>
+Our most complete detailing experience — built for
+customers who want their vehicle taken to the next level.
+</p>
+
+
+<ul>
+<li>Everything in Sunset Detail</li>
+<li>Complete interior deep cleaning</li>
+<li>Full carpet shampoo</li>
+<li>Dog & pet hair removal</li>
+<li>Sand removal</li>
+<li>Leather deep cleaning & conditioning</li>
+<li>Interior reconditioning</li>
+<li>Trunk and door jambs detailed</li>
+<li>Wheels cleaned inside and out</li>
+<li>Engine bay cleaning</li>
+<li>Premium paint protection</li>
+<li>3+ months of protection</li>
+<li>Windshield protection</li>
+<li>Exotic wheel protection</li>
+<li>Final showroom-style inspection</li>
+</ul>
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+<p class="disclaimer">
+Additional fees may apply for vehicles requiring excessive cleaning
+due to heavy dirt, severe stains, excessive pet hair, excessive sand,
+heavy odors, neglected interiors, or other conditions outside normal
+condition. Final pricing will be discussed before any additional
+work is performed.
+</p>
+
+
+</div>
+
 
 </section>
 
 
-<!-- =======================================================
-     CTA
-======================================================= -->
-
-<section
-  class="section cta-section"
-  id="book">
-
-  <div class="cta-watermark">
-    BEACHBOYZ
-  </div>
 
 
-  <div class="cta-inner">
-
-    <div class="section-label">
-      Ready When You Are
-    </div>
-
-    <h2 class="cta-title">
-
-      Let's Make<br>
-
-      It <span>Shine.</span>
-
-    </h2>
-
-    <p class="cta-copy">
-      Tell us what you're driving, what it needs
-      and where you're located. We'll get you set
-      up with the right Beachboyz experience.
-    </p>
+<!-- EXPERIENCE -->
 
 
-    <div class="cta-buttons">
+<section class="why" id="experience">
 
-      <a
-        href="tel:7864744880"
-        class="btn btn-light">
-        Call 786-474-4880
-      </a>
 
-      <a
-        href="mailto:info@beachboyzdetailing.com"
-        class="btn btn-dark">
-        Request A Detail
-      </a>
+<div class="section-inner">
 
-    </div>
 
-  </div>
+<div class="eyebrow">
+Why Beachboyz?
+</div>
+
+
+<h2 class="section-title">
+More Than A<br>
+<span>Detail.</span>
+</h2>
+
+
+
+
+<div class="why-grid">
+
+
+<div class="why-box">
+
+
+<h3>
+Attention To Detail
+</h3>
+
+
+<p>
+We focus on the areas that are easy to overlook and take
+pride in delivering a thorough, finished result.
+</p>
+
+
+</div>
+
+
+
+
+<div class="why-box">
+
+
+<h3>
+Every Vehicle Matters
+</h3>
+
+
+<p>
+Exotic, classic, luxury, truck, SUV, or daily driver —
+every vehicle receives the same level of care.
+</p>
+
+
+</div>
+
+
+
+
+<div class="why-box">
+
+
+<h3>
+The Experience
+</h3>
+
+
+<p>
+Professional service, honest communication, and a finished
+vehicle you're proud to drive.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
-<footer class="footer">
 
-  <span>
-    Beachboyz Detailing
-  </span>
 
-  <span>
-    Miami • Sunny Isles • North Miami • South Florida
-  </span>
+<!-- CONTACT -->
+
+
+<section class="contact" id="contact">
+
+
+<div class="section-inner">
+
+
+<div class="contact-box">
+
+
+<div class="eyebrow">
+Beachboyz Detailing
+</div>
+
+
+<h2>
+Ready For The<br>
+<span>Beachboyz Experience?</span>
+</h2>
+
+
+<p>
+Your vehicle deserves more than a quick wash.
+Schedule your detail and let us take care of the rest.
+</p>
+
+
+
+
+<div class="contact-info">
+
+
+<div class="contact-item">
+
+
+<small>
+CALL OR TEXT
+</small>
+
+
+<a href="tel:7864744880">
+786-474-4880
+</a>
+
+
+</div>
+
+
+
+
+<div class="contact-item">
+
+
+<small>
+EMAIL
+</small>
+
+
+<a href="mailto:info@beachboyzdetailing.com">
+info@beachboyzdetailing.com
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="buttons" style="justify-content:center;">
+
+
+<a class="btn btn-primary" href="tel:7864744880">
+Call / Text To Book
+</a>
+
+
+<a class="btn btn-outline"
+href="mailto:info@beachboyzdetailing.com?subject=Beachboyz%20Detailing%20Booking%20Request">
+Email Beachboyz
+</a>
+
+
+</div>
+
+
+
+
+<div class="contact-area">
+
+
+Serving Sunny Isles Beach, North Miami, Bal Harbour,
+Golden Beach and surrounding South Florida areas.
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<p>
+<strong>BEACHBOYZ DETAILING</strong>
+• Miami, Florida
+</p>
+
+
+<p style="margin-top:8px;">
+We don't Just provide the service, We provide the experience.
+</p>
+
 
 </footer>
 
-</main>
-
-
-<!-- =======================================================
-     THREE.JS
-======================================================= -->
-
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
-  }
-}
-</script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-
-
-<script type="module">
-
-import * as THREE from "three";
-
-import {
-  GLTFLoader
-} from "three/addons/loaders/GLTFLoader.js";
-
-
-/* =========================================================
-   INITIALIZE
-========================================================= */
-
-gsap.registerPlugin(ScrollTrigger);
-
-
-const canvas =
-  document.getElementById("scene");
-
-const hero =
-  document.querySelector(".hero");
-
-const heroCopy =
-  document.querySelector(".hero-copy");
-
-const progressBar =
-  document.getElementById("progressBar");
-
-const sceneNumber =
-  document.getElementById("sceneNumber");
-
-const sceneName =
-  document.getElementById("sceneName");
-
-
-/* =========================================================
-   RENDERER
-========================================================= */
-
-const renderer =
-  new THREE.WebGLRenderer({
-
-    canvas:canvas,
-
-    antialias:true,
-
-    alpha:false,
-
-    powerPreference:
-      "high-performance"
-
-  });
-
-
-renderer.setPixelRatio(
-  Math.min(
-    window.devicePixelRatio,
-    1.6
-  )
-);
-
-
-renderer.setSize(
-  window.innerWidth,
-  window.innerHeight
-);
-
-
-renderer.outputColorSpace =
-  THREE.SRGBColorSpace;
-
-
-renderer.toneMapping =
-  THREE.ACESFilmicToneMapping;
-
-
-renderer.toneMappingExposure =
-  1.1;
-
-
-renderer.shadowMap.enabled =
-  true;
-
-
-renderer.shadowMap.type =
-  THREE.PCFSoftShadowMap;
-
-
-/* =========================================================
-   SCENE
-========================================================= */
-
-const scene =
-  new THREE.Scene();
-
-
-scene.background =
-  new THREE.Color(
-    0x050608
-  );
-
-
-scene.fog =
-  new THREE.FogExp2(
-    0x050608,
-    .014
-  );
-
-
-/* =========================================================
-   CAMERA
-========================================================= */
-
-const camera =
-  new THREE.PerspectiveCamera(
-    43,
-    window.innerWidth /
-    window.innerHeight,
-    .1,
-    250
-  );
-
-
-camera.position.set(
-  0,
-  4,
-  30
-);
-
-
-/* =========================================================
-   WORLD
-========================================================= */
-
-const world =
-  new THREE.Group();
-
-const exterior =
-  new THREE.Group();
-
-const garage =
-  new THREE.Group();
-
-const carRig =
-  new THREE.Group();
-
-const lightingRig =
-  new THREE.Group();
-
-const atmosphere =
-  new THREE.Group();
-
-
-world.add(
-  exterior,
-  garage,
-  carRig,
-  lightingRig,
-  atmosphere
-);
-
-scene.add(world);
-
-
-/* =========================================================
-   MATERIALS
-========================================================= */
-
-function standardMaterial(
-  color,
-  roughness=.5,
-  metalness=0
-){
-
-  return new THREE.MeshStandardMaterial({
-
-    color:color,
-
-    roughness:roughness,
-
-    metalness:metalness
-
-  });
-
-}
-
-
-const asphalt =
-  standardMaterial(
-    0x060708,
-    .18,
-    .35
-  );
-
-
-const concrete =
-  standardMaterial(
-    0x17191b,
-    .8,
-    .05
-  );
-
-
-const darkMetal =
-  standardMaterial(
-    0x08090b,
-    .48,
-    .75
-  );
-
-
-const chrome =
-  standardMaterial(
-    0xbfc3c6,
-    .14,
-    1
-  );
-
-
-const gold =
-  standardMaterial(
-    0xc9b57e,
-    .26,
-    .82
-  );
-
-
-const glass =
-  new THREE.MeshPhysicalMaterial({
-
-    color:0x020406,
-
-    roughness:.035,
-
-    metalness:.1,
-
-    transmission:.06,
-
-    transparent:true,
-
-    opacity:.84
-
-  });
-
-
-/* =========================================================
-   BOX
-========================================================= */
-
-function box(
-  width,
-  height,
-  depth,
-  material,
-  x,
-  y,
-  z,
-  parent
-){
-
-  const mesh =
-    new THREE.Mesh(
-
-      new THREE.BoxGeometry(
-        width,
-        height,
-        depth
-      ),
-
-      material
-
-    );
-
-
-  mesh.position.set(
-    x,
-    y,
-    z
-  );
-
-
-  mesh.castShadow =
-    true;
-
-  mesh.receiveShadow =
-    true;
-
-
-  parent.add(mesh);
-
-
-  return mesh;
-
-}
-
-
-/* =========================================================
-   MIAMI STREET
-========================================================= */
-
-box(
-  90,
-  .3,
-  90,
-  asphalt,
-  0,
-  -.2,
-  18,
-  exterior
-);
-
-
-/* =========================================================
-   WET STREET REFLECTION
-========================================================= */
-
-const wetReflection =
-  new THREE.Mesh(
-
-    new THREE.PlaneGeometry(
-      34,
-      34
-    ),
-
-    new THREE.MeshBasicMaterial({
-
-      color:0x18333e,
-
-      transparent:true,
-
-      opacity:.16,
-
-      blending:
-        THREE.AdditiveBlending
-
-    })
-
-  );
-
-
-wetReflection.rotation.x =
-  -Math.PI/2;
-
-
-wetReflection.position.set(
-  0,
-  .01,
-  21
-);
-
-
-exterior.add(
-  wetReflection
-);
-
-
-/* =========================================================
-   MIAMI SKY GLOW
-========================================================= */
-
-const skyGlow =
-  new THREE.Mesh(
-
-    new THREE.SphereGeometry(
-      70,
-      32,
-      16
-    ),
-
-    new THREE.MeshBasicMaterial({
-
-      color:0x06131b,
-
-      side:
-        THREE.BackSide
-
-    })
-
-  );
-
-
-skyGlow.position.set(
-  0,
-  20,
-  15
-);
-
-
-exterior.add(
-  skyGlow
-);
-
-
-/* =========================================================
-   PALMS
-========================================================= */
-
-function palm(
-  x,
-  z,
-  scale=1
-){
-
-  const group =
-    new THREE.Group();
-
-
-  const trunk =
-    new THREE.Mesh(
-
-      new THREE.CylinderGeometry(
-        .11*scale,
-        .24*scale,
-        5.5*scale,
-        8
-      ),
-
-      darkMetal
-
-    );
-
-
-  trunk.position.y =
-    2.75*scale;
-
-
-  group.add(trunk);
-
-
-  for(
-    let i=0;
-    i<9;
-    i++
-  ){
-
-    const leaf =
-      new THREE.Mesh(
-
-        new THREE.BoxGeometry(
-          .12*scale,
-          .05*scale,
-          3.4*scale
-        ),
-
-        darkMetal
-
-      );
-
-
-    leaf.position.y =
-      5.35*scale;
-
-
-    leaf.rotation.y =
-      i *
-      Math.PI /
-      4.5;
-
-
-    leaf.rotation.x =
-      -.18;
-
-
-    group.add(leaf);
-
-  }
-
-
-  group.position.set(
-    x,
-    0,
-    z
-  );
-
-
-  exterior.add(
-    group
-  );
-
-}
-
-
-palm(-15,12,1.5);
-palm(15,13,1.25);
-palm(-20,26,1.7);
-palm(20,27,1.6);
-
-
-/* =========================================================
-   GARAGE STRUCTURE
-========================================================= */
-
-box(
-  30,
-  14,
-  .8,
-  darkMetal,
-  0,
-  6.8,
-  -13,
-  garage
-);
-
-
-box(
-  .8,
-  14,
-  38,
-  darkMetal,
-  -15,
-  6.8,
-  3,
-  garage
-);
-
-
-box(
-  .8,
-  14,
-  38,
-  darkMetal,
-  15,
-  6.8,
-  3,
-  garage
-);
-
-
-box(
-  30,
-  .8,
-  38,
-  darkMetal,
-  0,
-  14,
-  3,
-  garage
-);
-
-
-box(
-  30,
-  .25,
-  38,
-  concrete,
-  0,
-  -.15,
-  3,
-  garage
-);
-
-
-/* =========================================================
-   GARAGE FLOOR
-========================================================= */
-
-const garageFloor =
-  new THREE.Mesh(
-
-    new THREE.PlaneGeometry(
-      25,
-      39
-    ),
-
-    new THREE.MeshStandardMaterial({
-
-      color:0x070809,
-
-      roughness:.08,
-
-      metalness:.42
-
-    })
-
-  );
-
-
-garageFloor.rotation.x =
-  -Math.PI/2;
-
-
-garageFloor.position.set(
-  0,
-  .02,
-  2
-);
-
-
-garage.add(
-  garageFloor
-);
-
-
-/* =========================================================
-   GARAGE ENTRANCE FRAME
-========================================================= */
-
-box(
-  1.1,
-  13,
-  1,
-  chrome,
-  -14.5,
-  6.5,
-  9,
-  garage
-);
-
-
-box(
-  1.1,
-  13,
-  1,
-  chrome,
-  14.5,
-  6.5,
-  9,
-  garage
-);
-
-
-box(
-  30,
-  1.1,
-  1,
-  chrome,
-  0,
-  12.45,
-  9,
-  garage
-);
-
-
-/* =========================================================
-   CEILING LIGHTS
-========================================================= */
-
-const ceilingLights = [];
-
-
-for(
-  let i=0;
-  i<8;
-  i++
-){
-
-  const z =
-    9 -
-    i*3.15;
-
-
-  const fixture =
-    box(
-      8,
-      .08,
-      .14,
-      new THREE.MeshBasicMaterial({
-        color:0xffffff
-      }),
-      0,
-      13.45,
-      z,
-      garage
-    );
-
-
-  const light =
-    new THREE.PointLight(
-      0xfff5df,
-      0,
-      17
-    );
-
-
-  light.position.set(
-    0,
-    12.8,
-    z
-  );
-
-
-  light.castShadow =
-    true;
-
-
-  lightingRig.add(
-    light
-  );
-
-
-  ceilingLights.push({
-    fixture:fixture,
-    light:light
-  });
-
-}
-
-
-/* =========================================================
-   SIDE LIGHTS
-========================================================= */
-
-const sideLights = [];
-
-
-for(
-  let i=0;
-  i<6;
-  i++
-){
-
-  const z =
-    7 -
-    i*4;
-
-
-  [-14.5,14.5].forEach(
-    x => {
-
-      box(
-        .12,
-        2.1,
-        .1,
-        new THREE.MeshBasicMaterial({
-          color:0xffd6a0
-        }),
-        x,
-        7,
-        z,
-        garage
-      );
-
-
-      const light =
-        new THREE.PointLight(
-          0xffae5b,
-          0,
-          8
-        );
-
-
-      light.position.set(
-        x > 0
-          ? x-.65
-          : x+.65,
-        7,
-        z
-      );
-
-
-      lightingRig.add(
-        light
-      );
-
-
-      sideLights.push(
-        light
-      );
-
-    }
-  );
-
-}
-
-
-/* =========================================================
-   BACK WALL NEON
-========================================================= */
-
-box(
-  8,
-  2.4,
-  .08,
-  new THREE.MeshBasicMaterial({
-    color:0x6ee5ff
-  }),
-  0,
-  8.6,
-  -12.55,
-  garage
-);
-
-
-const neonLight =
-  new THREE.PointLight(
-    0x4bdcff,
-    0,
-    20
-  );
-
-
-neonLight.position.set(
-  0,
-  8,
-  -10
-);
-
-
-lightingRig.add(
-  neonLight
-);
-
-
-/* =========================================================
-   FALLBACK EXOTIC CAR
-========================================================= */
-
-function buildCar(){
-
-  const root =
-    new THREE.Group();
-
-
-  const paint =
-    new THREE.MeshPhysicalMaterial({
-
-      color:0x16191d,
-
-      metalness:.88,
-
-      roughness:.12,
-
-      clearcoat:1,
-
-      clearcoatRoughness:.035
-
-    });
-
-
-  const black =
-    new THREE.MeshPhysicalMaterial({
-
-      color:0x020304,
-
-      metalness:.75,
-
-      roughness:.17,
-
-      clearcoat:1
-
-    });
-
-
-  const body =
-    new THREE.Mesh(
-
-      new THREE.BoxGeometry(
-        4.7,
-        1.05,
-        9
-      ),
-
-      paint
-
-    );
-
-
-  body.position.y =
-    1.02;
-
-
-  body.scale.y =
-    .72;
-
-
-  root.add(body);
-
-
-  const nose =
-    new THREE.Mesh(
-
-      new THREE.BoxGeometry(
-        4.5,
-        .5,
-        2.2
-      ),
-
-      paint
-
-    );
-
-
-  nose.position.set(
-    0,
-    1.28,
-    -3.45
-  );
-
-
-  root.add(nose);
-
-
-  const rear =
-    new THREE.Mesh(
-
-      new THREE.BoxGeometry(
-        4.45,
-        .5,
-        1.9
-      ),
-
-      paint
-
-    );
-
-
-  rear.position.set(
-    0,
-    1.3,
-    3.35
-  );
-
-
-  root.add(rear);
-
-
-  const cabin =
-    new THREE.Mesh(
-
-      new THREE.BoxGeometry(
-        3.35,
-        1.25,
-        3.95
-      ),
-
-      glass
-
-    );
-
-
-  cabin.position.set(
-    0,
-    1.82,
-    .2
-  );
-
-
-  root.add(cabin);
-
-
-  const roof =
-    new THREE.Mesh(
-
-      new THREE.BoxGeometry(
-        3.12,
-        .13,
-        2.55
-      ),
-
-      black
-
-    );
-
-
-  roof.position.set(
-    0,
-    2.48,
-    .2
-  );
-
-
-  root.add(roof);
-
-
-  const wheelPositions = [
-
-    [-2.4,.72,-2.65],
-    [ 2.4,.72,-2.65],
-    [-2.4,.72, 2.65],
-    [ 2.4,.72, 2.65]
-
-  ];
-
-
-  wheelPositions.forEach(
-    p => {
-
-      const tire =
-        new THREE.Mesh(
-
-          new THREE.CylinderGeometry(
-            .77,
-            .77,
-            .53,
-            32
-          ),
-
-          new THREE.MeshStandardMaterial({
-
-            color:0x020202,
-
-            roughness:.72,
-
-            metalness:.05
-
-          })
-
-        );
-
-
-      tire.rotation.z =
-        Math.PI/2;
-
-
-      tire.position.set(
-        p[0],
-        p[1],
-        p[2]
-      );
-
-
-      root.add(tire);
-
-
-      const rim =
-        new THREE.Mesh(
-
-          new THREE.CylinderGeometry(
-            .45,
-            .45,
-            .55,
-            32
-          ),
-
-          chrome
-
-        );
-
-
-      rim.rotation.z =
-        Math.PI/2;
-
-
-      rim.position.set(
-        p[0],
-        p[1],
-        p[2]
-      );
-
-
-      root.add(rim);
-
-
-      for(
-        let s=0;
-        s<6;
-        s++
-      ){
-
-        const spoke =
-          new THREE.Mesh(
-
-            new THREE.BoxGeometry(
-              .05,
-              .08,
-              .8
-            ),
-
-            gold
-
-          );
-
-
-        spoke.position.set(
-          p[0],
-          p[1],
-          p[2]
-        );
-
-
-        spoke.rotation.z =
-          Math.PI/2;
-
-
-        spoke.rotation.y =
-          s*Math.PI/3;
-
-
-        root.add(spoke);
-
-      }
-
-    }
-  );
-
-
-  [-1.42,1.42].forEach(
-    x => {
-
-      const head =
-        new THREE.Mesh(
-
-          new THREE.BoxGeometry(
-            .75,
-            .17,
-            .06
-          ),
-
-          new THREE.MeshBasicMaterial({
-            color:0xffffff
-          })
-
-        );
-
-
-      head.position.set(
-        x,
-        1.42,
-        -4.58
-      );
-
-
-      root.add(head);
-
-
-      const tail =
-        new THREE.Mesh(
-
-          new THREE.BoxGeometry(
-            .8,
-            .16,
-            .06
-          ),
-
-          new THREE.MeshBasicMaterial({
-            color:0x850909
-          })
-
-        );
-
-
-      tail.position.set(
-        x,
-        1.4,
-        4.58
-      );
-
-
-      root.add(tail);
-
-    }
-  );
-
-
-  const grille =
-    new THREE.Mesh(
-
-      new THREE.BoxGeometry(
-        1.7,
-        .3,
-        .06
-      ),
-
-      new THREE.MeshBasicMaterial({
-        color:0x010101
-      })
-
-    );
-
-
-  grille.position.set(
-    0,
-    1.05,
-    -4.61
-  );
-
-
-  root.add(grille);
-
-
-  return root;
-
-}
-
-
-const fallbackCar =
-  buildCar();
-
-
-fallbackCar.scale.setScalar(
-  .95
-);
-
-
-carRig.add(
-  fallbackCar
-);
-
-
-let realCar =
-  null;
-
-
-/* =========================================================
-   OPTIONAL REAL CAR MODEL
-========================================================= */
-
-const loader =
-  new GLTFLoader();
-
-
-loader.load(
-
-  "./car.glb",
-
-  gltf => {
-
-    realCar =
-      gltf.scene;
-
-
-    realCar.traverse(
-      object => {
-
-        if(object.isMesh){
-
-          object.castShadow =
-            true;
-
-          object.receiveShadow =
-            true;
-
-        }
-
-      }
-    );
-
-
-    const bounds =
-      new THREE.Box3()
-        .setFromObject(
-          realCar
-        );
-
-
-    const center =
-      bounds.getCenter(
-        new THREE.Vector3()
-      );
-
-
-    realCar.position.sub(
-      center
-    );
-
-
-    const size =
-      bounds.getSize(
-        new THREE.Vector3()
-      );
-
-
-    const largest =
-      Math.max(
-        size.x,
-        size.y,
-        size.z
-      );
-
-
-    if(largest > 0){
-
-      const scale =
-        8.8 / largest;
-
-      realCar.scale.setScalar(
-        scale
-      );
-
-    }
-
-
-    realCar.position.y =
-      0;
-
-
-    carRig.add(
-      realCar
-    );
-
-
-    fallbackCar.visible =
-      false;
-
-  },
-
-  undefined,
-
-  () => {
-
-    /*
-      If car.glb isn't uploaded,
-      fallback stays active.
-    */
-
-  }
-
-);
-
-
-/* =========================================================
-   CAR POSITION
-========================================================= */
-
-carRig.position.set(
-  0,
-  0,
-  27
-);
-
-
-/* =========================================================
-   HEADLIGHTS
-========================================================= */
-
-const headlightLeft =
-  new THREE.SpotLight(
-    0xfff3d8,
-    18,
-    38,
-    Math.PI/9,
-    .55,
-    1
-  );
-
-
-const headlightRight =
-  headlightLeft.clone();
-
-
-headlightLeft.castShadow =
-  true;
-
-headlightRight.castShadow =
-  true;
-
-
-lightingRig.add(
-  headlightLeft,
-  headlightRight
-);
-
-
-/* =========================================================
-   CAMERA PATH
-========================================================= */
-
-const cameraPath =
-  new THREE.CatmullRomCurve3(
-
-    [
-
-      new THREE.Vector3(
-        0,
-        4.7,
-        31
-      ),
-
-      new THREE.Vector3(
-        -7,
-        4,
-        24
-      ),
-
-      new THREE.Vector3(
-        8,
-        3.3,
-        17
-      ),
-
-      new THREE.Vector3(
-        -6,
-        2.8,
-        9
-      ),
-
-      new THREE.Vector3(
-        5,
-        2.5,
-        2
-      ),
-
-      new THREE.Vector3(
-        -3,
-        2.2,
-        -5
-      ),
-
-      new THREE.Vector3(
-        2,
-        2,
-        -10
-      )
-
-    ],
-
-    false,
-
-    "centripetal"
-
-  );
-
-
-/* =========================================================
-   CAMERA TARGET PATH
-========================================================= */
-
-const targetPath =
-  new THREE.CatmullRomCurve3(
-
-    [
-
-      new THREE.Vector3(
-        0,
-        1.2,
-        23
-      ),
-
-      new THREE.Vector3(
-        0,
-        1.2,
-        17
-      ),
-
-      new THREE.Vector3(
-        0,
-        1.15,
-        10
-      ),
-
-      new THREE.Vector3(
-        0,
-        1.15,
-        4
-      ),
-
-      new THREE.Vector3(
-        0,
-        1.2,
-        -2
-      ),
-
-      new THREE.Vector3(
-        0,
-        1.2,
-        -8
-      ),
-
-      new THREE.Vector3(
-        0,
-        1.2,
-        -11
-      )
-
-    ],
-
-    false,
-
-    "centripetal"
-
-  );
-
-
-const lookTarget =
-  new THREE.Vector3();
-
-
-/* =========================================================
-   STATE
-========================================================= */
-
-const state = {
-
-  progress:0,
-
-  intro:0,
-
-  lightPower:0
-
-};
-
-
-/* =========================================================
-   INTRO TIMER
-========================================================= */
-
-const introStart =
-  performance.now();
-
-const introLength =
-  5200;
-
-
-/* =========================================================
-   UPDATE
-========================================================= */
-
-function updateScene(){
-
-  const elapsed =
-    performance.now() -
-    introStart;
-
-
-  const intro =
-    THREE.MathUtils.clamp(
-      elapsed /
-      introLength,
-      0,
-      1
-    );
-
-
-  /*
-    The vehicle starts moving
-    automatically.
-  */
-
-  const autoProgress =
-    intro * .15;
-
-
-  const p =
-    Math.max(
-      state.progress,
-      autoProgress
-    );
-
-
-  /* =========================
-     CAR DRIVE-IN
-  ========================= */
-
-  carRig.position.z =
-    THREE.MathUtils.lerp(
-      27,
-      -8,
-      p
-    );
-
-
-  carRig.rotation.y =
-    Math.sin(
-      p*Math.PI*3
-    )*.025;
-
-
-  carRig.position.y =
-    Math.sin(
-      performance.now()*.0025
-    )*.008;
-
-
-  /* =========================
-     CAMERA
-  ========================= */
-
-  const cameraPoint =
-    cameraPath.getPointAt(
-      THREE.MathUtils.clamp(
-        p,
-        0,
-        .9999
-      )
-    );
-
-
-  const targetPoint =
-    targetPath.getPointAt(
-      THREE.MathUtils.clamp(
-        p,
-        0,
-        .9999
-      )
-    );
-
-
-  camera.position.lerp(
-    cameraPoint,
-    .075
-  );
-
-
-  lookTarget.lerp(
-    targetPoint,
-    .09
-  );
-
-
-  camera.lookAt(
-    lookTarget
-  );
-
-
-  camera.fov =
-    THREE.MathUtils.lerp(
-      44,
-      31,
-      Math.max(
-        0,
-        (p-.56)/.44
-      )
-    );
-
-
-  camera.updateProjectionMatrix();
-
-
-  /* =========================
-     GARAGE LIGHT WAKE
-  ========================= */
-
-  const targetLight =
-    THREE.MathUtils.clamp(
-      (p-.08)/.3,
-      0,
-      1
-    );
-
-
-  state.lightPower +=
-    (
-      targetLight -
-      state.lightPower
-    )*.075;
-
-
-  ceilingLights.forEach(
-    item => {
-
-      item.light.intensity =
-        3.1 *
-        state.lightPower;
-
-    }
-  );
-
-
-  sideLights.forEach(
-    light => {
-
-      light.intensity =
-        2.1 *
-        state.lightPower;
-
-    }
-  );
-
-
-  neonLight.intensity =
-    5 *
-    state.lightPower;
-
-
-  /* =========================
-     HEADLIGHT POSITION
-  ========================= */
-
-  headlightLeft.position.set(
-    -1.42,
-    1.5,
-    carRig.position.z-4.8
-  );
-
-
-  headlightRight.position.set(
-    1.42,
-    1.5,
-    carRig.position.z-4.8
-  );
-
-
-  headlightLeft.target.position.set(
-    -1.4,
-    .4,
-    carRig.position.z-15
-  );
-
-
-  headlightRight.target.position.set(
-    1.4,
-    .4,
-    carRig.position.z-15
-  );
-
-
-  /* =========================
-     HEADLIGHT POWER
-  ========================= */
-
-  const headPower =
-    THREE.MathUtils.lerp(
-      1,
-      .15,
-      p
-    );
-
-
-  headlightLeft.intensity =
-    18 *
-    headPower;
-
-
-  headlightRight.intensity =
-    18 *
-    headPower;
-
-
-  /* =========================
-     TEXT
-  ========================= */
-
-  const textOpacity =
-    THREE.MathUtils.clamp(
-      1-p*2.8,
-      0,
-      1
-    );
-
-
-  heroCopy.style.opacity =
-    textOpacity;
-
-
-  if(
-    window.innerWidth > 700
-  ){
-
-    heroCopy.style.transform =
-      `translateY(${
-        -50-p*12
-      }%)`;
-
-  }
-
-
-  /* =========================
-     HUD
-  ========================= */
-
-  progressBar.style.width =
-    `${p*100}%`;
-
-
-  if(p < .16){
-
-    sceneNumber.textContent =
-      "01";
-
-    sceneName.textContent =
-      "Arrival";
-
-  }
-  else if(p < .34){
-
-    sceneNumber.textContent =
-      "02";
-
-    sceneName.textContent =
-      "Threshold";
-
-  }
-  else if(p < .57){
-
-    sceneNumber.textContent =
-      "03";
-
-    sceneName.textContent =
-      "Inside";
-
-  }
-  else if(p < .79){
-
-    sceneNumber.textContent =
-      "04";
-
-    sceneName.textContent =
-      "Detail";
-
-  }
-  else{
-
-    sceneNumber.textContent =
-      "05";
-
-    sceneName.textContent =
-      "Beachboyz";
-
-  }
-
-}
-
-
-/* =========================================================
-   SCROLLTRIGGER
-========================================================= */
-
-ScrollTrigger.create({
-
-  trigger:hero,
-
-  start:"top top",
-
-  end:"bottom bottom",
-
-  scrub:1.15,
-
-  onUpdate:self => {
-
-    state.progress =
-      self.progress;
-
-  }
-
-});
-
-
-/* =========================================================
-   PARTICLES
-========================================================= */
-
-const particleCount =
-  450;
-
-
-const particlePositions =
-  new Float32Array(
-    particleCount*3
-  );
-
-
-for(
-  let i=0;
-  i<particleCount;
-  i++
-){
-
-  particlePositions[i*3] =
-    (Math.random()-.5)*32;
-
-  particlePositions[i*3+1] =
-    Math.random()*14;
-
-  particlePositions[i*3+2] =
-    Math.random()*48-14;
-
-}
-
-
-const particleGeometry =
-  new THREE.BufferGeometry();
-
-
-particleGeometry.setAttribute(
-  "position",
-  new THREE.BufferAttribute(
-    particlePositions,
-    3
-  )
-);
-
-
-const particleMaterial =
-  new THREE.PointsMaterial({
-
-    color:0xd9d1bd,
-
-    size:.035,
-
-    transparent:true,
-
-    opacity:.32,
-
-    depthWrite:false
-
-  });
-
-
-const particles =
-  new THREE.Points(
-    particleGeometry,
-    particleMaterial
-  );
-
-
-atmosphere.add(
-  particles
-);
-
-
-/* =========================================================
-   ANIMATION LOOP
-========================================================= */
-
-function animate(){
-
-  requestAnimationFrame(
-    animate
-  );
-
-
-  particles.rotation.y +=
-    .00012;
-
-
-  updateScene();
-
-
-  renderer.render(
-    scene,
-    camera
-  );
-
-}
-
-
-animate();
-
-
-/* =========================================================
-   RESIZE
-========================================================= */
-
-window.addEventListener(
-  "resize",
-  () => {
-
-    camera.aspect =
-      window.innerWidth /
-      window.innerHeight;
-
-
-    camera.updateProjectionMatrix();
-
-
-    renderer.setSize(
-      window.innerWidth,
-      window.innerHeight
-    );
-
-
-    renderer.setPixelRatio(
-      Math.min(
-        window.devicePixelRatio,
-        1.6
-      )
-    );
-
-
-    ScrollTrigger.refresh();
-
-  }
-);
-
-
-/* =========================================================
-   REFRESH AFTER LOAD
-========================================================= */
-
-window.addEventListener(
-  "load",
-  () => {
-
-    setTimeout(
-      () => {
-
-        ScrollTrigger.refresh();
-
-      },
-      400
-    );
-
-  }
-);
-
-</script>
 
 </body>
 </html>
