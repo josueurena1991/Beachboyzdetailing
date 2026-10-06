@@ -15,20 +15,24 @@
 <meta name="theme-color" content="#05080a">
 
 <!-- =========================================================
-     THREE.JS
+     THREE.JS MODULE MAP
 ========================================================= -->
 
-<script src="https://cdn.jsdelivr.net/npm/[email protected]/build/three.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/[email protected]/examples/js/loaders/GLTFLoader.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
 
 <!-- =========================================================
      GSAP
 ========================================================= -->
 
-<script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
 <style>
 
@@ -50,10 +54,7 @@ body{
     margin:0;
     background:#05080a;
     color:#fff;
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     overflow-x:hidden;
 }
 
@@ -75,24 +76,15 @@ button{
 ========================================================= */
 
 :root{
-
     --black:#05080a;
     --black2:#081013;
-
     --cream:#f4efe5;
-
-    --white:#ffffff;
-
+    --white:#fff;
     --cyan:#7bd9ed;
-
     --cyan2:#b7f4ff;
-
     --muted:#89989d;
-
     --line:rgba(255,255,255,.12);
-
     --gold:#d7b778;
-
 }
 
 /* =========================================================
@@ -100,199 +92,111 @@ button{
 ========================================================= */
 
 #loader{
-
     position:fixed;
-
     inset:0;
-
     z-index:99999;
-
     background:#05080a;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     flex-direction:column;
-
     transition:opacity .7s ease;
-
 }
 
 .loader-logo{
-
-    font-size:
-        clamp(
-            36px,
-            8vw,
-            82px
-        );
-
+    font-size:clamp(36px,8vw,82px);
     font-weight:900;
-
     letter-spacing:-4px;
-
     text-transform:uppercase;
-
 }
 
 .loader-logo span{
-
     color:var(--cyan);
-
 }
 
 .loader-sub{
-
     margin-top:18px;
-
     color:#66757a;
-
     font-size:10px;
-
     letter-spacing:4px;
-
     text-transform:uppercase;
-
 }
 
 .loader-track{
-
     width:210px;
-
-    height:1px;
-
+    height:2px;
     margin-top:30px;
-
     background:rgba(255,255,255,.15);
-
     overflow:hidden;
-
 }
 
 .loader-bar{
-
     width:0%;
-
     height:100%;
-
     background:var(--cyan);
-
 }
 
 /* =========================================================
-   NAVIGATION
+   NAV
 ========================================================= */
 
 .nav{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
-
     height:78px;
-
-    padding:
-        0
-        5vw;
-
+    padding:0 5vw;
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     z-index:5000;
-
     transition:
         background .4s ease,
         border .4s ease,
         backdrop-filter .4s ease;
-
 }
 
 .nav.scrolled{
-
-    background:
-        rgba(5,8,10,.78);
-
-    backdrop-filter:
-        blur(18px);
-
-    border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
-
+    background:rgba(5,8,10,.78);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-
     font-size:21px;
-
     font-weight:900;
-
     letter-spacing:-1px;
-
     text-transform:uppercase;
-
 }
 
 .logo span{
-
     color:var(--cyan);
-
 }
 
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     gap:30px;
-
 }
 
 .nav-links a{
-
-    color:
-        rgba(255,255,255,.72);
-
+    color:rgba(255,255,255,.72);
     font-size:10px;
-
     letter-spacing:1.8px;
-
     text-transform:uppercase;
-
     transition:.3s ease;
-
 }
 
 .nav-links a:hover{
-
     color:#fff;
-
 }
 
 .nav-phone{
-
-    padding:
-        11px
-        17px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.22);
-
+    padding:11px 17px;
+    border:1px solid rgba(255,255,255,.22);
     border-radius:30px;
-
     color:#fff!important;
-
 }
 
 /* =========================================================
@@ -300,39 +204,27 @@ button{
 ========================================================= */
 
 .hero{
-
     position:relative;
-
-    height:260vh;
-
+    height:300vh;
     background:#05080a;
-
 }
 
 .hero-sticky{
-
     position:sticky;
-
     top:0;
-
     height:100vh;
-
     overflow:hidden;
-
     background:
-
         radial-gradient(
             circle at 50% 48%,
             rgba(57,149,174,.16),
             transparent 27%
         ),
-
         linear-gradient(
             180deg,
             #071014 0%,
             #030506 100%
         );
-
 }
 
 /* =========================================================
@@ -340,19 +232,12 @@ button{
 ========================================================= */
 
 #scene{
-
     position:absolute;
-
     inset:0;
-
     width:100%;
-
     height:100%;
-
     display:block;
-
     z-index:2;
-
 }
 
 /* =========================================================
@@ -360,17 +245,12 @@ button{
 ========================================================= */
 
 .garage-overlay{
-
     position:absolute;
-
     inset:0;
-
     z-index:3;
-
     pointer-events:none;
 
     background:
-
         linear-gradient(
             90deg,
             rgba(0,0,0,.72),
@@ -378,178 +258,106 @@ button{
             transparent 68%,
             rgba(0,0,0,.72)
         ),
-
         linear-gradient(
             180deg,
-            rgba(0,0,0,.25),
+            rgba(0,0,0,.22),
             transparent 35%,
-            rgba(0,0,0,.4)
+            rgba(0,0,0,.42)
         );
-
 }
 
 /* =========================================================
-   GARAGE LIGHTS
+   LIGHT BEAMS
 ========================================================= */
 
 .light-beam{
-
     position:absolute;
-
     z-index:4;
-
     height:2px;
-
     width:45vw;
-
-    background:
-        rgba(220,250,255,.75);
-
+    background:rgba(220,250,255,.75);
     box-shadow:
-        0 0 18px
-        rgba(190,245,255,.8),
-
-        0 0 70px
-        rgba(80,200,230,.4);
-
+        0 0 18px rgba(190,245,255,.8),
+        0 0 70px rgba(80,200,230,.4);
     opacity:.35;
-
 }
 
 .light-one{
-
     top:16%;
-
     left:-8%;
-
     transform:rotate(12deg);
-
 }
 
 .light-two{
-
     top:25%;
-
     right:-8%;
-
     transform:rotate(-12deg);
-
 }
 
 /* =========================================================
-   HERO TEXT
+   HERO COPY
 ========================================================= */
 
 .hero-copy{
-
     position:absolute;
-
     z-index:10;
-
     left:6vw;
-
     top:25%;
-
     max-width:720px;
-
 }
 
 .eyebrow{
-
     color:var(--cyan);
-
     font-size:10px;
-
     letter-spacing:4px;
-
     text-transform:uppercase;
-
     margin-bottom:22px;
-
 }
 
 .hero-title{
-
-    font-size:
-        clamp(
-            54px,
-            8.8vw,
-            130px
-        );
-
+    font-size:clamp(54px,8.8vw,130px);
     line-height:.84;
-
     letter-spacing:-7px;
-
     font-weight:900;
-
     text-transform:uppercase;
+}
 
+.hero-title span{
+    display:block;
 }
 
 .hero-title .outline{
-
     color:transparent;
-
-    -webkit-text-stroke:
-        1px
-        rgba(255,255,255,.72);
-
+    -webkit-text-stroke:1px rgba(255,255,255,.72);
 }
 
 .hero-copy p{
-
     max-width:470px;
-
     margin-top:28px;
-
     color:#9ba8ac;
-
     font-size:15px;
-
     line-height:1.7;
-
 }
 
 .hero-button{
-
     display:inline-flex;
-
     margin-top:28px;
-
-    padding:
-        15px
-        23px;
-
+    padding:15px 23px;
     border-radius:40px;
-
     background:var(--cream);
-
     color:#071014;
-
     font-size:10px;
-
     font-weight:900;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
     transition:
         transform .3s ease,
         box-shadow .3s ease;
-
 }
 
 .hero-button:hover{
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 15px 40px
-        rgba(255,255,255,.12);
-
+    transform:translateY(-4px);
+    box-shadow:0 15px 40px rgba(255,255,255,.12);
 }
 
 /* =========================================================
@@ -557,75 +365,39 @@ button{
 ========================================================= */
 
 .scroll-indicator{
-
     position:absolute;
-
     z-index:12;
-
     bottom:27px;
-
     left:50%;
-
     transform:translateX(-50%);
-
     color:rgba(255,255,255,.45);
-
     font-size:8px;
-
     letter-spacing:4px;
-
     text-transform:uppercase;
-
     text-align:center;
-
 }
 
 .scroll-line{
-
     width:1px;
-
     height:46px;
-
-    margin:
-        10px
-        auto
-        0;
-
-    background:
-        linear-gradient(
-            #fff,
-            transparent
-        );
-
+    margin:10px auto 0;
+    background:linear-gradient(#fff,transparent);
 }
 
 /* =========================================================
-   HERO SIDE LABEL
+   SIDE LABEL
 ========================================================= */
 
 .hero-side{
-
     position:absolute;
-
     z-index:10;
-
     right:5vw;
-
     top:50%;
-
-    transform:
-        translateY(-50%)
-        rotate(90deg);
-
-    color:
-        rgba(255,255,255,.28);
-
+    transform:translateY(-50%) rotate(90deg);
+    color:rgba(255,255,255,.28);
     font-size:8px;
-
     letter-spacing:4px;
-
     text-transform:uppercase;
-
 }
 
 /* =========================================================
@@ -633,109 +405,59 @@ button{
 ========================================================= */
 
 .intro{
-
     position:relative;
-
     min-height:90vh;
-
-    padding:
-        150px
-        7vw;
-
+    padding:150px 7vw;
     display:flex;
-
     align-items:center;
-
     background:var(--cream);
-
     color:#071014;
-
     overflow:hidden;
-
 }
 
 .intro-watermark{
-
     position:absolute;
-
     right:-3vw;
-
     top:30px;
-
     font-size:27vw;
-
     line-height:.7;
-
     font-weight:900;
-
-    color:
-        rgba(0,0,0,.035);
-
+    color:rgba(0,0,0,.035);
     pointer-events:none;
-
 }
 
 .intro-content{
-
     position:relative;
-
     z-index:2;
-
     max-width:1000px;
-
 }
 
 .kicker{
-
     margin-bottom:23px;
-
     color:#63838c;
-
     font-size:10px;
-
     letter-spacing:4px;
-
     text-transform:uppercase;
-
 }
 
 .intro h2{
-
     max-width:1000px;
-
-    font-size:
-        clamp(
-            48px,
-            7vw,
-            105px
-        );
-
+    font-size:clamp(48px,7vw,105px);
     line-height:.88;
-
     letter-spacing:-6px;
-
     text-transform:uppercase;
-
 }
 
 .intro h2 span{
-
     color:#658f99;
-
 }
 
 .intro p{
-
     max-width:620px;
-
     margin-top:38px;
-
     color:#56666b;
-
     font-size:16px;
-
     line-height:1.85;
-
 }
 
 /* =========================================================
@@ -743,139 +465,75 @@ button{
 ========================================================= */
 
 .experience{
-
     position:relative;
-
-    padding:
-        150px
-        7vw;
-
+    padding:150px 7vw;
     background:
-
         radial-gradient(
             circle at 80% 20%,
             rgba(74,174,197,.13),
             transparent 28%
         ),
-
         #071014;
-
 }
 
 .experience-grid{
-
     display:grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:9vw;
-
     align-items:center;
-
 }
 
 .experience h2{
-
-    font-size:
-        clamp(
-            52px,
-            7vw,
-            105px
-        );
-
+    font-size:clamp(52px,7vw,105px);
     line-height:.86;
-
     letter-spacing:-6px;
-
     text-transform:uppercase;
-
 }
 
 .experience h2 span{
-
     color:var(--cyan);
-
 }
 
 .experience-copy{
-
     max-width:570px;
-
     color:#8d9ca1;
-
     line-height:1.85;
-
     font-size:15px;
-
 }
 
 .feature-grid{
-
     display:grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:12px;
-
     margin-top:38px;
-
 }
 
 .feature{
-
     padding:25px;
-
     min-height:150px;
-
-    border:
-        1px solid
-        var(--line);
-
-    background:
-        rgba(255,255,255,.025);
-
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.025);
     transition:.4s ease;
-
 }
 
 .feature:hover{
-
-    transform:
-        translateY(-7px);
-
-    border-color:
-        rgba(123,217,237,.4);
-
+    transform:translateY(-7px);
+    border-color:rgba(123,217,237,.4);
 }
 
 .feature strong{
-
     display:block;
-
     margin-bottom:10px;
-
     color:#fff;
-
     font-size:12px;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
 }
 
 .feature span{
-
     color:#718084;
-
     font-size:11px;
-
     line-height:1.6;
-
 }
 
 /* =========================================================
@@ -883,248 +541,134 @@ button{
 ========================================================= */
 
 .services{
-
-    padding:
-        145px
-        6vw;
-
+    padding:145px 6vw;
     background:var(--cream);
-
     color:#071014;
-
 }
 
 .services-header{
-
     display:flex;
-
     align-items:flex-end;
-
     justify-content:space-between;
-
     gap:40px;
-
     margin-bottom:65px;
-
 }
 
 .services-header h2{
-
-    font-size:
-        clamp(
-            50px,
-            7vw,
-            105px
-        );
-
+    font-size:clamp(50px,7vw,105px);
     line-height:.85;
-
     letter-spacing:-6px;
-
     text-transform:uppercase;
-
 }
 
 .services-header h2 span{
-
     color:#658f99;
-
 }
 
 .services-header p{
-
     max-width:420px;
-
     color:#68777b;
-
     font-size:13px;
-
     line-height:1.7;
-
 }
 
 .package-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
-
 }
 
 .package{
-
     position:relative;
-
     min-height:650px;
-
-    padding:
-        34px
-        30px;
-
+    padding:34px 30px;
     background:#fffdf8;
-
-    border:
-        1px solid
-        rgba(0,0,0,.1);
-
+    border:1px solid rgba(0,0,0,.1);
     display:flex;
-
     flex-direction:column;
-
     overflow:hidden;
-
     transition:
         transform .5s ease,
         box-shadow .5s ease;
-
 }
 
 .package:hover{
-
-    transform:
-        translateY(-10px);
-
-    box-shadow:
-        0 30px 70px
-        rgba(0,0,0,.12);
-
+    transform:translateY(-10px);
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
 }
 
 .package.featured{
-
     color:#fff;
-
     background:#071014;
-
     border-color:#071014;
-
 }
 
 .package-number{
-
     font-size:9px;
-
     letter-spacing:3px;
-
     opacity:.48;
-
 }
 
 .package h3{
-
     margin-top:60px;
-
     font-size:27px;
-
     letter-spacing:-1px;
-
     text-transform:uppercase;
-
 }
 
 .price{
-
     margin-top:13px;
-
     font-size:53px;
-
     font-weight:900;
-
     letter-spacing:-4px;
-
 }
 
 .price small{
-
     margin-left:7px;
-
     font-size:9px;
-
     letter-spacing:1px;
-
     font-weight:400;
-
     opacity:.5;
-
 }
 
 .package ul{
-
     list-style:none;
-
     margin-top:30px;
-
 }
 
 .package li{
-
-    padding:
-        9px
-        0;
-
-    border-bottom:
-        1px solid
-        rgba(0,0,0,.09);
-
+    padding:9px 0;
+    border-bottom:1px solid rgba(0,0,0,.09);
     font-size:12px;
-
     line-height:1.4;
-
 }
 
 .package.featured li{
-
-    border-color:
-        rgba(255,255,255,.1);
-
+    border-color:rgba(255,255,255,.1);
 }
 
 .package li::before{
-
     content:"✓";
-
     margin-right:9px;
-
     color:#6599a4;
-
     font-weight:900;
-
 }
 
 .package-button{
-
     margin-top:auto;
-
     padding:15px;
-
-    border:
-        1px solid
-        rgba(0,0,0,.2);
-
+    border:1px solid rgba(0,0,0,.2);
     text-align:center;
-
     font-size:9px;
-
     font-weight:900;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
 }
 
-.package.featured
-.package-button{
-
+.package.featured .package-button{
     color:#071014;
-
     background:var(--cream);
-
     border-color:var(--cream);
-
 }
 
 /* =========================================================
@@ -1132,211 +676,110 @@ button{
 ========================================================= */
 
 .addons{
-
-    padding:
-        120px
-        7vw;
-
+    padding:120px 7vw;
     background:#0a1519;
-
 }
 
 .addons h2{
-
-    font-size:
-        clamp(
-            45px,
-            6vw,
-            85px
-        );
-
+    font-size:clamp(45px,6vw,85px);
     line-height:.85;
-
     letter-spacing:-5px;
-
     text-transform:uppercase;
-
 }
 
 .addons h2 span{
-
     color:var(--cyan);
-
 }
 
 .addons-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     margin-top:55px;
-
-    border-top:
-        1px solid
-        var(--line);
-
-    border-left:
-        1px solid
-        var(--line);
-
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
 }
 
 .addon{
-
     min-height:175px;
-
     padding:25px;
-
-    border-right:
-        1px solid
-        var(--line);
-
-    border-bottom:
-        1px solid
-        var(--line);
-
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
 }
 
 .addon strong{
-
     display:block;
-
     margin-bottom:12px;
-
     font-size:12px;
-
     text-transform:uppercase;
-
 }
 
 .addon span{
-
     color:#75858a;
-
     font-size:11px;
-
     line-height:1.6;
-
 }
 
 /* =========================================================
-   SERVICE AREA
+   AREA
 ========================================================= */
 
 .area{
-
     position:relative;
-
-    padding:
-        150px
-        7vw;
-
+    padding:150px 7vw;
     background:#05080a;
-
     overflow:hidden;
-
 }
 
 .area::after{
-
     content:"305";
-
     position:absolute;
-
     right:-5vw;
-
     top:15%;
-
-    color:
-        rgba(255,255,255,.025);
-
+    color:rgba(255,255,255,.025);
     font-size:38vw;
-
     font-weight:900;
-
     line-height:.7;
-
 }
 
 .area-content{
-
     position:relative;
-
     z-index:2;
-
 }
 
 .area h2{
-
-    font-size:
-        clamp(
-            55px,
-            8vw,
-            120px
-        );
-
+    font-size:clamp(55px,8vw,120px);
     line-height:.82;
-
     letter-spacing:-7px;
-
     text-transform:uppercase;
-
 }
 
 .area h2 span{
-
     color:var(--cyan);
-
 }
 
 .area p{
-
     max-width:620px;
-
     margin-top:35px;
-
     color:#849398;
-
     font-size:15px;
-
     line-height:1.8;
-
 }
 
 .area-list{
-
     display:flex;
-
     flex-wrap:wrap;
-
     gap:10px;
-
     margin-top:35px;
-
 }
 
 .area-list span{
-
-    padding:
-        11px
-        16px;
-
-    border:
-        1px solid
-        var(--line);
-
+    padding:11px 16px;
+    border:1px solid var(--line);
     border-radius:30px;
-
     color:#b6c0c3;
-
     font-size:9px;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
 }
 
 /* =========================================================
@@ -1344,104 +787,55 @@ button{
 ========================================================= */
 
 .cta{
-
     min-height:85vh;
-
-    padding:
-        120px
-        6vw;
-
+    padding:120px 6vw;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     text-align:center;
-
     background:
-
         radial-gradient(
             circle at center,
             rgba(71,177,202,.17),
             transparent 36%
         ),
-
         #071014;
-
 }
 
 .cta h2{
-
-    font-size:
-        clamp(
-            55px,
-            9vw,
-            135px
-        );
-
+    font-size:clamp(55px,9vw,135px);
     line-height:.82;
-
     letter-spacing:-7px;
-
     text-transform:uppercase;
-
 }
 
 .cta h2 span{
-
     color:var(--cyan);
-
 }
 
 .cta p{
-
     max-width:550px;
-
-    margin:
-        35px
-        auto;
-
+    margin:35px auto;
     color:#849398;
-
     font-size:14px;
-
     line-height:1.8;
-
 }
 
 .cta-button{
-
     display:inline-flex;
-
-    padding:
-        18px
-        29px;
-
+    padding:18px 29px;
     border-radius:40px;
-
     background:var(--cream);
-
     color:#071014;
-
     font-size:10px;
-
     font-weight:900;
-
     letter-spacing:1.5px;
-
     text-transform:uppercase;
-
     transition:.3s ease;
-
 }
 
 .cta-button:hover{
-
-    transform:
-        translateY(-4px)
-        scale(1.02);
-
+    transform:translateY(-4px) scale(1.02);
 }
 
 /* =========================================================
@@ -1449,73 +843,41 @@ button{
 ========================================================= */
 
 footer{
-
-    padding:
-        45px
-        6vw;
-
+    padding:45px 6vw;
     background:#05080a;
-
-    border-top:
-        1px solid
-        var(--line);
-
+    border-top:1px solid var(--line);
 }
 
 .footer-top{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
 }
 
 .footer-logo{
-
     font-size:22px;
-
     font-weight:900;
-
     text-transform:uppercase;
-
 }
 
 .footer-logo span{
-
     color:var(--cyan);
-
 }
 
 .footer-phone{
-
     font-size:14px;
-
 }
 
 .footer-bottom{
-
     margin-top:35px;
-
     padding-top:20px;
-
-    border-top:
-        1px solid
-        var(--line);
-
+    border-top:1px solid var(--line);
     display:flex;
-
     justify-content:space-between;
-
     color:#5d6b70;
-
     font-size:8px;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
-
 }
 
 /* =========================================================
@@ -1525,140 +887,84 @@ footer{
 @media(max-width:900px){
 
     .nav-links a:not(.nav-phone){
-
         display:none;
-
     }
 
     .hero{
-
-        height:225vh;
-
+        height:260vh;
     }
 
     .hero-copy{
-
         top:18%;
-
         left:6vw;
-
         max-width:88vw;
-
     }
 
     .hero-title{
-
-        font-size:
-            clamp(
-                48px,
-                13vw,
-                88px
-            );
-
+        font-size:clamp(48px,13vw,88px);
         letter-spacing:-4px;
-
     }
 
     .hero-copy p{
-
         max-width:340px;
-
         font-size:13px;
-
     }
 
     .hero-side{
-
         display:none;
-
     }
 
     .experience-grid{
-
         grid-template-columns:1fr;
-
         gap:60px;
-
     }
 
     .package-grid{
-
         grid-template-columns:1fr;
-
     }
 
     .package{
-
         min-height:580px;
-
     }
 
     .services-header{
-
         display:block;
-
     }
 
     .services-header p{
-
         margin-top:25px;
-
     }
 
     .addons-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
+        grid-template-columns:repeat(2,1fr);
     }
-
 }
 
 @media(max-width:600px){
 
     .nav{
-
         height:70px;
-
     }
 
     .nav-phone{
-
-        padding:
-            9px
-            13px;
-
+        padding:9px 13px;
         font-size:8px!important;
-
     }
 
     .hero{
-
-        height:210vh;
-
+        height:245vh;
     }
 
     .hero-title{
-
-        font-size:
-            clamp(
-                46px,
-                13vw,
-                76px
-            );
-
+        font-size:clamp(46px,13vw,76px);
     }
 
     .feature-grid{
-
         grid-template-columns:1fr;
-
     }
 
     .addons-grid{
-
         grid-template-columns:1fr;
-
     }
 
     .intro,
@@ -1666,11 +972,7 @@ footer{
     .services,
     .addons,
     .area{
-
-        padding:
-            100px
-            7vw;
-
+        padding:100px 7vw;
     }
 
     .intro h2,
@@ -1679,22 +981,15 @@ footer{
     .addons h2,
     .area h2,
     .cta h2{
-
         letter-spacing:-4px;
-
     }
 
     .footer-top,
     .footer-bottom{
-
         flex-direction:column;
-
         align-items:flex-start;
-
         gap:15px;
-
     }
-
 }
 
 /* =========================================================
@@ -1704,11 +999,8 @@ footer{
 @media(prefers-reduced-motion:reduce){
 
     *{
-
         scroll-behavior:auto!important;
-
         transition:none!important;
-
     }
 
 }
@@ -1733,12 +1025,7 @@ footer{
     </div>
 
     <div class="loader-track">
-
-        <div
-            class="loader-bar"
-            id="loaderBar"
-        ></div>
-
+        <div class="loader-bar" id="loaderBar"></div>
     </div>
 
 </div>
@@ -1747,15 +1034,9 @@ footer{
      NAV
 ========================================================= -->
 
-<nav
-    class="nav"
-    id="nav"
->
+<nav class="nav" id="nav">
 
-    <a
-        href="#top"
-        class="logo"
-    >
+    <a href="#top" class="logo">
         Beachboyz<span>.</span>
     </a>
 
@@ -1785,21 +1066,14 @@ footer{
 </nav>
 
 <!-- =========================================================
-     HERO / 3D GARAGE
+     HERO
 ========================================================= -->
 
-<section
-    class="hero"
-    id="top"
->
+<section class="hero" id="top">
 
     <div class="hero-sticky">
 
-        <!-- REAL WEBGL CANVAS -->
-
-        <canvas
-            id="scene"
-        ></canvas>
+        <canvas id="scene"></canvas>
 
         <div class="garage-overlay"></div>
 
@@ -1860,11 +1134,8 @@ footer{
         </div>
 
         <div class="scroll-indicator">
-
             Scroll To Drive
-
             <div class="scroll-line"></div>
-
         </div>
 
     </div>
@@ -1888,14 +1159,9 @@ footer{
         </div>
 
         <h2>
-
             We Don't Just
-            <span>
-                Clean Cars.
-            </span>
-
+            <span>Clean Cars.</span>
             We Bring Them Back.
-
         </h2>
 
         <p>
@@ -1914,10 +1180,7 @@ footer{
      EXPERIENCE
 ========================================================= -->
 
-<section
-    class="experience"
-    id="experience"
->
+<section class="experience" id="experience">
 
     <div class="experience-grid">
 
@@ -1928,12 +1191,8 @@ footer{
             </div>
 
             <h2>
-
                 Built For
-                <span>
-                    Miami.
-                </span>
-
+                <span>Miami.</span>
             </h2>
 
         </div>
@@ -2027,10 +1286,7 @@ footer{
      SERVICES
 ========================================================= -->
 
-<section
-    class="services"
-    id="services"
->
+<section class="services" id="services">
 
     <div class="services-header">
 
@@ -2041,18 +1297,13 @@ footer{
             </div>
 
             <h2>
-
                 Pick Your
-                <span>
-                    Experience.
-                </span>
-
+                <span>Experience.</span>
             </h2>
 
         </div>
 
         <p>
-
             Straightforward packages.
             Premium results.
 
@@ -2060,14 +1311,11 @@ footer{
             in normal condition. Additional charges
             may apply for excessive sand, pet hair,
             stains or unusually heavy buildup.
-
         </p>
 
     </div>
 
     <div class="package-grid">
-
-        <!-- BEACH WASH -->
 
         <article class="package">
 
@@ -2081,44 +1329,19 @@ footer{
 
             <div class="price">
                 $150
-                <small>
-                    STARTING
-                </small>
+                <small>STARTING</small>
             </div>
 
             <ul>
 
-                <li>
-                    Exterior hand wash
-                </li>
-
-                <li>
-                    Two-bucket contact wash
-                </li>
-
-                <li>
-                    Professional drying towel
-                </li>
-
-                <li>
-                    Wheels cleaned inside & out
-                </li>
-
-                <li>
-                    Wheel faces detailed
-                </li>
-
-                <li>
-                    Exterior glass cleaned
-                </li>
-
-                <li>
-                    Door jambs cleaned
-                </li>
-
-                <li>
-                    Final exterior inspection
-                </li>
+                <li>Exterior hand wash</li>
+                <li>Two-bucket contact wash</li>
+                <li>Professional drying towel</li>
+                <li>Wheels cleaned inside &amp; out</li>
+                <li>Wheel faces detailed</li>
+                <li>Exterior glass cleaned</li>
+                <li>Door jambs cleaned</li>
+                <li>Final exterior inspection</li>
 
             </ul>
 
@@ -2130,8 +1353,6 @@ footer{
             </a>
 
         </article>
-
-        <!-- SUNSET -->
 
         <article class="package">
 
@@ -2145,52 +1366,21 @@ footer{
 
             <div class="price">
                 $200
-                <small>
-                    STARTING
-                </small>
+                <small>STARTING</small>
             </div>
 
             <ul>
 
-                <li>
-                    Everything in Beach Wash
-                </li>
-
-                <li>
-                    Clay treatment
-                </li>
-
-                <li>
-                    Paint decontamination
-                </li>
-
-                <li>
-                    Sealant protection
-                </li>
-
-                <li>
-                    Interior vacuum
-                </li>
-
-                <li>
-                    Leather cleaning
-                </li>
-
-                <li>
-                    Interior surface cleaning
-                </li>
-
-                <li>
-                    Windows inside & out
-                </li>
-
-                <li>
-                    Trunk cleaned
-                </li>
-
-                <li>
-                    Door jambs detailed
-                </li>
+                <li>Everything in Beach Wash</li>
+                <li>Clay treatment</li>
+                <li>Paint decontamination</li>
+                <li>Sealant protection</li>
+                <li>Interior vacuum</li>
+                <li>Leather cleaning</li>
+                <li>Interior surface cleaning</li>
+                <li>Windows inside &amp; out</li>
+                <li>Trunk cleaned</li>
+                <li>Door jambs detailed</li>
 
             </ul>
 
@@ -2203,11 +1393,7 @@ footer{
 
         </article>
 
-        <!-- MIAMI EXPERIENCE -->
-
-        <article
-            class="package featured"
-        >
+        <article class="package featured">
 
             <div class="package-number">
                 03 / MIAMI EXPERIENCE
@@ -2219,56 +1405,22 @@ footer{
 
             <div class="price">
                 $300
-                <small>
-                    STARTING
-                </small>
+                <small>STARTING</small>
             </div>
 
             <ul>
 
-                <li>
-                    Everything in Sunset Detail
-                </li>
-
-                <li>
-                    Full interior deep clean
-                </li>
-
-                <li>
-                    Carpet shampoo treatment
-                </li>
-
-                <li>
-                    Seat shampoo treatment
-                </li>
-
-                <li>
-                    Dog & sand removal
-                </li>
-
-                <li>
-                    Engine bay detail
-                </li>
-
-                <li>
-                    Premium paint protection
-                </li>
-
-                <li>
-                    3–4+ month protection
-                </li>
-
-                <li>
-                    Windshield protection
-                </li>
-
-                <li>
-                    Exotic wheel protection
-                </li>
-
-                <li>
-                    Final showroom inspection
-                </li>
+                <li>Everything in Sunset Detail</li>
+                <li>Full interior deep clean</li>
+                <li>Carpet shampoo treatment</li>
+                <li>Seat shampoo treatment</li>
+                <li>Dog &amp; sand removal</li>
+                <li>Engine bay detail</li>
+                <li>Premium paint protection</li>
+                <li>3–4+ month protection</li>
+                <li>Windshield protection</li>
+                <li>Exotic wheel protection</li>
+                <li>Final showroom inspection</li>
 
             </ul>
 
@@ -2296,12 +1448,8 @@ footer{
     </div>
 
     <h2>
-
         Add What
-        <span>
-            You Need.
-        </span>
-
+        <span>You Need.</span>
     </h2>
 
     <div class="addons-grid">
@@ -2369,10 +1517,7 @@ footer{
      SERVICE AREA
 ========================================================= -->
 
-<section
-    class="area"
-    id="area"
->
+<section class="area" id="area">
 
     <div class="area-content">
 
@@ -2381,48 +1526,27 @@ footer{
         </div>
 
         <h2>
-
             Your Car.
             <br>
-
-            <span>
-                Your Driveway.
-            </span>
-
+            <span>Your Driveway.</span>
         </h2>
 
         <p>
-
             Beachboyz Detailing provides mobile
             service throughout Sunny Isles Beach,
             North Miami, Bal Harbour, Golden Beach
             and surrounding South Florida areas —
             generally within approximately a
             15–20 mile service radius.
-
         </p>
 
         <div class="area-list">
 
-            <span>
-                Sunny Isles Beach
-            </span>
-
-            <span>
-                North Miami
-            </span>
-
-            <span>
-                Bal Harbour
-            </span>
-
-            <span>
-                Golden Beach
-            </span>
-
-            <span>
-                South Florida
-            </span>
+            <span>Sunny Isles Beach</span>
+            <span>North Miami</span>
+            <span>Bal Harbour</span>
+            <span>Golden Beach</span>
+            <span>South Florida</span>
 
         </div>
 
@@ -2443,21 +1567,15 @@ footer{
         </div>
 
         <h2>
-
             Let's Make It
-            <span>
-                Shine.
-            </span>
-
+            <span>Shine.</span>
         </h2>
 
         <p>
-
             Tell us what you're driving
             and what it needs.
 
             We'll take care of the details.
-
         </p>
 
         <a
@@ -2510,12 +1628,15 @@ footer{
      THREE.JS + GSAP ENGINE
 ========================================================= -->
 
-<script>
+<script type="module">
+
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
 /* =========================================================
-   VARIABLES
+   ELEMENTS
 ========================================================= */
 
 const canvas =
@@ -2537,7 +1658,7 @@ const nav =
     document.getElementById("nav");
 
 /* =========================================================
-   THREE.JS SCENE
+   SCENE
 ========================================================= */
 
 const scene =
@@ -2556,13 +1677,13 @@ const camera =
         window.innerWidth /
         window.innerHeight,
         0.1,
-        200
+        250
     );
 
 camera.position.set(
-    6,
-    2.8,
-    10
+    7.5,
+    3.1,
+    10.5
 );
 
 /* =========================================================
@@ -2572,7 +1693,7 @@ camera.position.set(
 const renderer =
     new THREE.WebGLRenderer({
 
-        canvas:canvas,
+        canvas,
 
         antialias:true,
 
@@ -2586,7 +1707,7 @@ const renderer =
 renderer.setPixelRatio(
     Math.min(
         window.devicePixelRatio,
-        1.7
+        1.75
     )
 );
 
@@ -2598,6 +1719,12 @@ renderer.setSize(
 renderer.outputColorSpace =
     THREE.SRGBColorSpace;
 
+renderer.toneMapping =
+    THREE.ACESFilmicToneMapping;
+
+renderer.toneMappingExposure =
+    1.15;
+
 renderer.shadowMap.enabled = true;
 
 renderer.shadowMap.type =
@@ -2607,209 +1734,177 @@ renderer.shadowMap.type =
    LIGHTING
 ========================================================= */
 
-const ambient =
+const hemi =
     new THREE.HemisphereLight(
-        0xbfefff,
-        0x050608,
-        2.2
+        0xd8f8ff,
+        0x030405,
+        2.4
     );
 
-scene.add(ambient);
+scene.add(hemi);
 
-const keyLight =
+const key =
     new THREE.DirectionalLight(
         0xffffff,
         5
     );
 
-keyLight.position.set(
+key.position.set(
     5,
-    8,
-    7
+    9,
+    8
 );
 
-keyLight.castShadow = true;
+key.castShadow = true;
 
-scene.add(keyLight);
+scene.add(key);
 
-const blueLight =
+const cyanLight =
     new THREE.PointLight(
-        0x5edbff,
-        16,
+        0x53ddff,
+        18,
+        28
+    );
+
+cyanLight.position.set(
+    -7,
+    4,
+    4
+);
+
+scene.add(cyanLight);
+
+const sideLight =
+    new THREE.PointLight(
+        0x9fefff,
+        12,
         25
     );
 
-blueLight.position.set(
-    -7,
+sideLight.position.set(
+    8,
     3,
-    3
+    -4
 );
 
-scene.add(blueLight);
+scene.add(sideLight);
 
-const rimLight =
+const rearLight =
     new THREE.PointLight(
-        0xffffff,
-        12,
-        20
+        0x168fb8,
+        18,
+        28
     );
 
-rimLight.position.set(
-    7,
-    4,
-    -5
-);
-
-scene.add(rimLight);
-
-const rearBlue =
-    new THREE.PointLight(
-        0x1f9dca,
-        13,
-        20
-    );
-
-rearBlue.position.set(
+rearLight.position.set(
     0,
-    2,
-    -8
+    3,
+    -9
 );
 
-scene.add(rearBlue);
+scene.add(rearLight);
 
 /* =========================================================
    GARAGE FLOOR
 ========================================================= */
 
-const floorGeometry =
-    new THREE.PlaneGeometry(
-        70,
-        70
-    );
-
-const floorMaterial =
-    new THREE.MeshStandardMaterial({
-
-        color:0x080d0f,
-
-        roughness:.38,
-
-        metalness:.35
-
-    });
-
 const floor =
     new THREE.Mesh(
-        floorGeometry,
-        floorMaterial
+
+        new THREE.PlaneGeometry(
+            70,
+            70
+        ),
+
+        new THREE.MeshStandardMaterial({
+
+            color:0x080d0f,
+
+            roughness:.3,
+
+            metalness:.48
+
+        })
+
     );
 
 floor.rotation.x =
     -Math.PI / 2;
 
-floor.position.y = -1.1;
+floor.position.y =
+    -1.1;
 
 floor.receiveShadow = true;
 
 scene.add(floor);
 
 /* =========================================================
-   GARAGE BACK WALL
+   GARAGE WALL
 ========================================================= */
 
-const wallGeometry =
-    new THREE.PlaneGeometry(
-        50,
-        20
-    );
-
-const wallMaterial =
-    new THREE.MeshStandardMaterial({
-
-        color:0x0b1215,
-
-        roughness:.75,
-
-        metalness:.1
-
-    });
-
-const wall =
+const backWall =
     new THREE.Mesh(
-        wallGeometry,
-        wallMaterial
+
+        new THREE.PlaneGeometry(
+            60,
+            25
+        ),
+
+        new THREE.MeshStandardMaterial({
+
+            color:0x0a1114,
+
+            roughness:.75,
+
+            metalness:.12
+
+        })
+
     );
 
-wall.position.set(
+backWall.position.set(
     0,
     8,
-    -10
+    -12
 );
 
-scene.add(wall);
+scene.add(backWall);
 
 /* =========================================================
-   GARAGE VERTICAL LIGHTS
+   GARAGE CEILING BEAMS
 ========================================================= */
 
-function makeGarageLight(
-    x,
-    y,
-    z,
-    rotationZ,
-    color
-){
+function addBeam(x,z){
 
-    const geometry =
-        new THREE.BoxGeometry(
-            .06,
-            6,
-            .06
-        );
-
-    const material =
-        new THREE.MeshBasicMaterial({
-            color:color
-        });
-
-    const mesh =
+    const beam =
         new THREE.Mesh(
-            geometry,
-            material
+
+            new THREE.BoxGeometry(
+                .07,
+                7,
+                .07
+            ),
+
+            new THREE.MeshBasicMaterial({
+                color:0x91eaff
+            })
+
         );
 
-    mesh.position.set(
+    beam.position.set(
         x,
-        y,
+        2.5,
         z
     );
 
-    mesh.rotation.z =
-        rotationZ;
-
-    scene.add(mesh);
-
-    return mesh;
+    scene.add(beam);
 
 }
 
-const garageLight1 =
-    makeGarageLight(
-        -8,
-        3,
-        -8,
-        0,
-        0x8de8ff
-    );
-
-const garageLight2 =
-    makeGarageLight(
-        8,
-        3,
-        -8,
-        0,
-        0x8de8ff
-    );
+addBeam(-8,-10);
+addBeam(8,-10);
+addBeam(-11,-4);
+addBeam(11,-4);
 
 /* =========================================================
    FLOOR GRID
@@ -2819,18 +1914,58 @@ const grid =
     new THREE.GridHelper(
         60,
         30,
-        0x23434b,
-        0x102024
+        0x2a5965,
+        0x10252b
     );
 
 grid.position.y =
-    -1.08;
+    -1.075;
 
 grid.material.transparent = true;
 
-grid.material.opacity = .23;
+grid.material.opacity = .22;
 
 scene.add(grid);
+
+/* =========================================================
+   GARAGE LIGHT PANELS
+========================================================= */
+
+function lightPanel(x,z,rotation){
+
+    const panel =
+        new THREE.Mesh(
+
+            new THREE.BoxGeometry(
+                3.6,
+                .04,
+                .18
+            ),
+
+            new THREE.MeshBasicMaterial({
+                color:0xdffaff
+            })
+
+        );
+
+    panel.position.set(
+        x,
+        6.2,
+        z
+    );
+
+    panel.rotation.y =
+        rotation;
+
+    scene.add(panel);
+
+}
+
+lightPanel(-6,-7,0);
+lightPanel(0,-7,0);
+lightPanel(6,-7,0);
+lightPanel(-6,1,0);
+lightPanel(6,1,0);
 
 /* =========================================================
    CAR GROUP
@@ -2841,158 +1976,18 @@ const carGroup =
 
 carGroup.position.set(
     0,
-    -0.35,
+    -.15,
     0
 );
 
 carGroup.rotation.y =
-    -0.25;
+    -.18;
 
 scene.add(carGroup);
 
 /* =========================================================
-   CAR MODEL
-========================================================= */
-
-/*
-   Real GLB vehicle.
-
-   This is loaded externally so the HTML itself
-   doesn't have to contain a 20+ MB binary model.
-
-   The model is a public automotive GLB asset
-   used by Three.js/Babylon examples.
-*/
-
-const CAR_MODEL =
-    "https://raw.githubusercontent.com/BabylonJS/Assets/master/meshes/car.glb";
-
-const gltfLoader =
-    new THREE.GLTFLoader();
-
-let carModel = null;
-
-let carLoaded = false;
-
-/* =========================================================
-   LOADING
-========================================================= */
-
-gltfLoader.load(
-
-    CAR_MODEL,
-
-    function(gltf){
-
-        carModel =
-            gltf.scene;
-
-        carModel.scale.set(
-            2.9,
-            2.9,
-            2.9
-        );
-
-        carModel.position.set(
-            0,
-            0,
-            0
-        );
-
-        carModel.rotation.y =
-            Math.PI;
-
-        carModel.traverse(
-            function(object){
-
-                if(
-                    object.isMesh
-                ){
-
-                    object.castShadow =
-                        true;
-
-                    object.receiveShadow =
-                        true;
-
-                    if(
-                        object.material
-                    ){
-
-                        object.material.envMapIntensity =
-                            1.2;
-
-                    }
-
-                }
-
-            }
-        );
-
-        carGroup.add(
-            carModel
-        );
-
-        carLoaded = true;
-
-        gsap.to(
-            loaderBar,
-            {
-                width:"100%",
-                duration:.35
-            }
-        );
-
-        setTimeout(
-            finishLoading,
-            300
-        );
-
-    },
-
-    function(xhr){
-
-        if(xhr.total){
-
-            const percent =
-                xhr.loaded /
-                xhr.total *
-                100;
-
-            loaderBar.style.width =
-                Math.min(
-                    percent,
-                    100
-                ) + "%";
-
-        }
-
-    },
-
-    function(error){
-
-        console.error(
-            "3D vehicle failed to load:",
-            error
-        );
-
-        /*
-           If the remote model fails,
-           the page still continues rather
-           than leaving the customer staring
-           at a blank screen.
-        */
-
-        createFallbackCar();
-
-        finishLoading();
-
-    }
-
-);
-
-/* =========================================================
-   FALLBACK CAR
+   FALLBACK DISPLAY CAR
+   Only used if external GLB fails.
 ========================================================= */
 
 function createFallbackCar(){
@@ -3004,18 +1999,22 @@ function createFallbackCar(){
         new THREE.Mesh(
 
             new THREE.BoxGeometry(
-                4.8,
-                1.05,
+                5.2,
+                1.0,
                 2.15
             ),
 
-            new THREE.MeshStandardMaterial({
+            new THREE.MeshPhysicalMaterial({
 
-                color:0xb7c2c5,
+                color:0xbfc9cb,
 
-                metalness:.82,
+                metalness:.88,
 
-                roughness:.2
+                roughness:.18,
+
+                clearcoat:1,
+
+                clearcoatRoughness:.08
 
             })
 
@@ -3025,32 +2024,67 @@ function createFallbackCar(){
 
     fallback.add(body);
 
-    const cabin =
+    const hood =
         new THREE.Mesh(
 
             new THREE.BoxGeometry(
-                2.6,
-                .8,
-                1.75
+                2.4,
+                .18,
+                2
             ),
 
-            new THREE.MeshStandardMaterial({
+            new THREE.MeshPhysicalMaterial({
 
-                color:0x081013,
+                color:0xd5dcdd,
 
-                metalness:.3,
+                metalness:.9,
 
-                roughness:.15
+                roughness:.14,
+
+                clearcoat:1
 
             })
 
         );
 
-    cabin.position.y =
-        .75;
+    hood.position.set(
+        1.35,
+        .48,
+        0
+    );
 
-    cabin.position.z =
-        -.1;
+    hood.castShadow = true;
+
+    fallback.add(hood);
+
+    const cabin =
+        new THREE.Mesh(
+
+            new THREE.BoxGeometry(
+                2.45,
+                .78,
+                1.7
+            ),
+
+            new THREE.MeshPhysicalMaterial({
+
+                color:0x071014,
+
+                metalness:.35,
+
+                roughness:.08,
+
+                transmission:.05
+
+            })
+
+        );
+
+    cabin.position.set(
+        -.45,
+        .72,
+        0
+    );
 
     cabin.castShadow = true;
 
@@ -3061,9 +2095,9 @@ function createFallbackCar(){
 
             color:0x050505,
 
-            metalness:.8,
+            metalness:.9,
 
-            roughness:.25
+            roughness:.2
 
         });
 
@@ -3071,62 +2105,201 @@ function createFallbackCar(){
         new THREE.CylinderGeometry(
             .55,
             .55,
-            .3,
-            32
+            .34,
+            40
         );
 
-    const positions = [
+    [
+        [-1.65,-.55,1.03],
+        [1.65,-.55,1.03],
+        [-1.65,-.55,-1.03],
+        [1.65,-.55,-1.03]
 
-        [-1.65,-.55,1.0],
+    ].forEach(pos => {
 
-        [1.65,-.55,1.0],
-
-        [-1.65,-.55,-1.0],
-
-        [1.65,-.55,-1.0]
-
-    ];
-
-    positions.forEach(
-        function(pos){
-
-            const wheel =
-                new THREE.Mesh(
-                    wheelGeometry,
-                    wheelMaterial
-                );
-
-            wheel.rotation.z =
-                Math.PI / 2;
-
-            wheel.position.set(
-                pos[0],
-                pos[1],
-                pos[2]
+        const wheel =
+            new THREE.Mesh(
+                wheelGeometry,
+                wheelMaterial
             );
 
-            wheel.castShadow = true;
+        wheel.rotation.z =
+            Math.PI / 2;
 
-            fallback.add(wheel);
+        wheel.position.set(
+            pos[0],
+            pos[1],
+            pos[2]
+        );
 
-        }
-    );
+        wheel.castShadow = true;
 
-    carGroup.add(
-        fallback
-    );
+        fallback.add(wheel);
 
-    carModel =
-        fallback;
+    });
+
+    return fallback;
 
 }
 
+let fallbackCar =
+    createFallbackCar();
+
+fallbackCar.visible = true;
+
+carGroup.add(
+    fallbackCar
+);
+
 /* =========================================================
-   3D FLOATING DUST
+   REAL 3D CAR
+========================================================= */
+
+/*
+   Three.js Ferrari example model.
+
+   This is being used as the visual test model.
+   Replace with a properly licensed business-use
+   model before commercial launch if required.
+*/
+
+const CAR_MODEL =
+    "https://threejs.org/examples/models/gltf/ferrari.glb";
+
+const gltfLoader =
+    new GLTFLoader();
+
+let realCar = null;
+
+let modelReady = false;
+
+gltfLoader.load(
+
+    CAR_MODEL,
+
+    async function(gltf){
+
+        realCar =
+            gltf.scene;
+
+        realCar.traverse(
+            object => {
+
+                if(object.isMesh){
+
+                    object.castShadow =
+                        true;
+
+                    object.receiveShadow =
+                        true;
+
+                    if(object.material){
+
+                        object.material.envMapIntensity =
+                            1.4;
+
+                    }
+
+                }
+
+            }
+        );
+
+        /*
+           Scale the official Ferrari example
+           to fit the garage.
+        */
+
+        realCar.scale.set(
+            4.2,
+            4.2,
+            4.2
+        );
+
+        realCar.position.set(
+            0,
+            -.65,
+            0
+        );
+
+        realCar.rotation.y =
+            Math.PI;
+
+        carGroup.add(
+            realCar
+        );
+
+        /*
+           The real 3D car replaces the
+           temporary display immediately.
+        */
+
+        fallbackCar.visible =
+            false;
+
+        modelReady = true;
+
+        gsap.to(
+            loaderBar,
+            {
+                width:"100%",
+                duration:.45
+            }
+        );
+
+        setTimeout(
+            finishLoading,
+            350
+        );
+
+    },
+
+    function(xhr){
+
+        if(xhr.total){
+
+            const progress =
+                xhr.loaded /
+                xhr.total *
+                100;
+
+            loaderBar.style.width =
+                Math.min(
+                    progress,
+                    98
+                ) + "%";
+
+        }
+
+    },
+
+    function(error){
+
+        console.error(
+            "Beachboyz 3D model failed:",
+            error
+        );
+
+        /*
+           Keep the scene alive.
+           The fallback is already visible.
+        */
+
+        loaderBar.style.width =
+            "100%";
+
+        finishLoading();
+
+    }
+
+);
+
+/* =========================================================
+   DUST / DETAIL PARTICLES
 ========================================================= */
 
 const dustCount =
-    350;
+    420;
 
 const dustGeometry =
     new THREE.BufferGeometry();
@@ -3142,80 +2315,55 @@ for(
     i++
 ){
 
-    dustPositions[
-        i*3
-    ] =
-        (Math.random()-.5)*30;
+    dustPositions[i*3] =
+        (Math.random()-.5)*35;
 
-    dustPositions[
-        i*3+1
-    ] =
-        Math.random()*9-1;
+    dustPositions[i*3+1] =
+        Math.random()*10-1;
 
-    dustPositions[
-        i*3+2
-    ] =
-        (Math.random()-.5)*30;
+    dustPositions[i*3+2] =
+        (Math.random()-.5)*35;
 
 }
 
 dustGeometry.setAttribute(
-
     "position",
-
     new THREE.BufferAttribute(
         dustPositions,
         3
     )
-
 );
-
-const dustMaterial =
-    new THREE.PointsMaterial({
-
-        color:0xa8e9f5,
-
-        size:.025,
-
-        transparent:true,
-
-        opacity:.25
-
-    });
 
 const dust =
     new THREE.Points(
+
         dustGeometry,
-        dustMaterial
+
+        new THREE.PointsMaterial({
+
+            color:0xa8e9f5,
+
+            size:.025,
+
+            transparent:true,
+
+            opacity:.24
+
+        })
+
     );
 
 scene.add(dust);
 
 /* =========================================================
-   CAMERA START
-========================================================= */
-
-camera.position.set(
-    7.8,
-    3.4,
-    10.5
-);
-
-camera.lookAt(
-    0,
-    0,
-    0
-);
-
-/* =========================================================
-   ANIMATION STATE
+   CAMERA STATE
 ========================================================= */
 
 const cameraState = {
 
-    x:7.8,
+    x:7.5,
 
-    y:3.4,
+    y:3.1,
 
     z:10.5,
 
@@ -3228,10 +2376,10 @@ const cameraState = {
 };
 
 /* =========================================================
-   MAIN SCROLL TIMELINE
+   CINEMATIC SCROLL
 ========================================================= */
 
-const heroTimeline =
+const cinematic =
     gsap.timeline({
 
         scrollTrigger:{
@@ -3242,58 +2390,49 @@ const heroTimeline =
 
             end:"bottom bottom",
 
-            scrub:1.2
+            scrub:1.15
 
         }
 
     });
 
-/* =========================================================
-   SCENE 1
-   CAR ENTERS GARAGE
-========================================================= */
+/* START */
 
-heroTimeline
-
-.to(
-
-    carGroup.position,
-
-    {
-
-        x:0,
-
-        y:-.35,
-
-        z:1,
-
-        duration:.20,
-
-        ease:"none"
-
-    }
-
-)
-
+cinematic
 .to(
 
     cameraState,
 
     {
 
-        x:5.8,
-
-        y:2.4,
-
-        z:8.2,
+        x:5.7,
+        y:2.45,
+        z:8.0,
 
         lookX:0,
-
         lookY:.1,
-
         lookZ:0,
 
-        duration:.20,
+        duration:1,
+
+        ease:"none"
+
+    }
+
+)
+
+/* DRIVE-BY */
+
+.to(
+
+    carGroup.position,
+
+    {
+
+        x:1.8,
+        z:.6,
+
+        duration:1,
 
         ease:"none"
 
@@ -3303,26 +2442,7 @@ heroTimeline
 
 )
 
-/* =========================================================
-   SCENE 2
-   SIDE CAMERA
-========================================================= */
-
-.to(
-
-    carGroup.rotation,
-
-    {
-
-        y:-.65,
-
-        duration:.20,
-
-        ease:"none"
-
-    }
-
-)
+/* SIDE SHOT */
 
 .to(
 
@@ -3330,19 +2450,33 @@ heroTimeline
 
     {
 
-        x:9.2,
-
+        x:8.8,
         y:2.1,
-
-        z:5.2,
+        z:5.0,
 
         lookX:0,
-
         lookY:.15,
-
         lookZ:0,
 
-        duration:.20,
+        duration:1,
+
+        ease:"none"
+
+    }
+
+)
+
+/* ROTATE VEHICLE */
+
+.to(
+
+    carGroup.rotation,
+
+    {
+
+        y:-.8,
+
+        duration:1,
 
         ease:"none"
 
@@ -3352,10 +2486,7 @@ heroTimeline
 
 )
 
-/* =========================================================
-   SCENE 3
-   CLOSE DETAIL SHOT
-========================================================= */
+/* DETAIL CLOSE-UP */
 
 .to(
 
@@ -3363,19 +2494,15 @@ heroTimeline
 
     {
 
-        x:4.1,
-
+        x:4.0,
         y:1.55,
-
-        z:4.3,
+        z:4.0,
 
         lookX:0,
-
         lookY:.2,
-
         lookZ:0,
 
-        duration:.20,
+        duration:1,
 
         ease:"none"
 
@@ -3383,10 +2510,7 @@ heroTimeline
 
 )
 
-/* =========================================================
-   SCENE 4
-   PULL AWAY
-========================================================= */
+/* PULL AROUND */
 
 .to(
 
@@ -3394,19 +2518,15 @@ heroTimeline
 
     {
 
-        x:-7,
-
-        y:3.2,
-
-        z:8.5,
+        x:-6.8,
+        y:2.8,
+        z:6.4,
 
         lookX:0,
-
-        lookY:0,
-
+        lookY:.1,
         lookZ:0,
 
-        duration:.20,
+        duration:1,
 
         ease:"none"
 
@@ -3414,10 +2534,7 @@ heroTimeline
 
 )
 
-/* =========================================================
-   SCENE 5
-   CAR ROTATES
-========================================================= */
+/* REVEAL BACK */
 
 .to(
 
@@ -3425,20 +2542,19 @@ heroTimeline
 
     {
 
-        y:Math.PI * .35,
+        y:-2.1,
 
-        duration:.20,
+        duration:1,
 
         ease:"none"
 
-    }
+    },
+
+    "<"
 
 )
 
-/* =========================================================
-   SCENE 6
-   FINAL HERO EXIT
-========================================================= */
+/* FINAL HERO */
 
 .to(
 
@@ -3446,19 +2562,15 @@ heroTimeline
 
     {
 
-        x:-9,
-
-        y:4.3,
-
-        z:11,
+        x:-8.5,
+        y:3.9,
+        z:10.5,
 
         lookX:0,
-
-        lookY:.3,
-
+        lookY:.2,
         lookZ:0,
 
-        duration:.20,
+        duration:1,
 
         ease:"none"
 
@@ -3472,13 +2584,11 @@ heroTimeline
 
     {
 
-        x:4,
+        x:2.8,
+        y:-.05,
+        z:-1.8,
 
-        y:-.2,
-
-        z:-2,
-
-        duration:.20,
+        duration:1,
 
         ease:"none"
 
@@ -3489,7 +2599,7 @@ heroTimeline
 );
 
 /* =========================================================
-   HERO TEXT EXIT
+   HERO TEXT MOVEMENT
 ========================================================= */
 
 gsap.to(
@@ -3498,7 +2608,7 @@ gsap.to(
 
     {
 
-        y:-150,
+        y:-180,
 
         opacity:0,
 
@@ -3510,7 +2620,7 @@ gsap.to(
 
             start:"top top",
 
-            end:"35% top",
+            end:"32% top",
 
             scrub:1
 
@@ -3530,9 +2640,11 @@ gsap.to(
 
     {
 
-        x:"20vw",
+        x:"22vw",
 
-        opacity:.1,
+        opacity:.08,
+
+        ease:"none",
 
         scrollTrigger:{
 
@@ -3556,9 +2668,11 @@ gsap.to(
 
     {
 
-        x:"-20vw",
+        x:"-22vw",
 
-        opacity:.1,
+        opacity:.08,
+
+        ease:"none",
 
         scrollTrigger:{
 
@@ -3586,9 +2700,9 @@ gsap.to(
 
     {
 
-        y:"+=.08",
+        y:"+=.055",
 
-        duration:2.5,
+        duration:2.7,
 
         repeat:-1,
 
@@ -3604,50 +2718,48 @@ gsap.to(
    RENDER LOOP
 ========================================================= */
 
+const cameraTarget =
+    new THREE.Vector3();
+
 function animate(){
 
     requestAnimationFrame(
         animate
     );
 
-    /* Camera */
-
     camera.position.x =
         THREE.MathUtils.lerp(
             camera.position.x,
             cameraState.x,
-            .08
+            .075
         );
 
     camera.position.y =
         THREE.MathUtils.lerp(
             camera.position.y,
             cameraState.y,
-            .08
+            .075
         );
 
     camera.position.z =
         THREE.MathUtils.lerp(
             camera.position.z,
             cameraState.z,
-            .08
+            .075
         );
 
-    const target =
-        new THREE.Vector3(
-            cameraState.lookX,
-            cameraState.lookY,
-            cameraState.lookZ
-        );
-
-    camera.lookAt(
-        target
+    cameraTarget.set(
+        cameraState.lookX,
+        cameraState.lookY,
+        cameraState.lookZ
     );
 
-    /* Dust */
+    camera.lookAt(
+        cameraTarget
+    );
 
     dust.rotation.y +=
-        .00025;
+        .00022;
 
     renderer.render(
         scene,
@@ -3663,40 +2775,31 @@ animate();
 ========================================================= */
 
 let mouseX = 0;
-
 let mouseY = 0;
 
 let targetMouseX = 0;
-
 let targetMouseY = 0;
 
 window.addEventListener(
-
     "mousemove",
-
-    function(event){
+    event => {
 
         targetMouseX =
-            (event.clientX /
-            window.innerWidth
-            -.5);
+            event.clientX /
+            window.innerWidth -
+            .5;
 
         targetMouseY =
-            (event.clientY /
-            window.innerHeight
-            -.5);
+            event.clientY /
+            window.innerHeight -
+            .5;
 
     }
-
 );
-
-/* =========================================================
-   MOUSE CAMERA LOOP
-========================================================= */
 
 gsap.ticker.add(
 
-    function(){
+    () => {
 
         mouseX +=
             (targetMouseX -
@@ -3713,7 +2816,10 @@ gsap.ticker.add(
         ){
 
             camera.rotation.y =
-                mouseX * .025;
+                mouseX * .018;
+
+            camera.rotation.x =
+                mouseY * .008;
 
         }
 
@@ -3722,46 +2828,31 @@ gsap.ticker.add(
 );
 
 /* =========================================================
-   REVEAL ANIMATIONS
+   SECTION REVEALS
 ========================================================= */
 
-gsap.utils.toArray(
-    ".intro-content"
-).forEach(
-    function(element){
+gsap.from(
+    ".intro-content",
+    {
 
-        gsap.from(
-            element,
-            {
+        y:80,
 
-                y:80,
+        opacity:0,
 
-                opacity:0,
+        duration:1.1,
 
-                duration:1.1,
+        ease:"power3.out",
 
-                ease:"power3.out",
+        scrollTrigger:{
 
-                scrollTrigger:{
+            trigger:".intro-content",
 
-                    trigger:element,
+            start:"top 82%"
 
-                    start:"top 82%",
-
-                    toggleActions:
-                        "play none none reverse"
-
-                }
-
-            }
-        );
+        }
 
     }
 );
-
-/* =========================================================
-   FEATURE CARDS
-========================================================= */
 
 gsap.from(
     ".feature",
@@ -3788,10 +2879,6 @@ gsap.from(
     }
 );
 
-/* =========================================================
-   PACKAGES
-========================================================= */
-
 gsap.from(
     ".package",
     {
@@ -3811,207 +2898,3 @@ gsap.from(
         scrollTrigger:{
 
             trigger:".package-grid",
-
-            start:"top 78%"
-
-        }
-
-    }
-);
-
-/* =========================================================
-   ADDONS
-========================================================= */
-
-gsap.from(
-    ".addon",
-    {
-
-        y:50,
-
-        opacity:0,
-
-        stagger:.1,
-
-        duration:.8,
-
-        ease:"power3.out",
-
-        scrollTrigger:{
-
-            trigger:".addons-grid",
-
-            start:"top 80%"
-
-        }
-
-    }
-);
-
-/* =========================================================
-   AREA TAGS
-========================================================= */
-
-gsap.from(
-    ".area-list span",
-    {
-
-        y:25,
-
-        opacity:0,
-
-        stagger:.08,
-
-        duration:.6,
-
-        ease:"power2.out",
-
-        scrollTrigger:{
-
-            trigger:".area-list",
-
-            start:"top 80%"
-
-        }
-
-    }
-);
-
-/* =========================================================
-   NAVIGATION SCROLL
-========================================================= */
-
-window.addEventListener(
-
-    "scroll",
-
-    function(){
-
-        if(
-            window.scrollY > 50
-        ){
-
-            nav.classList.add(
-                "scrolled"
-            );
-
-        }else{
-
-            nav.classList.remove(
-                "scrolled"
-            );
-
-        }
-
-    }
-
-);
-
-/* =========================================================
-   RESIZE
-========================================================= */
-
-window.addEventListener(
-
-    "resize",
-
-    function(){
-
-        camera.aspect =
-            window.innerWidth /
-            window.innerHeight;
-
-        camera.updateProjectionMatrix();
-
-        renderer.setSize(
-            window.innerWidth,
-            window.innerHeight
-        );
-
-        renderer.setPixelRatio(
-            Math.min(
-                window.devicePixelRatio,
-                1.7
-            )
-        );
-
-        ScrollTrigger.refresh();
-
-    }
-
-);
-
-/* =========================================================
-   LOADING COMPLETE
-========================================================= */
-
-function finishLoading(){
-
-    document.body.classList.remove(
-        "loading"
-    );
-
-    gsap.to(
-
-        loaderScreen,
-
-        {
-
-            opacity:0,
-
-            duration:.7,
-
-            ease:"power2.out",
-
-            onComplete:function(){
-
-                loaderScreen.style.display =
-                    "none";
-
-            }
-
-        }
-
-    );
-
-}
-
-/* =========================================================
-   SAFETY LOADER
-========================================================= */
-
-/*
-   If the remote GLB takes too long,
-   don't trap the visitor on the loading
-   screen forever.
-*/
-
-setTimeout(
-
-    function(){
-
-        if(
-            loaderScreen.style.display !==
-            "none"
-        ){
-
-            if(!carLoaded){
-
-                createFallbackCar();
-
-            }
-
-            finishLoading();
-
-        }
-
-    },
-
-    10000
-
-);
-
-</script>
-
-</body>
-</html>
