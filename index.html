@@ -1176,12 +1176,22 @@ Call / Text 786-474-4880
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 80px 7%;
+  padding: 90px 7%;
   background:
-    radial-gradient(circle at 75% 50%, rgba(255, 90, 60, 0.18), transparent 35%),
-    linear-gradient(135deg, #070707, #111 55%, #050505);
+    radial-gradient(circle at 70% 50%, rgba(201,169,106,0.12), transparent 28%),
+    linear-gradient(135deg, #070909 0%, #121417 45%, #080b10 100%);
+  border-top: 1px solid rgba(201,169,106,0.18);
+  border-bottom: 1px solid rgba(201,169,106,0.18);
   color: white;
-  perspective: 2000px;
+  perspective: 2200px;
+}
+
+.ferrari-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 20px 6% auto 6%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,106,0.7), transparent);
 }
 
 .ferrari-content {
@@ -1194,7 +1204,8 @@ Call / Text 786-474-4880
   font-size: 12px;
   letter-spacing: 4px;
   font-weight: 700;
-  opacity: .7;
+  opacity: .8;
+  color: #f0d7a3;
 }
 
 .ferrari-content h2 {
@@ -1205,23 +1216,24 @@ Call / Text 786-474-4880
 }
 
 .ferrari-content h2 span {
-  opacity: .65;
+  opacity: .7;
+  color: #f0d7a3;
 }
 
 .ferrari-content p {
   max-width: 430px;
   line-height: 1.7;
-  color: #ccc;
+  color: #d1d8d8;
 }
 
 .ferrari-stage {
   position: relative;
-  width: min(620px, 55vw);
-  height: 360px;
+  width: min(660px, 58vw);
+  height: 390px;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1500px;
+  perspective: 1800px;
 }
 
 .ferrari-rotator {
@@ -1237,75 +1249,79 @@ Call / Text 786-474-4880
   position: absolute;
   left: 50%;
   bottom: 12px;
-  width: 88%;
+  width: 92%;
   height: 120px;
   border-radius: 50%;
-  transform: translateX(-50%) translateZ(-90px) rotateX(78deg);
-  background: radial-gradient(circle, rgba(25, 211, 197, 0.38), rgba(255, 90, 60, 0.12) 40%, transparent 75%);
-  box-shadow: 0 0 60px rgba(25, 211, 197, 0.18);
+  transform: translateX(-50%) translateZ(-95px) rotateX(78deg);
+  background: radial-gradient(circle, rgba(201,169,106,0.32), rgba(255, 115, 83, 0.14) 38%, transparent 72%);
+  box-shadow: 0 0 60px rgba(201,169,106,0.18);
 }
 
 .ferrari-glow {
   position: absolute;
-  width: 440px;
-  height: 190px;
+  width: 480px;
+  height: 220px;
   border-radius: 50%;
-  background: rgba(255, 80, 40, 0.22);
-  filter: blur(72px);
+  background: rgba(201,169,106,0.18);
+  filter: blur(80px);
   transform: translateZ(18px) translateX(-10px);
 }
 
 .ferrari-reflection {
   position: absolute;
-  right: 10%;
-  bottom: 14%;
-  width: 62%;
-  height: 34%;
+  right: 12%;
+  bottom: 18%;
+  width: 58%;
+  height: 30%;
   border-radius: 50%;
-  background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0));
-  filter: blur(18px);
-  transform: translateZ(5px) rotateY(-28deg);
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
+  filter: blur(16px);
+  transform: translateZ(5px) rotateY(-26deg);
 }
 
 .ferrari-car {
   position: absolute;
   inset: 0 0 0 0;
   width: 100%;
-  max-width: 620px;
+  max-width: 640px;
   margin: auto;
-  border-radius: 18px;
+  border-radius: 24px;
   object-fit: cover;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65);
-  transform: rotateX(12deg) rotateY(-18deg) rotateZ(-1deg) translateZ(30px);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(240,215,163,0.18);
+  transform: rotateX(12deg) rotateY(-18deg) rotateZ(-1deg) translateZ(42px);
   filter: saturate(1.12) contrast(1.08) brightness(1.03);
 }
 
 .ferrari-badge {
   position: absolute;
-  right: 15px;
-  bottom: 10px;
+  right: 18px;
+  bottom: 18px;
   z-index: 4;
-  width: 78px;
-  height: 78px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  width: 82px;
+  height: 82px;
+  border: 1px solid rgba(201,169,106,0.45);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.62);
   backdrop-filter: blur(8px);
-  transform: translateZ(65px);
+  transform: translateZ(75px);
+  box-shadow: 0 0 30px rgba(201,169,106,0.12);
 }
 
 .ferrari-badge strong {
   font-size: 24px;
+  color: #f0d7a3;
 }
 
 .ferrari-badge small {
   font-size: 8px;
   letter-spacing: 2px;
   opacity: .7;
+  color: #fff;
 }
 
 @keyframes ferrariFloat {
