@@ -4,1655 +4,1621 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<title>Beachboyz Detailing | Miami Mobile Auto Detailing</title>
-
+<title>Beachboyz Detailing | The Miami Experience</title>
 
 <meta name="description"
 content="Beachboyz Detailing — premium mobile auto detailing serving Sunny Isles Beach, North Miami, Bal Harbour, Golden Beach and surrounding South Florida areas.">
 
+<meta name="theme-color" content="#05090b">
 
 <style>
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
-
-html {
- scroll-behavior: smooth;
-}
-
-
-body {
- font-family: Arial, Helvetica, sans-serif;
- background: #05080d;
- color: #f5f7f7;
- line-height: 1.6;
- overflow-x: hidden;
-}
-
-
-a {
- color: inherit;
- text-decoration: none;
-}
-
-
-/* ================= HEADER ================= */
-
-
-header {
- position: fixed;
- top: 0;
- width: 100%;
- z-index: 1000;
- padding: 17px 6%;
- background: rgba(3,7,12,.88);
- backdrop-filter: blur(15px);
- border-bottom: 1px solid rgba(25,211,197,.18);
-}
-
-
-nav {
- max-width: 1250px;
- margin: auto;
- display: flex;
- justify-content: space-between;
- align-items: center;
-}
-
-
-.logo {
- font-size: 21px;
- font-weight: 900;
- letter-spacing: 2px;
-}
-
-
-.logo span {
- color: #19d3c5;
-}
-
-
-.nav-links {
- display: flex;
- gap: 28px;
- font-size: 13px;
- font-weight: 800;
- text-transform: uppercase;
- letter-spacing: 1px;
-}
-
-
-.nav-links a:hover {
- color: #19d3c5;
-}
-
-
-/* ================= HERO ================= */
-
-
-.hero {
- min-height: 100vh;
- display: flex;
- align-items: center;
- padding: 155px 7% 90px;
- position: relative;
-
-
- background:
-   linear-gradient(
-     110deg,
-     rgba(2,8,13,.94),
-     rgba(2,8,13,.65),
-     rgba(2,8,13,.84)
-   ),
-   url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2200&q=90")
-   center/cover no-repeat;
-}
-
-
-.hero::after {
- content: "";
- position: absolute;
- inset: auto 0 0;
- height: 180px;
- background: linear-gradient(transparent,#05080d);
-}
-
-
-.hero-content {
- max-width: 950px;
- position: relative;
- z-index: 2;
-}
-
-
-.eyebrow {
- color: #19d3c5;
- font-size: 12px;
- font-weight: 900;
- letter-spacing: 5px;
- text-transform: uppercase;
- margin-bottom: 20px;
-}
-
-
-.hero h1 {
- font-size: clamp(55px,9vw,115px);
- line-height: .88;
- text-transform: uppercase;
- letter-spacing: -5px;
- margin-bottom: 30px;
- text-shadow: 0 8px 35px rgba(0,0,0,.55);
-}
-
-
-.hero h1 span {
- color: #19d3c5;
- text-shadow: 0 0 30px rgba(25,211,197,.35);
-}
-
-
-.hero h2 {
- font-size: clamp(21px,3vw,35px);
- text-transform: uppercase;
- letter-spacing: 1px;
- margin-bottom: 18px;
-}
-
-
-.hero p {
- max-width: 720px;
- color: #d4dddd;
- font-size: 18px;
- margin-bottom: 32px;
-}
-
-
-.buttons {
- display: flex;
- gap: 15px;
- flex-wrap: wrap;
-}
-
-
-.btn {
- display: inline-block;
- padding: 15px 25px;
- border-radius: 3px;
- font-weight: 900;
- text-transform: uppercase;
- letter-spacing: 1px;
- font-size: 12px;
- transition: .25s;
-}
-
-
-.btn-primary {
- background: #19d3c5;
- color: #041014;
- box-shadow: 0 0 25px rgba(25,211,197,.18);
-}
-
-
-.btn-primary:hover {
- transform: translateY(-3px);
- background: #65eee5;
- box-shadow: 0 0 35px rgba(25,211,197,.35);
-}
-
-
-.btn-outline {
- border: 1px solid rgba(25,211,197,.75);
- background: rgba(0,0,0,.18);
-}
-
-
-.btn-outline:hover {
- background: #19d3c5;
- color: #041014;
-}
-
-
-/* ================= CINEMATIC FERRARI MOMENT ================= */
-
-
-.cinematic {
- position: relative;
- height: 430px;
- overflow: hidden;
-
-
- background: #030609;
-}
-
-
-.cinematic-image {
- position: absolute;
- inset: 0;
-
-
- background:
-   linear-gradient(
-     90deg,
-     rgba(3,7,12,.55),
-     rgba(3,7,12,.05),
-     rgba(3,7,12,.6)
-   ),
-   url("ferrari-miami.png")
-   center/cover no-repeat;
-
-
- transform: scale(1.08);
- animation: cinematicZoom 8s ease-in-out forwards;
-}
-
-
-@keyframes cinematicZoom {
- 0% {
-   transform: scale(1.12);
- }
-
-
- 100% {
-   transform: scale(1);
- }
-}
-
-
-.cinematic-overlay {
- position: absolute;
- inset: 0;
-
-
- display: flex;
- align-items: center;
- justify-content: center;
-
-
- text-align: center;
-
-
- background:
-   linear-gradient(
-     transparent 20%,
-     rgba(3,7,12,.3),
-     rgba(3,7,12,.85)
-   );
-}
-
-
-.cinematic-content {
- position: relative;
- z-index: 2;
- animation: cinematicText 7s ease forwards;
-}
-
-
-@keyframes cinematicText {
- 0% {
-   opacity: 0;
-   transform: translateY(20px);
- }
-
-
- 15% {
-   opacity: 1;
-   transform: translateY(0);
- }
-
-
- 75% {
-   opacity: 1;
- }
 
+/* =========================================================
+   BEACHBOYZ 3D GARAGE EXPERIENCE
+========================================================= */
 
- 100% {
-   opacity: 0;
- }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-
-.cinematic-title {
- font-size: clamp(38px,6vw,75px);
- font-weight: 900;
- text-transform: uppercase;
- letter-spacing: -2px;
-}
-
-
-.cinematic-title span {
- color: #19d3c5;
-}
-
-
-.cinematic-subtitle {
- margin-top: 8px;
- color: white;
- font-size: 12px;
- letter-spacing: 5px;
- text-transform: uppercase;
-}
-
-
-.cinematic-badge {
- display: inline-block;
- margin-bottom: 15px;
- padding: 6px 12px;
-
-
- border: 1px solid #19d3c5;
- color: #19d3c5;
-
-
- font-size: 10px;
- font-weight: 900;
- letter-spacing: 3px;
-}
-
-
-/* ================= SECTIONS ================= */
-
-
-section {
- padding: 100px 7%;
-}
-
-
-.section-inner {
- max-width: 1250px;
- margin: auto;
-}
-
-
-.section-title {
- font-size: clamp(38px,5vw,64px);
- text-transform: uppercase;
- line-height: .95;
- margin-bottom: 20px;
- letter-spacing: -2px;
-}
-
-
-.section-title span {
- color: #19d3c5;
+html{
+    scroll-behavior:smooth;
 }
 
-
-/* ================= INTRO ================= */
-
-
-.intro {
- background:
-   linear-gradient(135deg,#071318,#081116 60%,#0b1018);
-}
-
-
-.intro-grid {
- display: grid;
- grid-template-columns: 1.2fr .8fr;
- gap: 65px;
- align-items: center;
-}
-
-
-.intro p {
- color: #c3cecf;
- font-size: 18px;
- margin-top: 20px;
+body{
+    background:#030708;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
-
 
-.experience-box {
- border: 1px solid rgba(25,211,197,.25);
- border-left: 3px solid #19d3c5;
- padding: 32px;
- background: linear-gradient(
-   135deg,
-   rgba(25,211,197,.08),
-   rgba(255,40,150,.035)
- );
+body::-webkit-scrollbar{
+    width:7px;
 }
 
-
-.experience-box strong {
- display: block;
- font-size: 23px;
- margin-bottom: 10px;
- text-transform: uppercase;
+body::-webkit-scrollbar-track{
+    background:#030708;
 }
-
 
-.experience-box p {
- font-size: 15px;
- margin: 0;
+body::-webkit-scrollbar-thumb{
+    background:#20d9d1;
+    border-radius:20px;
 }
 
-
-.service-area {
- margin-top: 45px;
- padding: 25px;
- background: rgba(25,211,197,.045);
- border: 1px solid rgba(25,211,197,.18);
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
-.service-area strong {
- color: #19d3c5;
- text-transform: uppercase;
- letter-spacing: 3px;
- font-size: 12px;
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 5%;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.7),
+        transparent
+    );
+    transition:.4s ease;
 }
-
 
-.service-area p {
- margin-top: 7px;
- font-size: 15px;
+header.scrolled{
+    height:65px;
+    background:rgba(3,7,8,.9);
+    backdrop-filter:blur(14px);
 }
 
-
-/* ================= SERVICES ================= */
-
-
-.services {
- background: #05080d;
+.logo{
+    font-size:23px;
+    font-weight:900;
+    letter-spacing:2px;
 }
 
-
-.section-heading {
- text-align: center;
- max-width: 780px;
- margin: 0 auto 55px;
+.logo span{
+    color:#25ddd5;
 }
-
 
-.section-heading p {
- color: #aebabb;
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
-
-.cards {
- display: grid;
- grid-template-columns: repeat(3,1fr);
- gap: 24px;
+nav a{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-weight:800;
+    transition:.25s;
 }
-
 
-.card {
- background: linear-gradient(145deg,#0c171d,#071015);
- border: 1px solid rgba(255,255,255,.08);
- overflow: hidden;
- transition: .3s;
+nav a:hover{
+    color:#25ddd5;
 }
 
-
-.card:hover {
- transform: translateY(-8px);
- border-color: rgba(25,211,197,.55);
- box-shadow: 0 20px 50px rgba(0,0,0,.35);
+.book-nav{
+    border:1px solid rgba(255,255,255,.65);
+    padding:11px 18px;
+    border-radius:30px;
+}
+
+.book-nav:hover{
+    background:#fff;
+    color:#000;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =========================================================
+   3D WORLD
+========================================================= */
+
+.world{
+    position:relative;
+    height:500vh;
+}
+
+.scene{
+    position:sticky;
+    top:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    perspective:1000px;
+    background:#030708;
+}
+
+/* =========================================================
+   GARAGE
+========================================================= */
+
+.garage{
+    position:absolute;
+    inset:0;
+    transform-style:preserve-3d;
+    overflow:hidden;
+}
+
+/* ceiling */
+
+.ceiling{
+    position:absolute;
+    width:160%;
+    height:55%;
+    left:-30%;
+    top:-25%;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #11191a 0 80px,
+            #0a1011 80px 160px
+        );
+    transform:
+        rotateX(68deg)
+        translateZ(0);
+    transform-origin:center bottom;
+}
+
+/* floor */
+
+.floor{
+    position:absolute;
+    width:180%;
+    height:90%;
+    left:-40%;
+    bottom:-37%;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 0 2px,
+            transparent 2px 120px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,.025) 0 2px,
+            transparent 2px 90px
+        ),
+        linear-gradient(
+            #11191b,
+            #030607
+        );
+    transform:
+        rotateX(70deg)
+        translateZ(0);
+    transform-origin:center top;
+}
+
+/* back wall */
+
+.back-wall{
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(
+            ellipse at center 45% 48%,
+            rgba(38,217,210,.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            90deg,
+            #020506,
+            #0a1113 48%,
+            #020506
+        );
+    transform:translateZ(-300px) scale(1.3);
+}
+
+/* garage beams */
+
+.beam{
+    position:absolute;
+    top:0;
+    width:13px;
+    height:100%;
+    background:linear-gradient(
+        #1c282a,
+        #070c0d
+    );
+    box-shadow:0 0 35px rgba(0,0,0,.9);
+    transform-origin:center;
+}
+
+.beam.left{
+    left:12%;
+    transform:rotateY(13deg);
+}
+
+.beam.right{
+    right:12%;
+    transform:rotateY(-13deg);
+}
+
+/* =========================================================
+   GARAGE LIGHTS
+========================================================= */
+
+.light{
+    position:absolute;
+    height:7px;
+    width:210px;
+    background:#e9ffff;
+    box-shadow:
+        0 0 20px #fff,
+        0 0 45px rgba(37,221,213,.6);
+    opacity:.8;
+}
+
+.light.one{
+    top:23%;
+    left:13%;
+    transform:rotate(-7deg);
+}
+
+.light.two{
+    top:23%;
+    right:13%;
+    transform:rotate(7deg);
+}
+
+.light.three{
+    top:42%;
+    left:50%;
+    transform:translateX(-50%);
+    width:300px;
+}
+
+/* =========================================================
+   MIAMI GLOW
+========================================================= */
+
+.miami-glow{
+    position:absolute;
+    width:700px;
+    height:700px;
+    left:50%;
+    top:48%;
+    transform:translate(-50%,-50%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,221,213,.13),
+            transparent 65%
+        );
+    filter:blur(15px);
+}
+
+/* =========================================================
+   CAR
+========================================================= */
+
+.car{
+    position:absolute;
+    left:50%;
+    top:57%;
+    width:min(620px,72vw);
+    transform:
+        translate(-50%,-50%)
+        translateZ(120px)
+        scale(.78);
+    z-index:20;
+    transition:transform .12s linear;
+    filter:
+        drop-shadow(
+            0 35px 35px rgba(0,0,0,.9)
+        );
+}
+
+.car img{
+    width:100%;
+    display:block;
+}
+
+/* =========================================================
+   CAR LIGHTS
+========================================================= */
+
+.headlight{
+    position:absolute;
+    width:90px;
+    height:24px;
+    background:#eaffff;
+    filter:blur(7px);
+    opacity:.85;
+    box-shadow:
+        0 0 30px #fff,
+        0 0 60px #5ffff8;
+}
+
+.headlight.left{
+    left:18%;
+    top:53%;
+    transform:rotate(9deg);
+}
+
+.headlight.right{
+    right:18%;
+    top:53%;
+    transform:rotate(-9deg);
+}
+
+/* =========================================================
+   HERO COPY
+========================================================= */
+
+.hero-copy{
+    position:absolute;
+    z-index:40;
+    left:7%;
+    bottom:12%;
+    max-width:650px;
+    transition:.15s linear;
+}
+
+.kicker{
+    color:#25ddd5;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.hero-copy h1{
+    font-size:clamp(52px,8vw,115px);
+    line-height:.84;
+    letter-spacing:-5px;
+    text-transform:uppercase;
+    font-weight:950;
+}
+
+.hero-copy h1 span{
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.9);
+}
+
+.hero-copy p{
+    margin-top:25px;
+    color:#b9c3c4;
+    max-width:420px;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 23px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#25ddd5;
+    color:#031011;
+}
+
+.btn-primary:hover{
+    background:#fff;
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.6);
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll{
+    position:absolute;
+    z-index:50;
+    right:6%;
+    bottom:8%;
+    writing-mode:vertical-rl;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:9px;
+    color:#718082;
+}
+
+.scroll::after{
+    content:"";
+    display:block;
+    width:1px;
+    height:55px;
+    background:#25ddd5;
+    margin:12px auto 0;
+}
+
+/* =========================================================
+   SCENE SECTIONS
+========================================================= */
+
+.scene-content{
+    position:absolute;
+    z-index:60;
+    top:50%;
+    transform:translateY(-50%);
+    width:100%;
+    padding:0 7%;
+    opacity:0;
+    transition:.15s linear;
+    pointer-events:none;
+}
+
+.scene-content.active{
+    pointer-events:auto;
+}
+
+.scene-content.left{
+    left:0;
+}
+
+.scene-content.right{
+    right:0;
+    text-align:right;
+}
+
+.scene-content h2{
+    font-size:clamp(42px,6vw,82px);
+    line-height:.9;
+    letter-spacing:-4px;
+    text-transform:uppercase;
+    max-width:650px;
+}
+
+.scene-content p{
+    max-width:480px;
+    color:#aab6b7;
+    line-height:1.7;
+    font-size:14px;
+    margin-top:22px;
+}
+
+.scene-content.right p{
+    margin-left:auto;
+}
+
+.scene-label{
+    color:#25ddd5;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+/* =========================================================
+   3D SERVICE CARDS
+========================================================= */
+
+.service-preview{
+    position:absolute;
+    right:7%;
+    top:50%;
+    transform:
+        translateY(-50%)
+        rotateY(-12deg);
+    z-index:70;
+    display:flex;
+    gap:12px;
+}
+
+.mini-card{
+    width:190px;
+    min-height:270px;
+    padding:25px 20px;
+    border:1px solid rgba(255,255,255,.16);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.015)
+        );
+    backdrop-filter:blur(10px);
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+
+.mini-card.featured{
+    border-color:#25ddd5;
+    transform:translateY(-25px);
+}
+
+.mini-card small{
+    color:#25ddd5;
+    font-weight:900;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.mini-card h3{
+    font-size:20px;
+    text-transform:uppercase;
+    margin:25px 0 12px;
+}
+
+.mini-card strong{
+    display:block;
+    font-size:14px;
+    margin-bottom:18px;
 }
 
-
-.card-image {
- height: 220px;
- background-size: cover;
- background-position: center;
+.mini-card ul{
+    list-style:none;
 }
-
 
-.card-content {
- padding: 29px;
+.mini-card li{
+    color:#9eaaab;
+    font-size:11px;
+    padding:7px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
 }
 
+/* =========================================================
+   NORMAL CONTENT BELOW EXPERIENCE
+========================================================= */
 
-.card h3 {
- font-size: 26px;
- text-transform: uppercase;
+.standard-section{
+    position:relative;
+    z-index:100;
+    padding:110px 7%;
+    background:#050b0d;
 }
 
-
-.price {
- color: #19d3c5;
- font-size: 31px;
- font-weight: 900;
- margin-bottom: 15px;
+.standard-label{
+    color:#25ddd5;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
 }
-
 
-.card p {
- color: #b7c2c3;
- font-size: 14px;
- margin-bottom: 18px;
+.standard-section h2{
+    font-size:clamp(40px,6vw,75px);
+    line-height:.9;
+    letter-spacing:-3px;
+    text-transform:uppercase;
+    margin-bottom:25px;
 }
 
-
-.card ul {
- list-style: none;
+.standard-section > p{
+    color:#9da9aa;
+    max-width:620px;
+    line-height:1.7;
+    font-size:14px;
 }
 
+/* =========================================================
+   PACKAGES
+========================================================= */
 
-.card li {
- color: #e0e6e6;
- font-size: 14px;
- padding: 7px 0;
- border-bottom: 1px solid rgba(255,255,255,.045);
+.packages{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:55px;
 }
-
 
-.card li::before {
- content: "✓";
- color: #19d3c5;
- font-weight: bold;
- margin-right: 9px;
+.package{
+    min-height:390px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.1);
+    background:#091215;
+    transition:.3s;
+}
+
+.package:hover{
+    transform:translateY(-8px);
+    border-color:#25ddd5;
 }
 
-
-.featured {
- border-color: rgba(25,211,197,.7);
- box-shadow: 0 0 45px rgba(25,211,197,.08);
+.package.featured{
+    border-color:#25ddd5;
+    box-shadow:0 0 45px rgba(37,221,213,.08);
 }
 
-
-.badge {
- display: inline-block;
- color: #071014;
- background: #19d3c5;
- padding: 5px 10px;
- font-size: 10px;
- font-weight: 900;
- letter-spacing: 1px;
- margin-bottom: 12px;
+.package small{
+    color:#25ddd5;
+    font-weight:900;
+    letter-spacing:2px;
+    font-size:9px;
 }
-
 
-.disclaimer {
- margin: 32px auto 0;
- max-width: 900px;
- text-align: center;
- color: #7f8d8f;
- font-size: 12px;
+.package h3{
+    font-size:27px;
+    text-transform:uppercase;
+    margin:25px 0 8px;
 }
 
-
-/* ================= EXPERIENCE ================= */
-
-
-.why {
- background:
-   linear-gradient(
-     rgba(3,9,14,.84),
-     rgba(3,9,14,.96)
-   ),
-   url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2200&q=85")
-   center/cover no-repeat;
+.price{
+    font-size:16px;
+    font-weight:900;
+    margin-bottom:25px;
 }
-
 
-.why-grid {
- display: grid;
- grid-template-columns: repeat(3,1fr);
- gap: 24px;
- margin-top: 50px;
+.package ul{
+    list-style:none;
 }
 
-
-.why-box {
- padding: 32px;
- background: rgba(5,13,18,.82);
- border: 1px solid rgba(255,255,255,.08);
- backdrop-filter: blur(8px);
+.package li{
+    padding:9px 0;
+    border-bottom:1px solid rgba(255,255,255,.07);
+    color:#aab5b6;
+    font-size:12px;
 }
 
-
-.why-box h3 {
- color: #19d3c5;
- text-transform: uppercase;
- margin-bottom: 10px;
+.package li::before{
+    content:"✓";
+    color:#25ddd5;
+    margin-right:8px;
 }
 
+/* =========================================================
+   LOCATION
+========================================================= */
 
-.why-box p {
- color: #c0cbcc;
- font-size: 14px;
+.location{
+    background:
+        linear-gradient(
+            135deg,
+            #071517,
+            #030708
+        );
+    text-align:center;
 }
-
 
-/* ================= CONTACT ================= */
-
-
-.contact {
- background:
-   radial-gradient(
-     circle at 50% 0%,
-     rgba(25,211,197,.08),
-     transparent 35%
-   ),
-   #071015;
+.location > p{
+    margin-left:auto;
+    margin-right:auto;
 }
-
-
-.contact-box {
- max-width: 1050px;
- margin: auto;
- text-align: center;
- padding: 70px 30px;
 
-
- border: 1px solid rgba(25,211,197,.3);
-
-
- background:
-   linear-gradient(
-     135deg,
-     rgba(25,211,197,.045),
-     rgba(255,40,150,.035)
-   );
-
-
- box-shadow: 0 30px 90px rgba(0,0,0,.3);
+.locations{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:35px;
 }
 
-
-.contact-box h2 {
- font-size: clamp(40px,6vw,75px);
- text-transform: uppercase;
- line-height: .95;
- margin-bottom: 22px;
- letter-spacing: -3px;
+.locations span{
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:30px;
+    padding:12px 18px;
+    color:#c4cccc;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
+/* =========================================================
+   BOOKING
+========================================================= */
 
-.contact-box h2 span {
- color: #19d3c5;
+.booking{
+    min-height:550px;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(37,221,213,.12),
+            transparent 30%
+        ),
+        #030708;
 }
-
-
-.contact-box > p {
- color: #bac5c6;
- max-width: 680px;
- margin: 0 auto 38px;
+
+.booking h2{
+    max-width:750px;
 }
+
+.booking-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:30px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#020506;
+    padding:55px 7% 30px;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    padding-bottom:35px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.footer-copy{
+    color:#778486;
+    font-size:12px;
+    line-height:1.6;
+    max-width:360px;
+    margin-top:15px;
+}
+
+.footer-links{
+    display:flex;
+    gap:30px;
+}
+
+.footer-links a{
+    color:#899596;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    padding-top:22px;
+    color:#566163;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:850px){
+
+    nav{
+        position:absolute;
+        top:65px;
+        left:0;
+        width:100%;
+        padding:25px;
+        background:rgba(3,7,8,.97);
+        display:none;
+        flex-direction:column;
+        gap:22px;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .world{
+        height:430vh;
+    }
+
+    .car{
+        width:105vw;
+        top:55%;
+        transform:
+            translate(-50%,-50%)
+            translateZ(50px)
+            scale(.9);
+    }
+
+    .hero-copy{
+        left:6%;
+        bottom:10%;
+        right:6%;
+    }
 
+    .hero-copy h1{
+        font-size:52px;
+        letter-spacing:-3px;
+    }
 
-.contact-info {
- display: flex;
- justify-content: center;
- gap: 65px;
- flex-wrap: wrap;
- margin-bottom: 38px;
-}
+    .hero-copy p{
+        font-size:13px;
+    }
 
+    .hero-buttons{
+        flex-direction:column;
+        max-width:250px;
+    }
 
-.contact-item small {
- display: block;
- color: #19d3c5;
- font-size: 10px;
- font-weight: bold;
- letter-spacing: 3px;
- margin-bottom: 5px;
-}
+    .scroll{
+        display:none;
+    }
 
+    .scene-content{
+        padding:0 6%;
+    }
 
-.contact-item a {
- font-size: 21px;
- font-weight: bold;
-}
+    .scene-content h2{
+        font-size:45px;
+        letter-spacing:-2px;
+    }
 
+    .scene-content.right{
+        text-align:left;
+    }
 
-.contact-item a:hover {
- color: #19d3c5;
-}
+    .scene-content.right p{
+        margin-left:0;
+    }
 
+    .service-preview{
+        right:auto;
+        left:6%;
+        top:68%;
+        transform:rotateY(-5deg) scale(.72);
+        transform-origin:left center;
+    }
 
-.contact-area {
- margin-top: 32px;
- color: #879597;
- font-size: 13px;
-}
+    .mini-card{
+        width:170px;
+    }
 
+    .packages{
+        grid-template-columns:1fr;
+    }
 
-/* ================= FOOTER ================= */
+    .standard-section{
+        padding:80px 6%;
+    }
 
+    .booking-buttons{
+        flex-direction:column;
+        max-width:260px;
+    }
 
-footer {
- padding: 38px 7%;
- text-align: center;
- background: #030609;
- color: #778587;
- font-size: 13px;
- border-top: 1px solid rgba(25,211,197,.08);
-}
+    .footer-top{
+        flex-direction:column;
+    }
 
+    .footer-links{
+        flex-wrap:wrap;
+    }
 
-footer strong {
- color: #19d3c5;
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+    }
 }
 
+@media(max-width:520px){
 
-/* ================= MOBILE ================= */
+    .logo{
+        font-size:18px;
+    }
 
+    .light{
+        width:120px;
+    }
 
-@media (max-width:900px) {
+    .hero-copy h1{
+        font-size:48px;
+    }
 
+    .scene-content h2{
+        font-size:40px;
+    }
 
- .cards,
- .why-grid {
-   grid-template-columns: 1fr;
- }
+    .service-preview{
+        transform:rotateY(-5deg) scale(.55);
+        top:72%;
+    }
 
-
- .intro-grid {
-   grid-template-columns: 1fr;
- }
-
-
- .nav-links {
-   gap: 12px;
-   font-size: 10px;
- }
-
-
- .cinematic {
-   height: 330px;
- }
 }
-
-
-@media (max-width:600px) {
-
-
- header {
-   padding: 14px 5%;
- }
-
-
- .logo {
-   font-size: 16px;
- }
-
-
- .nav-links {
-   gap: 8px;
- }
-
 
- .hero {
-   padding-left: 6%;
-   padding-right: 6%;
- }
-
-
- .hero h1 {
-   letter-spacing: -3px;
- }
-
-
- .hero p {
-   font-size: 16px;
- }
-
-
- section {
-   padding: 72px 6%;
- }
-
-
- .contact-info {
-   gap: 28px;
- }
-
-
- .contact-item a {
-   font-size: 17px;
- }
-
-
- .cinematic {
-   height: 300px;
- }
-
-
- .cinematic-title {
-   font-size: 38px;
- }
-}
 </style>
 </head>
 
-
 <body>
 
+<!-- ========================================================
+     NAVIGATION
+========================================================= -->
 
-<!-- HEADER -->
+<header id="header">
 
+    <a href="#top" class="logo">
+        BEACHBOYZ <span>DETAILING</span>
+    </a>
 
-<header>
-<nav>
+    <nav id="nav">
 
+        <a href="#packages">Services</a>
+        <a href="#location">Service Area</a>
+        <a href="#booking">Book</a>
 
-<div class="logo">
-BEACHBOYZ <span>DETAILING</span>
-</div>
+        <a
+            href="tel:7864744880"
+            class="book-nav"
+        >
+            786-474-4880
+        </a>
 
+    </nav>
 
-<div class="nav-links">
-<a href="#services">Services</a>
-<a href="#experience">Experience</a>
-<a href="#contact">Contact</a>
-</div>
+    <div class="menu" id="menu">☰</div>
 
-
-</nav>
 </header>
 
 
+<!-- ========================================================
+     CINEMATIC 3D EXPERIENCE
+========================================================= -->
+
+<div class="world" id="top">
+
+    <div class="scene">
+
+        <div class="garage">
+
+            <div class="back-wall"></div>
+
+            <div class="ceiling"></div>
+
+            <div class="floor"></div>
+
+            <div class="beam left"></div>
+            <div class="beam right"></div>
+
+            <div class="light one"></div>
+            <div class="light two"></div>
+            <div class="light three"></div>
+
+            <div class="miami-glow"></div>
+
+        </div>
 
 
-<!-- HERO -->
+        <!-- CAR -->
+
+        <div class="car" id="car">
+
+            <img
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=90"
+                alt="Luxury sports car"
+            >
+
+            <div class="headlight left"></div>
+            <div class="headlight right"></div>
+
+        </div>
 
 
-<section class="hero">
+        <!-- HERO -->
+
+        <div class="hero-copy" id="heroCopy">
+
+            <div class="kicker">
+                Miami Mobile Auto Detailing
+            </div>
+
+            <h1>
+                The Miami
+                <span>Experience.</span>
+            </h1>
+
+            <p>
+                Premium mobile detailing for daily drivers,
+                classics, trucks and exotics.
+                Every detail matters.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#booking"
+                    class="btn btn-primary"
+                >
+                    Book Your Detail
+                </a>
+
+                <a
+                    href="#packages"
+                    class="btn btn-outline"
+                >
+                    Explore
+                </a>
+
+            </div>
+
+        </div>
 
 
-<div class="hero-content">
+        <!-- SCENE 2 -->
+
+        <div class="scene-content left" id="sceneTwo">
+
+            <div class="scene-label">
+                The Beachboyz Difference
+            </div>
+
+            <h2>
+                We don't just
+                clean cars.
+            </h2>
+
+            <p>
+                We provide the experience. Professional detailing,
+                brought directly to you with the laid-back energy
+                of Miami and the attention to detail your vehicle
+                deserves.
+            </p>
+
+        </div>
 
 
-<div class="eyebrow">
-Miami • South Florida • Mobile Detailing
+        <!-- SCENE 3 -->
+
+        <div class="scene-content right" id="sceneThree">
+
+            <div class="scene-label">
+                Every Vehicle
+            </div>
+
+            <h2>
+                From daily
+                drivers to
+                exotics.
+            </h2>
+
+            <p>
+                Classics, trucks, SUVs, weekend cars and the ones
+                you don't let just anybody touch.
+            </p>
+
+        </div>
+
+
+        <!-- SCENE 4 -->
+
+        <div class="scene-content left" id="sceneFour">
+
+            <div class="scene-label">
+                Choose Your Experience
+            </div>
+
+            <h2>
+                Your car.
+                Your level.
+            </h2>
+
+        </div>
+
+
+        <!-- SERVICE CARDS -->
+
+        <div class="service-preview" id="servicePreview">
+
+            <div class="mini-card">
+
+                <small>01 / BEACH WASH</small>
+
+                <h3>Beach Wash</h3>
+
+                <strong>Starting at $150</strong>
+
+                <ul>
+                    <li>Exterior wash</li>
+                    <li>Wheels inside & out</li>
+                    <li>Windows</li>
+                    <li>Door jambs</li>
+                    <li>Professional dry</li>
+                </ul>
+
+            </div>
+
+
+            <div class="mini-card">
+
+                <small>02 / SUNSET DETAIL</small>
+
+                <h3>Sunset Detail</h3>
+
+                <strong>Starting at $200</strong>
+
+                <ul>
+                    <li>Interior cleaning</li>
+                    <li>Leather care</li>
+                    <li>Clay treatment</li>
+                    <li>Paint sealant</li>
+                    <li>Full finish</li>
+                </ul>
+
+            </div>
+
+
+            <div class="mini-card featured">
+
+                <small>03 / MIAMI EXPERIENCE</small>
+
+                <h3>Miami Experience</h3>
+
+                <strong>Premium Package</strong>
+
+                <ul>
+                    <li>Complete detail</li>
+                    <li>Engine bay</li>
+                    <li>Paint protection</li>
+                    <li>Wheel protection</li>
+                    <li>Carpet shampoo</li>
+                    <li>Sand & dog hair</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="scroll">
+            Scroll to enter
+        </div>
+
+    </div>
+
 </div>
 
 
-<h1>
-The Miami<br>
-<span>Detailing</span><br>
-Experience
-</h1>
+<!-- ========================================================
+     FULL SERVICES
+========================================================= -->
+
+<section class="standard-section" id="packages">
+
+    <div class="standard-label">
+        Services
+    </div>
+
+    <h2>
+        The full<br>
+        experience.
+    </h2>
+
+    <p>
+        Straightforward starting prices. Every vehicle is
+        different, so excessive pet hair, sand, stains, heavy
+        buildup or unusual conditions may require an additional
+        charge.
+    </p>
 
 
-<h2>
-We Don't Just Detail. We Create The Experience.
-</h2>
+    <div class="packages">
+
+        <div class="package">
+
+            <small>01 / BEACH WASH</small>
+
+            <h3>Beach Wash</h3>
+
+            <div class="price">
+                Starting at $150
+            </div>
+
+            <ul>
+                <li>Two-bucket contact wash</li>
+                <li>Exterior rinse & dry</li>
+                <li>Wheels inside & out</li>
+                <li>Wheel faces detailed</li>
+                <li>Windows cleaned</li>
+                <li>Door jambs cleaned</li>
+                <li>Professional drying towel</li>
+            </ul>
+
+        </div>
 
 
-<p>
-Premium mobile auto detailing for the vehicles you take pride in.
-From daily drivers to exotics and classics, Beachboyz Detailing
-brings meticulous care, professional detailing methods, and a
-showroom-inspired finish directly to you.
-</p>
+        <div class="package">
+
+            <small>02 / SUNSET DETAIL</small>
+
+            <h3>Sunset Detail</h3>
+
+            <div class="price">
+                Starting at $200
+            </div>
+
+            <ul>
+                <li>Everything in Beach Wash</li>
+                <li>Interior cleaning</li>
+                <li>Leather cleaning</li>
+                <li>Trunk cleaned</li>
+                <li>Clay treatment</li>
+                <li>Paint sealant</li>
+                <li>Full interior & exterior finish</li>
+            </ul>
+
+        </div>
 
 
-<div class="buttons">
+        <div class="package featured">
 
+            <small>03 / MIAMI EXPERIENCE</small>
 
-<a class="btn btn-primary" href="#contact">
-Book Your Detail
-</a>
+            <h3>Miami Experience</h3>
 
+            <div class="price">
+                Premium Package
+            </div>
 
-<a class="btn btn-outline" href="tel:7864744880">
-Call / Text 786-474-4880
-</a>
+            <ul>
+                <li>Complete interior & exterior detail</li>
+                <li>Engine bay cleaning</li>
+                <li>Top-of-the-line protection</li>
+                <li>Extended water-beading protection</li>
+                <li>Windshield protection</li>
+                <li>Exotic wheel protection</li>
+                <li>Carpet shampoo</li>
+                <li>Dog hair & sand removal</li>
+            </ul>
 
+        </div>
 
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
 
 
-<!-- MIAMI FERRARI SHOWCASE -->
-<section class="ferrari-showcase">
- <div class="ferrari-content">
-   <span class="ferrari-kicker">THE MIAMI EXPERIENCE</span>
-   <h2>BUILT FOR CARS<br><span>THAT DESERVE MORE.</span></h2>
-   <p>
-     From everyday drivers to exotic icons, we treat every vehicle
-     like it belongs under the lights of Miami.
-   </p>
- </div>
+<!-- ========================================================
+     LOCATION
+========================================================= -->
 
+<section class="standard-section location" id="location">
 
- <div class="ferrari-stage">
-   <div class="ferrari-glow"></div>
+    <div class="standard-label">
+        Where We Roll
+    </div>
 
+    <h2>
+        Miami is<br>
+        our backyard.
+    </h2>
 
-   <img
-     class="ferrari-car"
-     src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1600&q=85"
-     alt="Ferrari sports car"
-   />
+    <p>
+        Proudly serving Sunny Isles Beach, North Miami,
+        Bal Harbour, Golden Beach and surrounding South Florida
+        communities.
+    </p>
 
+    <div class="locations">
 
-   <div class="ferrari-badge">
-     <strong></strong>
-     <small>MIAMI</small>
-   </div>
- </div>
-</section>
+        <span>Sunny Isles Beach</span>
+        <span>North Miami</span>
+        <span>Bal Harbour</span>
+        <span>Golden Beach</span>
+        <span>South Florida</span>
 
-
-<style>
-.ferrari-showcase {
- position: relative;
- min-height: 520px;
- overflow: hidden;
- display: flex;
- align-items: center;
- justify-content: space-between;
- gap: 40px;
- padding: 80px 7%;
- background:
-   radial-gradient(circle at 75% 50%, rgba(255, 90, 60, .18), transparent 35%),
-   linear-gradient(135deg, #070707, #111 55%, #050505);
- color: white;
-}
-
-
-.ferrari-content {
- position: relative;
- z-index: 3;
- max-width: 470px;
-}
-
-
-.ferrari-kicker {
- font-size: 12px;
- letter-spacing: 4px;
- font-weight: 700;
- opacity: .7;
-}
-
-
-.ferrari-content h2 {
- margin: 15px 0;
- font-size: clamp(38px, 5vw, 68px);
- line-height: .95;
- letter-spacing: -2px;
-}
-
-
-.ferrari-content h2 span {
- opacity: .65;
-}
-
-
-.ferrari-content p {
- max-width: 430px;
- line-height: 1.7;
- color: #ccc;
-}
-
-
-.ferrari-stage {
- position: relative;
- width: min(620px, 55vw);
- height: 360px;
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
-
-.ferrari-glow {
- position: absolute;
- width: 420px;
- height: 180px;
- border-radius: 50%;
- background: rgba(255, 80, 40, .22);
- filter: blur(70px);
-}
-
-
-.ferrari-car {
- position: relative;
- z-index: 2;
- width: 100%;
- max-width: 620px;
- border-radius: 18px;
- object-fit: cover;
- box-shadow: 0 25px 70px rgba(0,0,0,.65);
- animation: ferrariReveal 3s ease-in-out infinite alternate;
-}
-
-
-.ferrari-badge {
- position: absolute;
- right: 15px;
- bottom: 10px;
- z-index: 4;
- width: 78px;
- height: 78px;
- border: 1px solid rgba(255,255,255,.35);
- border-radius: 50%;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- background: rgba(0,0,0,.55);
- backdrop-filter: blur(8px);
-}
-
-
-.ferrari-badge strong {
- font-size: 24px;
-}
-
-
-.ferrari-badge small {
- font-size: 8px;
- letter-spacing: 2px;
- opacity: .7;
-}
-
-
-@keyframes ferrariReveal {
- from {
-   transform: scale(1) translateX(0);
- }
- to {
-   transform: scale(1.035) translateX(-8px);
- }
-}
-
-
-@media (max-width: 800px) {
- .ferrari-showcase {
-   min-height: auto;
-   flex-direction: column;
-   padding: 65px 20px;
-   text-align: center;
- }
-
-
- .ferrari-content {
-   max-width: 100%;
- }
-
-
- .ferrari-content p {
-   margin-left: auto;
-   margin-right: auto;
- }
-
-
- .ferrari-stage {
-   width: 100%;
-   height: 270px;
- }
-
-
- .ferrari-car {
-   width: 100%;
- }
-
-
- .ferrari-badge {
-   right: 5px;
-   bottom: 0;
- }
-}
-</style>
-
-
-<div class="cinematic-subtitle">
-Clean. Protected. Ready For The Night.
-</div>
-
-
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
 
 
+<!-- ========================================================
+     BOOKING
+========================================================= -->
 
+<section class="standard-section booking" id="booking">
 
-<!-- INTRO -->
+    <div>
 
+        <div class="standard-label">
+            Ready When You Are
+        </div>
 
-<section class="intro">
+        <h2>
+            Let's make<br>
+            it shine.
+        </h2>
 
+        <p>
+            Tell us about your vehicle and what you're looking
+            to have done. We'll get you set up with the right
+            Beachboyz experience.
+        </p>
 
-<div class="section-inner">
+        <div class="booking-buttons">
 
+            <a
+                href="tel:7864744880"
+                class="btn btn-primary"
+            >
+                Call 786-474-4880
+            </a>
 
-<div class="intro-grid">
+            <a
+                href="sms:7864744880"
+                class="btn btn-outline"
+            >
+                Text Beachboyz
+            </a>
 
+        </div>
 
-<div>
-
-
-<div class="eyebrow">
-The Beachboyz Standard
-</div>
-
-
-<h2 class="section-title">
-Every Detail<br>
-<span>Matters.</span>
-</h2>
-
-
-<p>
-Your vehicle deserves more than a quick wash. We take our time,
-use professional detailing methods, and treat every surface
-with the attention it deserves.
-</p>
-
-
-<p>
-Our goal is simple: leave your vehicle looking, feeling, and
-smelling its best while giving you an experience worth coming back for.
-</p>
-
-
-</div>
-
-
-
-
-<div class="experience-box">
-
-
-<strong>
-Professional. Meticulous. Personal.
-</strong>
-
-
-<p>
-We believe quality detailing is about the little things —
-the areas most people overlook, the finish you notice when
-you walk back to your vehicle, and the pride you feel when it's done.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="service-area">
-
-
-<strong>
-Proudly Serving South Florida
-</strong>
-
-
-<p>
-Sunny Isles Beach • North Miami • Bal Harbour • Golden Beach
-• Surrounding areas within approximately 15–20 miles
-</p>
-
-
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
 
 
-
-
-<!-- SERVICES -->
-
-
-<section class="services" id="services">
-
-
-<div class="section-inner">
-
-
-<div class="section-heading">
-
-
-<div class="eyebrow">
-Choose Your Experience
-</div>
-
-
-<h2 class="section-title">
-Our <span>Services</span>
-</h2>
-
-
-<p>
-Every package is designed to give your vehicle the attention
-it deserves. Additional services are available when your
-vehicle needs a little more.
-</p>
-
-
-</div>
-
-
-
-
-<div class="cards">
-
-
-
-
-<!-- BEACH WASH -->
-
-
-<div class="card">
-
-
-<div class="card-image"
-style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85');">
-</div>
-
-
-<div class="card-content">
-
-
-<h3>Beach Wash</h3>
-
-
-<div class="price">$150</div>
-
-
-<p>
-A complete inside-and-out clean designed to refresh your
-vehicle and bring back that clean Beachboyz finish.
-</p>
-
-
-<ul>
-<li>Two-bucket contact wash</li>
-<li>Professional exterior wash</li>
-<li>Hand dried with dedicated drying towels</li>
-<li>Rims cleaned inside and out</li>
-<li>Tires cleaned</li>
-<li>Exterior windows cleaned</li>
-<li>Interior windows cleaned</li>
-<li>Full interior vacuum</li>
-<li>Seats and interior surfaces cleaned</li>
-<li>Dashboard and console cleaned</li>
-<li>Door panels cleaned</li>
-<li>Door jambs cleaned</li>
-<li>Trunk cleaned</li>
-<li>Final exterior inspection</li>
-</ul>
-
-
-</div>
-</div>
-
-
-
-
-<!-- SUNSET -->
-
-
-<div class="card">
-
-
-<div class="card-image"
-style="background-image:url('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=85');">
-</div>
-
-
-<div class="card-content">
-
-
-<h3>Sunset Detail</h3>
-
-
-<div class="price">$200</div>
-
-
-<p>
-Everything in the Beach Wash with additional paint and
-interior care for a deeper, more refined finish.
-</p>
-
-
-<ul>
-<li>Everything in Beach Wash</li>
-<li>Clay treatment</li>
-<li>Paint decontamination</li>
-<li>Enhanced exterior cleaning</li>
-<li>Premium paint sealant</li>
-<li>Exterior glass polished</li>
-<li>Interior glass cleaned</li>
-<li>Leather cleaned and reconditioned</li>
-<li>Interior surfaces deep cleaned</li>
-<li>Door jambs and trunk detailed</li>
-<li>Brush cleaning of hard-to-reach areas</li>
-<li>Final inspection</li>
-</ul>
-
-
-<p style="margin-top:18px;">
-<strong style="color:#19d3c5;">
-Optional Add-Ons:
-</strong>
-Sand Removal • Pet Hair Removal
-</p>
-
-
-</div>
-</div>
-
-
-
-
-<!-- MIAMI EXPERIENCE -->
-
-
-<div class="card featured">
-
-
-<div class="card-image"
-style="background-image:url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=85');">
-</div>
-
-
-<div class="card-content">
-
-
-<div class="badge">
-MOST COMPLETE
-</div>
-
-
-<h3>Miami Experience</h3>
-
-
-<div class="price">$300</div>
-
-
-<p>
-Our most complete detailing experience — built for
-customers who want their vehicle taken to the next level.
-</p>
-
-
-<ul>
-<li>Everything in Sunset Detail</li>
-<li>Complete interior deep cleaning</li>
-<li>Full carpet shampoo</li>
-<li>Dog & pet hair removal</li>
-<li>Sand removal</li>
-<li>Leather deep cleaning & conditioning</li>
-<li>Interior reconditioning</li>
-<li>Trunk and door jambs detailed</li>
-<li>Wheels cleaned inside and out</li>
-<li>Engine bay cleaning</li>
-<li>Premium paint protection</li>
-<li>3+ months of protection</li>
-<li>Windshield protection</li>
-<li>Exotic wheel protection</li>
-<li>Final showroom-style inspection</li>
-</ul>
-
-
-</div>
-</div>
-
-
-</div>
-
-
-
-
-<p class="disclaimer">
-Additional fees may apply for vehicles requiring excessive cleaning
-due to heavy dirt, severe stains, excessive pet hair, excessive sand,
-heavy odors, neglected interiors, or other conditions outside normal
-condition. Final pricing will be discussed before any additional
-work is performed.
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- EXPERIENCE -->
-
-
-<section class="why" id="experience">
-
-
-<div class="section-inner">
-
-
-<div class="eyebrow">
-Why Beachboyz?
-</div>
-
-
-<h2 class="section-title">
-More Than A<br>
-<span>Detail.</span>
-</h2>
-
-
-
-
-<div class="why-grid">
-
-
-<div class="why-box">
-
-
-<h3>
-Attention To Detail
-</h3>
-
-
-<p>
-We focus on the areas that are easy to overlook and take
-pride in delivering a thorough, finished result.
-</p>
-
-
-</div>
-
-
-
-
-<div class="why-box">
-
-
-<h3>
-Every Vehicle Matters
-</h3>
-
-
-<p>
-Exotic, classic, luxury, truck, SUV, or daily driver —
-every vehicle receives the same level of care.
-</p>
-
-
-</div>
-
-
-
-
-<div class="why-box">
-
-
-<h3>
-The Experience
-</h3>
-
-
-<p>
-Professional service, honest communication, and a finished
-vehicle you're proud to drive.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- CONTACT -->
-
-
-<section class="contact" id="contact">
-
-
-<div class="section-inner">
-
-
-<div class="contact-box">
-
-
-<div class="eyebrow">
-Beachboyz Detailing
-</div>
-
-
-<h2>
-Ready For The<br>
-<span>Beachboyz Experience?</span>
-</h2>
-
-
-<p>
-Your vehicle deserves more than a quick wash.
-Schedule your detail and let us take care of the rest.
-</p>
-
-
-
-
-<div class="contact-info">
-
-
-<div class="contact-item">
-
-
-<small>
-CALL OR TEXT
-</small>
-
-
-<a href="tel:7864744880">
-786-474-4880
-</a>
-
-
-</div>
-
-
-
-
-<div class="contact-item">
-
-
-<small>
-EMAIL
-</small>
-
-
-<a href="mailto:info@beachboyzdetailing.com">
-info@beachboyzdetailing.com
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="buttons" style="justify-content:center;">
-
-
-<a class="btn btn-primary" href="tel:7864744880">
-Call / Text To Book
-</a>
-
-
-<a class="btn btn-outline"
-href="mailto:info@beachboyzdetailing.com?subject=Beachboyz%20Detailing%20Booking%20Request">
-Email Beachboyz
-</a>
-
-
-</div>
-
-
-
-
-<div class="contact-area">
-
-
-Serving Sunny Isles Beach, North Miami, Bal Harbour,
-Golden Beach and surrounding South Florida areas.
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<!-- FOOTER -->
-
+<!-- ========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
+    <div class="footer-top">
 
-<p>
-<strong>BEACHBOYZ DETAILING</strong>
-• Miami, Florida
-</p>
+        <div>
+
+            <div class="logo">
+                BEACHBOYZ <span>DETAILING</span>
+            </div>
+
+            <p class="footer-copy">
+                Premium mobile auto detailing bringing
+                the Miami experience directly to you.
+            </p>
+
+        </div>
 
 
-<p style="margin-top:8px;">
-We don't Just provide the service, We provide the experience.
-</p>
+        <div class="footer-links">
 
+            <a href="#top">Experience</a>
+            <a href="#packages">Services</a>
+            <a href="#location">Service Area</a>
+            <a href="#booking">Book</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Beachboyz Detailing
+        </span>
+
+        <span>
+            Miami, Florida
+        </span>
+
+    </div>
 
 </footer>
 
 
+<script>
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 50){
+        header.classList.add("scrolled");
+    }else{
+        header.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
+
+menu.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+
+});
+
+
+/* =========================================================
+   CINEMATIC SCROLL
+========================================================= */
+
+const world = document.querySelector(".world");
+const car = document.getElementById("car");
+const heroCopy = document.getElementById("heroCopy");
+
+const sceneTwo = document.getElementById("sceneTwo");
+const sceneThree = document.getElementById("sceneThree");
+const sceneFour = document.getElementById("sceneFour");
+
+const servicePreview =
+    document.getElementById("servicePreview");
+
+
+function clamp(value,min,max){
+    return Math.min(Math.max(value,min),max);
+}
+
+
+function updateExperience(){
+
+    const rect = world.getBoundingClientRect();
+
+    const total =
+        world.offsetHeight - window.innerHeight;
+
+    let progress =
+        -rect.top / total;
+
+    progress = clamp(progress,0,1);
+
+
+    /* -----------------------------------------------
+       CAR MOVEMENT
+    ----------------------------------------------- */
+
+    const carZ =
+        120 + (progress * 900);
+
+    const carScale =
+        .78 + (progress * 2.15);
+
+    const carY =
+        57 - (progress * 8);
+
+    car.style.transform =
+        `translate(-50%,-50%)
+         translateZ(${carZ}px)
+         scale(${carScale})`;
+
+
+    /* -----------------------------------------------
+       HERO FADES
+    ----------------------------------------------- */
+
+    const heroOpacity =
+        clamp(1 - progress * 5,0,1);
+
+    heroCopy.style.opacity = heroOpacity;
+
+    heroCopy.style.transform =
+        `translateY(${progress * -90}px)`;
+
+
+    /* -----------------------------------------------
+       SECOND SCENE
+    ----------------------------------------------- */
+
+    const two =
+        clamp((progress - .16) / .15,0,1);
+
+    sceneTwo.style.opacity =
+        Math.sin(two * Math.PI);
+
+    sceneTwo.style.transform =
+        `translateY(-50%)
+         translateX(${(1-two) * -90}px)`;
+
+
+    /* -----------------------------------------------
+       THIRD SCENE
+    ----------------------------------------------- */
+
+    const three =
+        clamp((progress - .35) / .15,0,1);
+
+    sceneThree.style.opacity =
+        Math.sin(three * Math.PI);
+
+    sceneThree.style.transform =
+        `translateY(-50%)
+         translateX(${(1-three) * 90}px)`;
+
+
+    /* -----------------------------------------------
+       FOURTH SCENE
+    ----------------------------------------------- */
+
+    const four =
+        clamp((progress - .54) / .16,0,1);
+
+    sceneFour.style.opacity =
+        Math.sin(four * Math.PI);
+
+    sceneFour.style.transform =
+        `translateY(-50%)
+         translateX(${(1-four) * -90}px)`;
+
+
+    /* -----------------------------------------------
+       SERVICE CARDS
+    ----------------------------------------------- */
+
+    const cards =
+        clamp((progress - .58) / .22,0,1);
+
+    servicePreview.style.opacity = cards;
+
+    servicePreview.style.transform =
+        `translateY(-50%)
+         rotateY(${-12 + cards * 12}deg)
+         translateX(${(1-cards) * 120}px)
+         scale(${.75 + cards * .25})`;
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateExperience,
+    {passive:true}
+);
+
+updateExperience();
+
+
+/* =========================================================
+   REDUCE MOTION ACCESSIBILITY
+========================================================= */
+
+if(
+    window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches
+){
+
+    window.removeEventListener(
+        "scroll",
+        updateExperience
+    );
+
+}
+
+</script>
+
 </body>
 </html>
+
