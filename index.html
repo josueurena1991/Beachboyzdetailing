@@ -6,2139 +6,493 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#071416">
+<meta name="theme-color" content="#071313">
 
-
+<meta name="description" content="Beachboyz Detailing delivers premium mobile car detailing in North Miami, Sunny Isles Beach, Bal Harbour and surrounding South Florida communities. Exotic cars, daily drivers, fleets, boats and RVs. Contact us for a quote.">
 
 <title>Beachboyz Detailing | The Miami Experience</title>
-
-<meta name="description" content="Premium mobile detailing in North Miami, Sunny Isles Beach, Bal Harbour and surrounding South Florida communities. Luxury cars, exotics, trucks, RVs and boats. Request your personal quote.">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://beachboyzdetailing.com/">
-
-
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root {
 
-  --night: #071416;
+  --night:#071313;
 
-  --deep: #0b2022;
+  --deep:#0b2020;
 
-  --cream: #f5f0e6;
+  --teal:#4fffe1;
 
-  --aqua: #6ce5d2;
+  --white:#f5f3eb;
 
-  --coral: #ff886d;
+  --muted:#aab9b5;
 
-  --muted: #a9bab6;
+  --line:rgba(255,255,255,.15);
 
-  --line: rgba(245,240,230,.17);
-
-  --display: "Barlow Condensed", sans-serif;
-
-  --body: "DM Sans", sans-serif;
+  --pink:#ff776f;
 
 }
 
+*{box-sizing:border-box}
 
+html{scroll-behavior:smooth;scroll-padding-top:85px}
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+body{margin:0;background:var(--night);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
 
+a{color:inherit;text-decoration:none}
 
+button{font:inherit}
 
-html {
+img{display:block;width:100%;object-fit:cover}
 
-  scroll-behavior: smooth;
+::selection{background:var(--teal);color:var(--night)}
 
-  scroll-padding-top: 90px;
+.container{width:min(1240px,90%);margin:auto}
 
-}
+.eyebrow{display:flex;align-items:center;gap:12px;color:var(--teal);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
 
+.eyebrow:before{content:"";width:27px;height:1px;background:var(--teal)}
 
+.section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,7vw,88px);line-height:.91;text-transform:uppercase;font-weight:800;letter-spacing:-1.5px;margin:18px 0}
 
-body {
+.section-copy{color:var(--muted);line-height:1.9;max-width:550px;font-size:14px}
 
-  background: var(--night);
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:14px;min-height:53px;padding:0 24px;background:var(--teal);color:#061313;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;transition:.25s;border:1px solid var(--teal)}
 
-  color: var(--cream);
+.btn:hover{background:var(--white);border-color:var(--white);transform:translateY(-3px)}
 
-  font-family: var(--body);
+.btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.4)}
 
-  overflow-x: hidden;
+.btn-outline:hover{background:var(--teal);color:var(--night);border-color:var(--teal)}
 
-}
-
-
-
-body::after {
-
-  content: "";
-
-  position: fixed;
-
-  inset: 0;
-
-  pointer-events: none;
-
-  z-index: 20;
-
-  opacity: .11;
-
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E");
-
-}
-
-
-
-a { color: inherit; text-decoration: none; }
-
-button, input, textarea, select { font: inherit; }
-
-img { display: block; width: 100%; }
-
-button, a { -webkit-tap-highlight-color: transparent; }
-
-
-
-.container {
-
-  width: min(1240px, calc(100% - 48px));
-
-  margin: auto;
-
-}
-
-
-
-.eyebrow {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 3px;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  color: var(--aqua);
-
-}
-
-
-
-.eyebrow::before {
-
-  content: "";
-
-  width: 28px;
-
-  height: 1px;
-
-  background: var(--aqua);
-
-}
-
-
-
-.section-heading {
-
-  font-family: var(--display);
-
-  font-size: clamp(48px, 7vw, 88px);
-
-  line-height: .93;
-
-  font-weight: 800;
-
-  text-transform: uppercase;
-
-  letter-spacing: -1.5px;
-
-}
-
-
-
-.section-heading span { color: var(--aqua); }
-
-
-
-.section-copy {
-
-  color: var(--muted);
-
-  line-height: 1.9;
-
-  font-size: 14px;
-
-  max-width: 520px;
-
-}
-
-
-
-.btn {
-
-  display: inline-flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 13px;
-
-  min-height: 52px;
-
-  padding: 0 24px;
-
-  background: var(--aqua);
-
-  color: var(--night);
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.7px;
-
-  text-transform: uppercase;
-
-  border: 1px solid var(--aqua);
-
-  transition: .3s ease;
-
-  cursor: pointer;
-
-}
-
-
-
-.btn:hover {
-
-  background: transparent;
-
-  color: var(--aqua);
-
-  transform: translateY(-2px);
-
-}
-
-
-
-.btn-outline {
-
-  background: transparent;
-
-  color: var(--cream);
-
-  border-color: rgba(245,240,230,.35);
-
-}
-
-
-
-.btn-outline:hover {
-
-  background: var(--cream);
-
-  color: var(--night);
-
-}
-
-
-
-.btn-arrow { font-size: 17px; }
-
-
+.arrow{font-size:17px}
 
 /* NAVIGATION */
 
+header{position:fixed;inset:0 0 auto;z-index:100;border-bottom:1px solid transparent;transition:.3s}
 
+header.scrolled{background:rgba(5,16,16,.94);backdrop-filter:blur(18px);border-color:var(--line)}
 
-.nav {
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 
-  position: absolute;
+.logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
 
-  top: 0;
+.logo-mark{width:43px;height:43px;border:1px solid var(--teal);display:grid;place-items:center;color:var(--teal);font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;transform:skew(-5deg)}
 
-  left: 0;
+.logo-text{font-family:'Barlow Condensed',sans-serif;font-size:23px;font-weight:800;line-height:.85;letter-spacing:.7px}
 
-  width: 100%;
+.logo-text small{display:block;font-family:'DM Sans',sans-serif;font-size:8px;letter-spacing:3.3px;color:var(--teal);margin-top:7px}
 
-  z-index: 50;
+.nav-links{display:flex;align-items:center;gap:28px}
 
-  border-bottom: 1px solid rgba(255,255,255,.12);
+.nav-links a{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.1px;color:#e1e9e5;transition:.2s}
 
-}
+.nav-links a:hover{color:var(--teal)}
 
+.nav-call{padding:13px 17px;border:1px solid rgba(79,255,225,.55);font-size:10px;font-weight:800;letter-spacing:1px;white-space:nowrap}
 
+.nav-call:hover{background:var(--teal);color:var(--night)}
 
-.nav-inner {
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;padding:10px 13px;font-size:21px}
 
-  min-height: 88px;
+/* CINEMATIC HERO */
 
-  display: flex;
+.hero{position:relative;min-height:780px;height:100svh;max-height:1050px;overflow:hidden;display:flex;align-items:center;background:#102222}
 
-  align-items: center;
+.hero-photo{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2400&q=90');background-size:cover;background-position:center 58%;transform:scale(1.04);animation:heroEnter 1.6s ease-out forwards}
 
-  justify-content: space-between;
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(3,13,13,.94) 0%,rgba(4,15,15,.78) 35%,rgba(4,15,15,.2) 75%,rgba(4,15,15,.24) 100%),linear-gradient(0deg,var(--night) 0%,transparent 29%,rgba(3,13,13,.2) 100%)}
 
-  gap: 25px;
+.hero:after{content:"";position:absolute;inset:0;z-index:1;opacity:.12;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E")}
 
-}
+.hero-inner{position:relative;z-index:2;padding-top:65px;width:100%}
 
+.hero-kicker{display:flex;align-items:center;gap:12px;color:var(--teal);font-size:10px;letter-spacing:4px;font-weight:700;text-transform:uppercase;margin-bottom:27px}
 
+.live-dot{height:7px;width:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 16px var(--teal)}
 
-.brand {
+.hero h1{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:clamp(76px,12.6vw,164px);font-weight:900;line-height:.76;letter-spacing:-3px;margin:0;max-width:850px}
 
-  display: flex;
+.hero h1 .second{display:block;color:var(--teal);margin-top:16px}
 
-  align-items: center;
+.hero-sub{margin-top:31px;color:#e0e5df;font-size:clamp(13px,1.3vw,16px);line-height:1.9;max-width:450px}
 
-  gap: 12px;
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 
-}
+.hero-foot{display:flex;align-items:center;gap:28px;margin-top:52px}
 
+.hero-foot-item{border-left:1px solid var(--teal);padding-left:13px}
 
+.hero-foot-item strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:21px;letter-spacing:1px}
 
-.brand-mark {
+.hero-foot-item span{display:block;margin-top:3px;color:#c0ceca;font-size:9px;letter-spacing:1.3px;text-transform:uppercase}
 
-  width: 43px;
+.hero-side{position:absolute;z-index:2;right:5%;bottom:100px;writing-mode:vertical-rl;color:rgba(255,255,255,.7);font-size:9px;letter-spacing:4px;text-transform:uppercase}
 
-  height: 43px;
+.scroll-cue{position:absolute;z-index:3;bottom:28px;left:5%;display:flex;align-items:center;gap:13px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
 
-  border: 1px solid var(--aqua);
+.scroll-line{width:48px;height:1px;background:var(--teal);animation:linePulse 2s infinite}
 
-  display: grid;
+/* MOVING BRAND STRIP */
 
-  place-items: center;
+.marquee{overflow:hidden;background:var(--teal);color:var(--night);padding:17px 0}
 
-  font-family: var(--display);
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
 
-  font-weight: 900;
+.marquee span{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:2px;text-transform:uppercase;padding:0 24px;white-space:nowrap}
 
-  font-size: 23px;
+.marquee b{font-size:15px}
 
-  color: var(--aqua);
+/* INTRO */
 
-  transform: skew(-6deg);
+.intro{padding:125px 0 120px;position:relative;overflow:hidden}
 
-}
+.intro:after{content:"BB";position:absolute;right:-30px;top:50px;font-family:'Barlow Condensed',sans-serif;font-size:clamp(250px,40vw,520px);font-weight:900;color:rgba(255,255,255,.018);line-height:1;pointer-events:none}
 
+.intro-grid{display:grid;grid-template-columns:1fr .8fr;gap:90px;align-items:center;position:relative;z-index:1}
 
+.intro h2 span{color:var(--teal)}
 
-.brand-name {
+.intro-note{border-left:1px solid var(--teal);padding:12px 0 12px 28px;margin-top:35px;color:var(--muted);font-size:13px;line-height:1.9}
 
-  font-family: var(--display);
+.intro-image{position:relative;min-height:490px}
 
-  font-size: 25px;
+.intro-image img{height:490px;filter:saturate(.82)}
 
-  line-height: .95;
+.image-caption{position:absolute;bottom:0;left:0;right:0;padding:25px;background:linear-gradient(0deg,rgba(0,0,0,.9),transparent);font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;text-transform:uppercase}
 
-  font-weight: 800;
-
-  letter-spacing: .3px;
-
-}
-
-
-
-.brand-sub {
-
-  font-size: 8px;
-
-  letter-spacing: 3px;
-
-  color: var(--aqua);
-
-  margin-top: 5px;
-
-}
-
-
-
-.nav-links {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 27px;
-
-}
-
-
-
-.nav-links a {
-
-  color: #e0e5df;
-
-  font-size: 10px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1.3px;
-
-  transition: color .2s;
-
-}
-
-
-
-.nav-links a:hover { color: var(--aqua); }
-
-
-
-.nav-cta { min-height: 43px; padding: 0 17px; }
-
-
-
-.menu-toggle {
-
-  display: none;
-
-  width: 44px;
-
-  height: 44px;
-
-  border: 1px solid var(--line);
-
-  background: transparent;
-
-  color: var(--cream);
-
-  font-size: 23px;
-
-}
-
-
-
-/* CINEMATIC MIAMI OPENING */
-
-
-
-.hero {
-
-  position: relative;
-
-  min-height: 850px;
-
-  min-height: max(760px, 100svh);
-
-  display: flex;
-
-  align-items: center;
-
-  isolation: isolate;
-
-  overflow: hidden;
-
-  background: #0a1a1d;
-
-}
-
-
-
-.hero-backdrop {
-
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -3;
-
-  background-image:
-
-    url("https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=2400&q=90");
-
-  background-position: center 48%;
-
-  background-size: cover;
-
-  transform: scale(1.04);
-
-  animation: openingScene 1.8s ease-out both;
-
-}
-
-
-
-@keyframes openingScene {
-
-  from { transform: scale(1.14); }
-
-  to { transform: scale(1.04); }
-
-}
-
-
-
-.hero::before {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -2;
-
-  background:
-
-    linear-gradient(90deg,
-
-      rgba(4,15,18,.95) 0%,
-
-      rgba(4,15,18,.80) 34%,
-
-      rgba(4,15,18,.35) 69%,
-
-      rgba(4,15,18,.25) 100%),
-
-    linear-gradient(0deg,
-
-      var(--night) 0%,
-
-      transparent 34%,
-
-      rgba(4,15,18,.25) 100%);
-
-}
-
-
-
-.hero::after {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -1;
-
-  background: radial-gradient(ellipse at 75% 60%, rgba(255,136,109,.13), transparent 36%);
-
-  pointer-events: none;
-
-}
-
-
-
-.hero-content {
-
-  padding-top: 100px;
-
-  padding-bottom: 130px;
-
-  max-width: 800px;
-
-}
-
-
-
-.hero-kicker {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 11px 14px;
-
-  border: 1px solid rgba(108,229,210,.38);
-
-  background: rgba(7,20,22,.4);
-
-  backdrop-filter: blur(10px);
-
-  color: var(--aqua);
-
-  text-transform: uppercase;
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  letter-spacing: 2.3px;
-
-  margin-bottom: 30px;
-
-}
-
-
-
-.live-dot {
-
-  width: 7px;
-
-  height: 7px;
-
-  background: var(--coral);
-
-  border-radius: 50%;
-
-  box-shadow: 0 0 13px var(--coral);
-
-}
-
-
-
-.hero h1 {
-
-  font-family: var(--display);
-
-  text-transform: uppercase;
-
-  font-weight: 900;
-
-  letter-spacing: -2px;
-
-  font-size: clamp(76px, 12.5vw, 160px);
-
-  line-height: .76;
-
-}
-
-
-
-.hero h1 .line-two {
-
-  color: var(--aqua);
-
-  display: block;
-
-  margin-top: 15px;
-
-}
-
-
-
-.hero h1 .line-three {
-
-  display: block;
-
-  font-size: .48em;
-
-  letter-spacing: 5px;
-
-  font-weight: 600;
-
-  margin-top: 26px;
-
-}
-
-
-
-.hero-copy {
-
-  max-width: 470px;
-
-  color: #d3dcd5;
-
-  font-size: 14px;
-
-  line-height: 1.9;
-
-  margin-top: 30px;
-
-}
-
-
-
-.hero-actions {
-
-  display: flex;
-
-  gap: 12px;
-
-  flex-wrap: wrap;
-
-  margin-top: 30px;
-
-}
-
-
-
-.hero-foot {
-
-  position: absolute;
-
-  left: 0;
-
-  right: 0;
-
-  bottom: 37px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: end;
-
-  gap: 20px;
-
-}
-
-
-
-.hero-location {
-
-  font-size: 9px;
-
-  letter-spacing: 2px;
-
-  color: #e0e7df;
-
-  text-transform: uppercase;
-
-  line-height: 2;
-
-}
-
-
-
-.hero-location span { color: var(--aqua); }
-
-
-
-.scroll-cue {
-
-  display: flex;
-
-  gap: 13px;
-
-  align-items: center;
-
-  color: #c8d2cc;
-
-  font-size: 9px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 2px;
-
-}
-
-
-
-.scroll-line {
-
-  width: 48px;
-
-  height: 1px;
-
-  background: var(--aqua);
-
-}
-
-
-
-/* TICKER */
-
-
-
-.ticker {
-
-  overflow: hidden;
-
-  border-top: 1px solid var(--line);
-
-  border-bottom: 1px solid var(--line);
-
-  background: #0b1d1f;
-
-}
-
-
-
-.ticker-track {
-
-  display: flex;
-
-  width: max-content;
-
-  padding: 20px 0;
-
-  animation: ticker 34s linear infinite;
-
-}
-
-
-
-.ticker-group {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 35px;
-
-  padding-right: 35px;
-
-  white-space: nowrap;
-
-  font-family: var(--display);
-
-  font-size: 22px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
-  text-transform: uppercase;
-
-}
-
-
-
-.ticker-group span { color: var(--aqua); }
-
-
-
-@keyframes ticker {
-
-  to { transform: translateX(-50%); }
-
-}
-
-
-
-/* EXPERIENCE */
-
-
-
-.experience {
-
-  padding: 130px 0;
-
-  position: relative;
-
-  overflow: hidden;
-
-}
-
-
-
-.experience::after {
-
-  content: "MIAMI";
-
-  position: absolute;
-
-  top: 105px;
-
-  right: -60px;
-
-  font-family: var(--display);
-
-  font-size: 240px;
-
-  font-weight: 900;
-
-  color: rgba(255,255,255,.025);
-
-  pointer-events: none;
-
-}
-
-
-
-.experience-grid {
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 85px;
-
-  align-items: center;
-
-}
-
-
-
-.experience-visual {
-
-  min-height: 590px;
-
-  position: relative;
-
-}
-
-
-
-.experience-image {
-
-  position: absolute;
-
-  inset: 0 35px 45px 0;
-
-  background:
-
-    linear-gradient(0deg, rgba(5,16,18,.28), transparent 60%),
-
-    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85")
-
-    center / cover;
-
-}
-
-
-
-.experience-image::after {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  border: 1px solid rgba(108,229,210,.24);
-
-}
-
-
-
-.experience-stamp {
-
-  position: absolute;
-
-  right: 0;
-
-  bottom: 0;
-
-  width: 190px;
-
-  padding: 25px;
-
-  background: var(--aqua);
-
-  color: var(--night);
-
-}
-
-
-
-.experience-stamp strong {
-
-  display: block;
-
-  font-family: var(--display);
-
-  font-size: 34px;
-
-  line-height: 1;
-
-  text-transform: uppercase;
-
-}
-
-
-
-.experience-stamp small {
-
-  display: block;
-
-  margin-top: 10px;
-
-  font-size: 9px;
-
-  letter-spacing: 1px;
-
-  line-height: 1.7;
-
-  text-transform: uppercase;
-
-}
-
-
-
-.experience-text .section-heading { margin: 24px 0; }
-
-
-
-.experience-text .section-copy { margin-bottom: 22px; }
-
-
-
-.promise {
-
-  display: flex;
-
-  gap: 15px;
-
-  align-items: start;
-
-  padding: 20px 0;
-
-  border-top: 1px solid var(--line);
-
-}
-
-
-
-.promise-icon {
-
-  flex: 0 0 37px;
-
-  height: 37px;
-
-  display: grid;
-
-  place-items: center;
-
-  color: var(--aqua);
-
-  border: 1px solid rgba(108,229,210,.4);
-
-  font-size: 16px;
-
-}
-
-
-
-.promise h3 {
-
-  font-size: 13px;
-
-  margin-bottom: 7px;
-
-}
-
-
-
-.promise p {
-
-  font-size: 12px;
-
-  line-height: 1.8;
-
-  color: var(--muted);
-
-}
-
-
+.image-caption small{display:block;color:var(--teal);font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:2px;margin-bottom:7px}
 
 /* SERVICES */
 
+.services{background:#0b1c1c;padding:115px 0}
 
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:48px}
 
-.services {
+.section-heading .section-copy{max-width:380px}
 
-  padding: 110px 0 125px;
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 
-  background:
+.service-card{position:relative;min-height:420px;overflow:hidden;background:#112626}
 
-    radial-gradient(ellipse at 100% 0%, rgba(108,229,210,.07), transparent 40%),
+.service-card img{position:absolute;inset:0;height:100%;transition:transform .7s;filter:brightness(.69) saturate(.8)}
 
-    #0b1d1f;
+.service-card:hover img{transform:scale(1.06);filter:brightness(.8) saturate(1)}
 
-}
+.service-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,12,12,.97),transparent 78%)}
 
+.service-content{position:absolute;z-index:2;left:28px;right:25px;bottom:28px}
 
+.service-number{font-size:10px;letter-spacing:2px;color:var(--teal);margin-bottom:12px}
 
-.services-head {
+.service-content h3{font-family:'Barlow Condensed',sans-serif;font-size:38px;line-height:.95;text-transform:uppercase;margin:0 0 13px}
 
-  display: flex;
+.service-content p{font-size:12px;color:#c2ceca;line-height:1.8;margin:0;max-width:330px}
 
-  justify-content: space-between;
+.service-link{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--teal)}
 
-  align-items: end;
+/* EXPERIENCE */
 
-  gap: 35px;
+.experience{padding:125px 0;position:relative;overflow:hidden}
 
-  margin-bottom: 50px;
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:75px}
 
-}
+.experience-image{height:570px;position:relative}
 
+.experience-image img{height:100%;filter:saturate(.75)}
 
+.experience-image:before{content:"";position:absolute;z-index:1;inset:20px -20px -20px 20px;border:1px solid rgba(79,255,225,.55);pointer-events:none}
 
-.services-head .section-heading { margin-top: 24px; }
+.experience-stamp{position:absolute;z-index:2;right:-18px;top:35px;background:var(--teal);color:var(--night);width:105px;height:105px;border-radius:50%;display:grid;place-content:center;text-align:center;transform:rotate(10deg);font-family:'Barlow Condensed',sans-serif;font-size:21px;line-height:.95;font-weight:800}
 
+.experience-stamp small{font:700 8px 'DM Sans',sans-serif;letter-spacing:1px;margin-top:6px}
 
+.experience-copy h2 span{color:var(--teal)}
 
-.services-grid {
+.feature-list{margin-top:32px;border-top:1px solid var(--line)}
 
-  display: grid;
+.feature{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
 
-  grid-template-columns: repeat(3, minmax(0,1fr));
+.feature-icon{flex-shrink:0;width:35px;height:35px;display:grid;place-items:center;border:1px solid rgba(79,255,225,.5);color:var(--teal);font-size:16px}
 
-  gap: 17px;
+.feature h4{margin:0 0 6px;font-size:12px;letter-spacing:.4px}
 
-}
+.feature p{margin:0;font-size:11px;color:var(--muted);line-height:1.7}
 
+/* MIAMI */
 
+.miami{min-height:540px;position:relative;display:flex;align-items:center;background:#162b2b;overflow:hidden}
 
-.service-card {
+.miami-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=2200&q=85');background-size:cover;background-position:center 52%;filter:saturate(.8)}
 
-  min-height: 370px;
+.miami:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,12,13,.9),rgba(3,12,13,.48)),linear-gradient(0deg,rgba(3,12,13,.6),transparent)}
 
-  position: relative;
+.miami-inner{position:relative;z-index:1;padding:110px 0}
 
-  overflow: hidden;
+.miami h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:clamp(58px,10vw,124px);line-height:.82;letter-spacing:-1px;margin:23px 0}
 
-  isolation: isolate;
+.miami h2 span{color:var(--teal)}
 
-  border: 1px solid rgba(245,240,230,.13);
-
-  background: #142629;
-
-  transition: border-color .35s, transform .35s;
-
-}
-
-
-
-.service-card:hover {
-
-  transform: translateY(-6px);
-
-  border-color: var(--aqua);
-
-}
-
-
-
-.service-card .service-bg {
-
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -2;
-
-  background-size: cover;
-
-  background-position: center;
-
-  transition: transform .65s ease;
-
-}
-
-
-
-.service-card:hover .service-bg { transform: scale(1.06); }
-
-
-
-.service-bg::after { content: ""; }
-
-
-
-.service-card::after {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -1;
-
-  background: linear-gradient(0deg, rgba(5,15,17,.97) 0%, rgba(5,15,17,.6) 38%, rgba(5,15,17,.05) 100%);
-
-}
-
-
-
-.service-card:nth-child(1) .service-bg {
-
-  background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85");
-
-}
-
-.service-card:nth-child(2) .service-bg {
-
-  background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85");
-
-}
-
-.service-card:nth-child(3) .service-bg {
-
-  background-image: url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85");
-
-}
-
-.service-card:nth-child(4) .service-bg {
-
-  background-image: url("https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=85");
-
-}
-
-.service-card:nth-child(5) .service-bg {
-
-  background-image: url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=85");
-
-}
-
-.service-card:nth-child(6) .service-bg {
-
-  background-image: url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=85");
-
-}
-
-
-
-.service-number {
-
-  position: absolute;
-
-  top: 20px;
-
-  left: 20px;
-
-  color: var(--aqua);
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-}
-
-
-
-.service-info {
-
-  position: absolute;
-
-  left: 24px;
-
-  right: 24px;
-
-  bottom: 25px;
-
-}
-
-
-
-.service-info h3 {
-
-  font-family: var(--display);
-
-  font-size: 35px;
-
-  text-transform: uppercase;
-
-  line-height: 1;
-
-  margin-bottom: 12px;
-
-}
-
-
-
-.service-info p {
-
-  font-size: 12px;
-
-  line-height: 1.8;
-
-  color: #c5d0cb;
-
-  max-width: 300px;
-
-}
-
-
-
-.service-link {
-
-  display: inline-flex;
-
-  gap: 10px;
-
-  align-items: center;
-
-  margin-top: 17px;
-
-  color: var(--aqua);
-
-  font-size: 9px;
-
-  letter-spacing: 1.7px;
-
-  text-transform: uppercase;
-
-  font-weight: 700;
-
-}
-
-
+.miami p{max-width:490px;color:#d5dfda;font-size:14px;line-height:1.9;margin:25px 0 30px}
 
 /* PROCESS */
 
+.process{padding:115px 0;background:var(--white);color:var(--night)}
 
+.process .eyebrow{color:#007c70}
 
-.process { padding: 125px 0; }
+.process .eyebrow:before{background:#007c70}
 
+.process .section-copy{color:#53605b}
 
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:55px;border-top:1px solid #cbd3ce}
 
-.process-header { max-width: 650px; }
+.process-step{padding:28px 24px 0 0;border-right:1px solid #cbd3ce;margin-right:22px}
 
-.process-header .section-heading { margin: 25px 0; }
+.process-step:last-child{border-right:0}
 
+.process-step .num{font-family:'Barlow Condensed',sans-serif;font-size:48px;color:#008f80;font-weight:800}
 
+.process-step h3{font-family:'Barlow Condensed',sans-serif;font-size:26px;text-transform:uppercase;margin:12px 0}
 
-.process-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  margin-top: 65px;
-
-  border-top: 1px solid var(--line);
-
-}
-
-
-
-.process-step {
-
-  padding: 35px 30px 0 0;
-
-}
-
-
-
-.process-step + .process-step {
-
-  padding-left: 30px;
-
-  border-left: 1px solid var(--line);
-
-}
-
-
-
-.process-num {
-
-  font-family: var(--display);
-
-  font-size: 65px;
-
-  line-height: 1;
-
-  color: var(--aqua);
-
-  margin-bottom: 23px;
-
-}
-
-
-
-.process-step h3 {
-
-  font-size: 16px;
-
-  margin-bottom: 12px;
-
-}
-
-
-
-.process-step p {
-
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.9;
-
-}
-
-
-
-/* SIGNATURE EXPERIENCE */
-
-
-
-.signature {
-
-  position: relative;
-
-  min-height: 580px;
-
-  display: flex;
-
-  align-items: center;
-
-  overflow: hidden;
-
-  isolation: isolate;
-
-}
-
-
-
-.signature-bg {
-
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -2;
-
-  background:
-
-    url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2200&q=85")
-
-    center 55% / cover;
-
-}
-
-
-
-.signature::after {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  z-index: -1;
-
-  background: linear-gradient(90deg, rgba(4,15,17,.95), rgba(4,15,17,.68) 53%, rgba(4,15,17,.3));
-
-}
-
-
-
-.signature-content {
-
-  padding: 110px 0;
-
-  max-width: 710px;
-
-}
-
-
-
-.signature-content .section-heading {
-
-  margin: 25px 0;
-
-  font-size: clamp(54px, 8vw, 100px);
-
-}
-
-
-
-.signature-content .section-copy { margin-bottom: 27px; }
-
-
+.process-step p{font-size:12px;color:#53605b;line-height:1.8}
 
 /* SERVICE AREA */
 
+.area{padding:100px 0;background:var(--deep)}
 
+.area-grid{display:grid;grid-template-columns:.8fr 1fr;gap:70px;align-items:center}
 
-.area { padding: 110px 0; }
+.area-map{min-height:330px;position:relative;overflow:hidden;background:linear-gradient(135deg,#123333,#081818);border:1px solid var(--line);padding:35px;display:flex;flex-direction:column;justify-content:space-between}
 
+.area-map:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(30deg,transparent,transparent 37px,rgba(79,255,225,.08) 38px,transparent 39px),repeating-linear-gradient(120deg,transparent,transparent 53px,rgba(79,255,225,.07) 54px,transparent 55px)}
 
+.map-label{position:relative;z-index:1;font-size:9px;color:var(--teal);letter-spacing:2px;text-transform:uppercase}
 
-.area-grid {
+.map-pin{position:relative;z-index:1;display:flex;align-items:center;gap:14px;margin:auto 0}
 
-  display: grid;
+.pin-icon{height:44px;width:44px;border:1px solid var(--teal);display:grid;place-items:center;color:var(--teal);font-size:20px}
 
-  grid-template-columns: .85fr 1.15fr;
+.map-pin strong{font-family:'Barlow Condensed',sans-serif;font-size:32px;text-transform:uppercase}
 
-  gap: 80px;
+.map-pin small{display:block;font-family:'DM Sans',sans-serif;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:5px}
 
-  align-items: center;
+.area-tags{position:relative;z-index:1;display:flex;gap:8px;flex-wrap:wrap}
 
-}
+.area-tags span{padding:9px 12px;border:1px solid rgba(79,255,225,.3);font-size:10px;color:#d4e4df}
 
+.area-copy h2 span{color:var(--teal)}
 
+/* CTA */
 
-.area-grid .section-heading { margin: 25px 0; }
+.contact{padding:120px 0;background:#081515;position:relative;overflow:hidden}
 
+.contact:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-200px;top:-150px;border:1px solid rgba(79,255,225,.12);box-shadow:0 0 0 60px rgba(79,255,225,.025),0 0 0 120px rgba(79,255,225,.018)}
 
+.contact-grid{display:grid;grid-template-columns:1fr .8fr;gap:70px;position:relative;z-index:1}
 
-.area-panel {
+.contact h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:clamp(64px,9vw,110px);line-height:.85;letter-spacing:-1px;margin:22px 0}
 
-  border: 1px solid var(--line);
+.contact h2 span{color:var(--teal)}
 
-  padding: 35px;
+.contact-details{display:flex;flex-direction:column;gap:17px;margin-top:32px}
 
-  background: linear-gradient(135deg, rgba(108,229,210,.07), rgba(255,255,255,.01));
+.contact-row{display:flex;gap:13px;align-items:center;font-size:13px;color:#d7e0dc}
 
-}
+.contact-row .symbol{width:37px;height:37px;border:1px solid rgba(79,255,225,.4);display:grid;place-items:center;color:var(--teal)}
 
+.contact-panel{padding:34px;background:#102525;border:1px solid var(--line);align-self:center}
 
+.contact-panel h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:35px;margin:0 0 12px}
 
-.area-label {
+.contact-panel p{font-size:12px;line-height:1.9;color:var(--muted);margin-bottom:24px}
 
-  font-size: 9px;
+.contact-panel .btn{width:100%;margin-bottom:11px}
 
-  text-transform: uppercase;
+.contact-panel .btn:last-child{margin-bottom:0}
 
-  letter-spacing: 2px;
-
-  color: var(--aqua);
-
-  margin-bottom: 22px;
-
-}
-
-
-
-.area-list {
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 0 20px;
-
-}
-
-
-
-.area-list div {
-
-  padding: 15px 0;
-
-  border-top: 1px solid var(--line);
-
-  font-size: 12px;
-
-  color: #e5e8e0;
-
-}
-
-
-
-.area-list div::before {
-
-  content: "↗";
-
-  color: var(--aqua);
-
-  margin-right: 10px;
-
-}
-
-
-
-.area-note {
-
-  font-size: 11px;
-
-  line-height: 1.8;
-
-  color: var(--muted);
-
-  margin-top: 25px;
-
-}
-
-
-
-/* QUOTE */
-
-
-
-.contact {
-
-  padding: 115px 0;
-
-  background:
-
-    radial-gradient(ellipse at 90% 0%, rgba(255,136,109,.09), transparent 38%),
-
-    #0b1d1f;
-
-}
-
-
-
-.contact-grid {
-
-  display: grid;
-
-  grid-template-columns: .9fr 1.1fr;
-
-  gap: 80px;
-
-}
-
-
-
-.contact-copy .section-heading { margin: 25px 0; }
-
-
-
-.contact-copy .section-copy { margin-bottom: 32px; }
-
-
-
-.contact-detail {
-
-  display: flex;
-
-  gap: 15px;
-
-  padding: 20px 0;
-
-  border-top: 1px solid var(--line);
-
-}
-
-
-
-.contact-detail .detail-symbol {
-
-  color: var(--aqua);
-
-  font-size: 20px;
-
-  width: 30px;
-
-}
-
-
-
-.contact-detail small {
-
-  display: block;
-
-  font-size: 9px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1.5px;
-
-  color: var(--muted);
-
-  margin-bottom: 6px;
-
-}
-
-
-
-.contact-detail strong {
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-}
-
-
-
-.quote-form {
-
-  padding: 35px;
-
-  border: 1px solid var(--line);
-
-  background: rgba(3,13,15,.45);
-
-}
-
-
-
-.form-heading {
-
-  font-family: var(--display);
-
-  font-size: 34px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 8px;
-
-}
-
-
-
-.form-intro {
-
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.8;
-
-  margin-bottom: 25px;
-
-}
-
-
-
-.form-grid {
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 17px;
-
-}
-
-
-
-.field { min-width: 0; }
-
-.field-full { grid-column: 1 / -1; }
-
-
-
-.field label {
-
-  display: block;
-
-  margin-bottom: 9px;
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
-  text-transform: uppercase;
-
-  color: #d4ddd7;
-
-}
-
-
-
-.field input,
-
-.field select,
-
-.field textarea {
-
-  display: block;
-
-  width: 100%;
-
-  border: 1px solid rgba(245,240,230,.17);
-
-  border-radius: 0;
-
-  padding: 14px;
-
-  background: #0b1b1d;
-
-  color: var(--cream);
-
-  outline: none;
-
-  font-size: 12px;
-
-  min-height: 47px;
-
-}
-
-
-
-.field select { color-scheme: dark; }
-
-
-
-.field input:focus,
-
-.field select:focus,
-
-.field textarea:focus {
-
-  border-color: var(--aqua);
-
-}
-
-
-
-.field textarea {
-
-  min-height: 110px;
-
-  resize: vertical;
-
-}
-
-
-
-.quote-form .btn { width: 100%; margin-top: 20px; }
-
-
-
-.form-note {
-
-  font-size: 10px;
-
-  color: var(--muted);
-
-  text-align: center;
-
-  line-height: 1.8;
-
-  margin-top: 15px;
-
-}
-
-
+.contact-small{font-size:10px;color:var(--muted);line-height:1.7;margin-top:16px}
 
 /* FOOTER */
 
+footer{background:#040d0d;border-top:1px solid var(--line);padding:36px 0}
 
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
 
-.footer {
+.footer-copy{font-size:10px;line-height:1.8;color:#879993}
 
-  padding: 50px 0 25px;
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
 
-  background: #061012;
+.footer-links a{font-size:10px;color:#c6d2cd}
 
-  border-top: 1px solid var(--line);
+.footer-links a:hover{color:var(--teal)}
 
-}
+.back-top{color:var(--teal);font-size:10px;letter-spacing:1px;text-transform:uppercase}
 
+/* MOTION */
 
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 
-.footer-top {
+.reveal.visible{opacity:1;transform:translateY(0)}
 
-  display: flex;
+@keyframes heroEnter{to{transform:scale(1)}}
 
-  justify-content: space-between;
+@keyframes marquee{to{transform:translateX(-50%)}}
 
-  gap: 35px;
+@keyframes linePulse{0%,100%{opacity:.4;transform:scaleX(.7);transform-origin:left}50%{opacity:1;transform:scaleX(1);transform-origin:left}}
 
-  align-items: center;
+@media(min-width:1500px){.hero h1{font-size:175px}}
 
-  padding-bottom: 40px;
+@media(max-width:900px){
 
-}
+  .nav-links{gap:15px}
 
+  .nav-links a{font-size:9px}
 
+  .nav-call{display:none}
 
-.footer-tagline {
+  .intro-grid,.experience-grid,.area-grid,.contact-grid{gap:45px}
 
-  color: var(--muted);
+  .service-card{min-height:370px}
 
-  font-size: 11px;
+  .service-content{left:20px;right:18px;bottom:23px}
 
-  line-height: 1.8;
-
-  max-width: 330px;
-
-  margin-top: 16px;
-
-}
-
-
-
-.footer-links {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 23px;
+  .service-content h3{font-size:32px}
 
 }
 
+@media(max-width:680px){
 
+  .container{width:89%}
 
-.footer-links a {
+  .nav{height:70px}
 
-  color: #cbd4ce;
+  .logo-mark{width:38px;height:38px}
 
-  font-size: 10px;
+  .logo-text{font-size:21px}
 
-  text-transform: uppercase;
+  .menu-toggle{display:block}
 
-  letter-spacing: 1px;
+  .nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:rgba(5,16,16,.98);padding:23px 6%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}
 
-}
+  .nav-links.open{display:flex}
 
+  .nav-links a{padding:16px 0;border-bottom:1px solid var(--line);font-size:11px}
 
+  .nav-links a:last-child{border:0}
 
-.footer-links a:hover { color: var(--aqua); }
+  .hero{min-height:760px;height:94svh;max-height:920px}
 
+  .hero-photo{background-position:59% center}
 
+  .hero:before{background:linear-gradient(90deg,rgba(3,13,13,.84),rgba(3,13,13,.48)),linear-gradient(0deg,var(--night) 0%,transparent 45%,rgba(3,13,13,.23))}
 
-.footer-bottom {
+  .hero-inner{padding-top:80px}
 
-  border-top: 1px solid var(--line);
+  .hero h1{font-size:clamp(72px,17vw,112px);letter-spacing:-1.5px}
 
-  padding-top: 20px;
+  .hero-kicker{font-size:9px;letter-spacing:2.3px}
 
-  display: flex;
+  .hero-sub{font-size:13px;max-width:330px}
 
-  justify-content: space-between;
+  .hero-foot{gap:18px;margin-top:37px}
 
-  gap: 15px;
+  .hero-foot-item strong{font-size:19px}
 
-  flex-wrap: wrap;
+  .hero-foot-item span{font-size:8px;letter-spacing:.6px}
 
-  font-size: 10px;
+  .hero-side{display:none}
 
-  color: #879893;
+  .scroll-cue{bottom:22px}
 
-}
+  .marquee{padding:13px 0}
 
+  .marquee span{font-size:17px;padding:0 16px}
 
+  .intro,.services,.experience,.process{padding:82px 0}
 
-/* REVEAL */
+  .intro-grid,.experience-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:38px}
 
+  .intro-image{min-height:340px}
 
+  .intro-image img{height:340px}
 
-.reveal {
+  .intro-note{margin-top:24px}
 
-  opacity: 0;
+  .section-heading{display:block;margin-bottom:32px}
 
-  transform: translateY(28px);
+  .section-heading .section-copy{margin-top:20px}
 
-  transition: opacity .8s ease, transform .8s ease;
+  .service-grid{grid-template-columns:1fr 1fr}
 
-}
+  .service-card{min-height:310px}
 
+  .service-card:last-child{grid-column:1/-1;min-height:340px}
 
+  .service-content{left:17px;right:13px;bottom:18px}
 
-.reveal.visible {
+  .service-content h3{font-size:29px}
 
-  opacity: 1;
+  .service-content p{font-size:11px}
 
-  transform: translateY(0);
+  .service-link{font-size:9px;margin-top:13px}
 
-}
+  .experience-image{height:390px;margin-right:12px}
 
+  .experience-stamp{right:-8px;width:82px;height:82px;font-size:17px}
 
+  .miami{min-height:470px}
 
-@media (prefers-reduced-motion: reduce) {
+  .miami-inner{padding:80px 0}
 
-  *, *::before, *::after {
+  .miami h2{font-size:clamp(62px,15vw,90px)}
 
-    scroll-behavior: auto !important;
+  .process-grid{grid-template-columns:1fr 1fr;row-gap:30px}
 
-    animation: none !important;
+  .process-step{padding-top:15px}
 
-    transition: none !important;
+  .process-step:nth-child(2){border-right:0}
 
-  }
+  .process-step h3{font-size:24px}
 
-  .reveal { opacity: 1; transform: none; }
+  .area{padding:80px 0}
 
-}
+  .area-map{min-height:280px}
 
+  .contact{padding:85px 0}
 
+  .contact-panel{padding:25px}
 
-/* MOBILE */
-
-
-
-@media (max-width: 900px) {
-
-  .nav-links { gap: 15px; }
-
-  .nav-links a { font-size: 9px; }
-
-  .nav-cta { padding: 0 12px; }
-
-  .experience-grid, .area-grid { gap: 45px; }
-
-  .contact-grid { gap: 35px; }
-
-  .services-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-
-  .experience-visual { min-height: 500px; }
+  .footer-row{align-items:flex-start;flex-direction:column}
 
 }
 
+@media(max-width:380px){
 
+  .hero h1{font-size:68px}
 
-@media (max-width: 680px) {
+  .hero-actions .btn{padding:0 14px;font-size:9px}
 
-  .container { width: calc(100% - 36px); }
+  .hero-foot{gap:12px}
 
-  .nav-inner { min-height: 75px; }
+  .service-card{min-height:290px}
 
-  .brand-name { font-size: 23px; }
-
-  .brand-mark { width: 39px; height: 39px; }
-
-  .nav-cta { display: none; }
-
-  .menu-toggle { display: block; }
-
-  .nav-links {
-
-    position: absolute;
-
-    top: 74px;
-
-    left: 0;
-
-    right: 0;
-
-    padding: 22px 24px 28px;
-
-    display: none;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    gap: 0;
-
-    background: rgba(6,17,19,.98);
-
-    border-bottom: 1px solid var(--line);
-
-  }
-
-  .nav-links.open { display: flex; }
-
-  .nav-links a {
-
-    font-size: 11px;
-
-    padding: 16px 0;
-
-    border-bottom: 1px solid var(--line);
-
-  }
-
-
-
-  .hero { min-height: 810px; min-height: 100svh; }
-
-  .hero-backdrop {
-
-    background-position: 58% center;
-
-  }
-
-  .hero::before {
-
-    background:
-
-      linear-gradient(90deg, rgba(4,15,18,.85), rgba(4,15,18,.45)),
-
-      linear-gradient(0deg, var(--night), transparent 70%);
-
-  }
-
-  .hero-content { padding-top: 90px; padding-bottom: 140px; }
-
-  .hero h1 { font-size: clamp(69px, 16vw, 105px); letter-spacing: -1px; }
-
-  .hero h1 .line-two { margin-top: 12px; }
-
-  .hero h1 .line-three { font-size: .38em; letter-spacing: 3px; margin-top: 21px; }
-
-  .hero-copy { font-size: 13px; max-width: 360px; }
-
-  .hero-kicker { font-size: 8px; letter-spacing: 1.5px; }
-
-  .hero-foot { bottom: 24px; align-items: end; }
-
-  .hero-location { font-size: 8px; }
-
-  .scroll-cue { font-size: 8px; }
-
-  .scroll-line { width: 23px; }
-
-
-
-  .experience, .process, .area { padding: 85px 0; }
-
-  .experience-grid, .area-grid, .contact-grid {
-
-    grid-template-columns: 1fr;
-
-    gap: 42px;
-
-  }
-
-  .experience-visual { min-height: 430px; }
-
-  .experience-image { inset: 0 24px 35px 0; }
-
-  .experience-stamp { width: 160px; padding: 20px; }
-
-  .experience::after { font-size: 130px; top: 40px; }
-
-  .services { padding: 85px 0; }
-
-  .services-head { align-items: start; flex-direction: column; }
-
-  .services-grid { grid-template-columns: 1fr; gap: 13px; }
-
-  .service-card { min-height: 355px; }
-
-  .process-grid { grid-template-columns: 1fr; margin-top: 42px; }
-
-  .process-step, .process-step + .process-step {
-
-    padding: 25px 0;
-
-    border-left: 0;
-
-    border-bottom: 1px solid var(--line);
-
-  }
-
-  .process-num { font-size: 52px; margin-bottom: 15px; }
-
-  .signature { min-height: 560px; }
-
-  .signature-content { padding: 90px 0; }
-
-  .signature-content .section-heading { font-size: 65px; }
-
-  .area-panel { padding: 25px 20px; }
-
-  .area-list { grid-template-columns: 1fr; }
-
-  .contact { padding: 85px 0; }
-
-  .quote-form { padding: 23px 18px; }
-
-  .form-grid { grid-template-columns: 1fr; }
-
-  .field-full { grid-column: auto; }
-
-  .footer-top { align-items: start; flex-direction: column; }
-
-  .footer-links { gap: 17px; }
-
-  .footer-bottom { line-height: 1.8; }
+  .service-content h3{font-size:25px}
 
 }
 
+@media(prefers-reduced-motion:reduce){
 
+  *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 
-@media (max-width: 370px) {
-
-  .hero h1 { font-size: 63px; }
-
-  .hero-actions .btn { width: 100%; }
-
-  .scroll-cue { display: none; }
+  .reveal{opacity:1;transform:none}
 
 }
 
@@ -2146,39 +500,29 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 </head>
 
-
-
 <body>
 
+<header id="header">
 
+  <div class="container nav">
 
-<header class="nav">
+    <a href="#home" class="logo" aria-label="Beachboyz Detailing home">
 
-  <div class="container nav-inner">
+      <div class="logo-mark">BB</div>
 
-    <a class="brand" href="#home" aria-label="Beachboyz Detailing home">
-
-      <div class="brand-mark">B</div>
-
-      <div>
-
-        <div class="brand-name">BEACHBOYZ</div>
-
-        <div class="brand-sub">DETAILING · MIAMI</div>
-
-      </div>
+      <div class="logo-text">BEACHBOYZ<small>DETAILING · SOUTH FLORIDA</small></div>
 
     </a>
 
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
+    <nav class="nav-links" id="navLinks">
 
-    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-
-      <a href="#experience">The Experience</a>
+      <a href="#home">Home</a>
 
       <a href="#services">Services</a>
 
-      <a href="#process">Our Approach</a>
+      <a href="#experience">Our Standard</a>
 
       <a href="#area">Service Area</a>
 
@@ -2186,451 +530,223 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
     </nav>
 
-
-
-    <a class="btn nav-cta" href="#contact">Get a Quote <span class="btn-arrow">↗</span></a>
-
-
-
-    <button class="menu-toggle" id="menuToggle"
-
-      aria-label="Open navigation" aria-expanded="false">☰</button>
+    <a class="nav-call" href="tel:+17864744880">CALL 786.474.4880 ↗</a>
 
   </div>
 
 </header>
 
-
-
 <main>
-
-
-
-  <!-- MIAMI OPENING SCENE -->
-
-
 
   <section class="hero" id="home">
 
-    <div class="hero-backdrop"></div>
+    <div class="hero-photo"></div>
 
+    <div class="container hero-inner">
 
+      <div class="hero-kicker"><span class="live-dot"></span> MOBILE DETAILING · MIAMI, FLORIDA</div>
 
-    <div class="container hero-content">
+      <h1>THIS ISN'T<br>JUST A <span class="second">DETAIL.</span></h1>
 
-      <div class="hero-kicker">
-
-        <span class="live-dot"></span>
-
-        South Florida · Mobile Detailing
-
-      </div>
-
-
-
-      <h1>
-
-        YOUR RIDE.
-
-        <span class="line-two">OUR CITY.</span>
-
-        <span class="line-three">THE MIAMI EXPERIENCE.</span>
-
-      </h1>
-
-
-
-      <p class="hero-copy">
-
-        From exotic machines to everyday classics, we bring premium
-
-        detailing directly to you. Professional care, a personal touch,
-
-        and that unmistakable Miami finish.
-
-      </p>
-
-
+      <p class="hero-sub">It's the Miami experience. Premium mobile detailing for the cars you love, the lifestyle you live, and the details everyone else misses.</p>
 
       <div class="hero-actions">
 
-        <a href="#contact" class="btn">
+        <a class="btn" href="#contact">GET YOUR QUOTE <span class="arrow">↗</span></a>
 
-          Book Your Detail <span class="btn-arrow">↗</span>
+        <a class="btn btn-outline" href="#services">EXPLORE SERVICES <span class="arrow">↓</span></a>
 
-        </a>
+      </div>
 
-        <a href="#services" class="btn btn-outline">
+      <div class="hero-foot">
 
-          Explore Services <span class="btn-arrow">↓</span>
+        <div class="hero-foot-item"><strong>ON YOUR TURF</strong><span>Mobile convenience</span></div>
 
-        </a>
+        <div class="hero-foot-item"><strong>EVERY DETAIL</strong><span>Never the bare minimum</span></div>
+
+        <div class="hero-foot-item"><strong>SOUTH FLORIDA</strong><span>Locally focused</span></div>
 
       </div>
 
     </div>
 
+    <div class="hero-side">THE MIAMI EXPERIENCE · EST. FOR THE DETAIL</div>
 
-
-    <div class="container hero-foot">
-
-      <div class="hero-location">
-
-        <span>MIAMI, FLORIDA</span><br>
-
-        NORTH MIAMI · SUNNY ISLES · BEYOND
-
-      </div>
-
-      <a class="scroll-cue" href="#experience">
-
-        Discover the experience <span class="scroll-line"></span>
-
-      </a>
-
-    </div>
+    <a class="scroll-cue" href="#intro"><span class="scroll-line"></span> SCROLL INTO THE EXPERIENCE</a>
 
   </section>
 
+  <div class="marquee" aria-label="Beachboyz Detailing services">
 
+    <div class="marquee-track">
 
-  <div class="ticker" aria-label="Our detailing services">
+      <span>EXOTIC CARS <b>✳</b></span><span>DAILY DRIVERS <b>✳</b></span><span>FLEET DETAILING <b>✳</b></span><span>BOATS & RVs <b>✳</b></span><span>THE MIAMI EXPERIENCE <b>✳</b></span>
 
-    <div class="ticker-track">
-
-      <div class="ticker-group">
-
-        <span>✳</span> Luxury Detailing <span>✳</span> Exotic Cars
-
-        <span>✳</span> Trucks & SUVs <span>✳</span> RVs & Boats
-
-        <span>✳</span> Mobile Service
-
-      </div>
-
-      <div class="ticker-group" aria-hidden="true">
-
-        <span>✳</span> Luxury Detailing <span>✳</span> Exotic Cars
-
-        <span>✳</span> Trucks & SUVs <span>✳</span> RVs & Boats
-
-        <span>✳</span> Mobile Service
-
-      </div>
+      <span>EXOTIC CARS <b>✳</b></span><span>DAILY DRIVERS <b>✳</b></span><span>FLEET DETAILING <b>✳</b></span><span>BOATS & RVs <b>✳</b></span><span>THE MIAMI EXPERIENCE <b>✳</b></span>
 
     </div>
 
   </div>
 
+  <section class="intro" id="intro">
 
+    <div class="container intro-grid">
 
-  <!-- THE EXPERIENCE -->
+      <div class="reveal">
 
+        <div class="eyebrow">WELCOME TO BEACHBOYZ</div>
 
+        <h2 class="section-title">MIAMI ROOTS.<br><span>SHOWROOM</span><br>STANDARDS.</h2>
 
-  <section class="experience" id="experience">
+        <p class="section-copy">Your vehicle deserves more than a quick wash. Beachboyz Detailing brings careful workmanship, premium presentation, and personal service straight to your location.</p>
 
-    <div class="container experience-grid">
+        <p class="section-copy">From the daily driver parked downstairs to the exotic car that turns heads, we treat every vehicle with respect and attention to detail.</p>
 
-      <div class="experience-visual reveal">
+        <div class="intro-note">We don't just provide a service. We provide an experience — with the convenience of having professional detailing come to you.</div>
 
-        <div class="experience-image"></div>
-
-        <div class="experience-stamp">
-
-          <strong>Miami<br>Made.</strong>
-
-          <small>Personal service.<br>Premium attention.</small>
-
-        </div>
+        <a href="#contact" class="btn" style="margin-top:30px">LET'S TALK DETAILS ↗</a>
 
       </div>
 
+      <div class="intro-image reveal">
 
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85" alt="Premium performance car with dramatic automotive styling" loading="lazy">
 
-      <div class="experience-text reveal">
-
-        <div class="eyebrow">More than a clean car</div>
-
-        <h2 class="section-heading">
-
-          WE DON'T JUST<br>
-
-          DETAIL.<br>
-
-          <span>WE DELIVER.</span>
-
-        </h2>
-
-
-
-        <p class="section-copy">
-
-          Beachboyz Detailing was built around one idea: your vehicle
-
-          deserves attention to detail without the hassle of taking
-
-          time out of your day. We come to you, work with care, and
-
-          treat every vehicle with respect.
-
-        </p>
-
-
-
-        <p class="section-copy">
-
-          From the daily driver to the weekend exotic, the family SUV
-
-          to your boat or RV, our goal is the same — quality work and
-
-          an experience worth coming back for.
-
-        </p>
-
-
-
-        <div class="promise">
-
-          <div class="promise-icon">✳</div>
-
-          <div>
-
-            <h3>Detail-Minded Work</h3>
-
-            <p>Careful wash methods, clean microfiber, and attention
-
-              to the surfaces and details that matter.</p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="promise">
-
-          <div class="promise-icon">↗</div>
-
-          <div>
-
-            <h3>We Come to You</h3>
-
-            <p>Convenient mobile detailing for homes, workplaces,
-
-              and other agreed service locations.</p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="promise">
-
-          <div class="promise-icon">◇</div>
-
-          <div>
-
-            <h3>Personalized Quotes</h3>
-
-            <p>Every vehicle and its condition are different.
-
-              Tell us what you drive and what you need.</p>
-
-          </div>
-
-        </div>
-
-
-
-        <a href="#contact" class="btn">
-
-          Let's Talk Details <span class="btn-arrow">↗</span>
-
-        </a>
+        <div class="image-caption"><small>01 / THE BEACHBOYZ APPROACH</small>BUILT AROUND THE DETAILS.</div>
 
       </div>
 
     </div>
 
   </section>
-
-
-
-  <!-- SERVICES -->
-
-
 
   <section class="services" id="services">
 
     <div class="container">
 
-      <div class="services-head reveal">
+      <div class="section-heading reveal">
 
         <div>
 
-          <div class="eyebrow">Made for every kind of ride</div>
+          <div class="eyebrow">WHAT WE BRING TO YOU</div>
 
-          <h2 class="section-heading">
-
-            YOUR VEHICLE.<br>
-
-            <span>OUR ATTENTION.</span>
-
-          </h2>
+          <h2 class="section-title">YOUR RIDE.<br>OUR STANDARD.</h2>
 
         </div>
 
-        <p class="section-copy">
-
-          One vehicle or an entire fleet, we'll discuss the right
-
-          detailing service for your needs. Contact us for a personalized
-
-          quote based on vehicle size, condition, and requested work.
-
-        </p>
+        <p class="section-copy">Different vehicles. Different needs. One commitment to doing the job with care. Tell us what you drive and we'll help you find the right service.</p>
 
       </div>
 
-
-
-      <div class="services-grid">
-
-
+      <div class="service-grid">
 
         <article class="service-card reveal">
 
-          <div class="service-bg"></div>
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="Luxury sports car" loading="lazy">
 
-          <span class="service-number">01 / DAILY DRIVERS</span>
+          <div class="service-content">
 
-          <div class="service-info">
+            <div class="service-number">01 / PREMIUM VEHICLES</div>
 
-            <h3>Everyday Luxury</h3>
+            <h3>EXOTICS &<br>LUXURY</h3>
 
-            <p>Keep your daily driver looking sharp, feeling fresh,
+            <p>Careful detailing for performance cars, luxury vehicles, classics, and prized weekend rides.</p>
 
-              and ready for the next Miami sunset.</p>
-
-            <a class="service-link" href="#contact">Request a quote ↗</a>
+            <a class="service-link" href="#contact">REQUEST A QUOTE ↗</a>
 
           </div>
 
         </article>
 
-
-
         <article class="service-card reveal">
 
-          <div class="service-bg"></div>
+          <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80" alt="Classic American car" loading="lazy">
 
-          <span class="service-number">02 / HIGH-END</span>
+          <div class="service-content">
 
-          <div class="service-info">
+            <div class="service-number">02 / EVERYDAY DRIVING</div>
 
-            <h3>Exotic & Classic</h3>
+            <h3>DAILY<br>DRIVERS</h3>
 
-            <p>Thoughtful detailing for special vehicles, performance
+            <p>Interior and exterior care that helps keep your everyday vehicle clean, fresh, and looking sharp.</p>
 
-              machines, cherished classics, and luxury cars.</p>
-
-            <a class="service-link" href="#contact">Request a quote ↗</a>
+            <a class="service-link" href="#contact">REQUEST A QUOTE ↗</a>
 
           </div>
 
         </article>
 
-
-
         <article class="service-card reveal">
 
-          <div class="service-bg"></div>
+          <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80" alt="Modern vehicle ready for detailing" loading="lazy">
 
-          <span class="service-number">03 / OVERSIZED</span>
+          <div class="service-content">
 
-          <div class="service-info">
+            <div class="service-number">03 / BUSINESS VEHICLES</div>
 
-            <h3>Trucks & SUVs</h3>
+            <h3>FLEETS &<br>TRUCKS</h3>
 
-            <p>Interior and exterior care for work trucks, family SUVs,
+            <p>Consistent presentation for work trucks, business vehicles, and fleets that represent your name.</p>
 
-              and larger everyday vehicles.</p>
-
-            <a class="service-link" href="#contact">Request a quote ↗</a>
+            <a class="service-link" href="#contact">DISCUSS YOUR FLEET ↗</a>
 
           </div>
 
         </article>
 
-
-
         <article class="service-card reveal">
 
-          <div class="service-bg"></div>
+          <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1000&q=80" alt="Boat on the water" loading="lazy">
 
-          <span class="service-number">04 / COMMERCIAL</span>
+          <div class="service-content">
 
-          <div class="service-info">
+            <div class="service-number">04 / ON THE WATER</div>
 
-            <h3>Fleet Detailing</h3>
+            <h3>BOATS &<br>MARINE CARE</h3>
 
-            <p>Ask about detailing solutions for business vehicles
+            <p>Ask about boat detailing options tailored to your vessel, finish, and condition.</p>
 
-              and recurring fleet maintenance.</p>
-
-            <a class="service-link" href="#contact">Discuss your fleet ↗</a>
+            <a class="service-link" href="#contact">ASK ABOUT MARINE CARE ↗</a>
 
           </div>
 
         </article>
 
-
-
         <article class="service-card reveal">
 
-          <div class="service-bg"></div>
+          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1000&q=80" alt="Large vehicle ready for a road trip" loading="lazy">
 
-          <span class="service-number">05 / ON THE WATER</span>
+          <div class="service-content">
 
-          <div class="service-info">
+            <div class="service-number">05 / BIG ADVENTURES</div>
 
-            <h3>Boats</h3>
+            <h3>RV & LARGE<br>VEHICLES</h3>
 
-            <p>Ask about cleaning and detailing options for your
+            <p>Get in touch for a custom quote based on your RV or larger vehicle's size and condition.</p>
 
-              boat, based on its surfaces and condition.</p>
-
-            <a class="service-link" href="#contact">Request a quote ↗</a>
+            <a class="service-link" href="#contact">REQUEST A QUOTE ↗</a>
 
           </div>
 
         </article>
 
-
-
         <article class="service-card reveal">
 
-          <div class="service-bg"></div>
+          <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1000&q=80" alt="Professional vehicle cleaning" loading="lazy">
 
-          <span class="service-number">06 / ROAD READY</span>
+          <div class="service-content">
 
-          <div class="service-info">
+            <div class="service-number">06 / THE FINISH</div>
 
-            <h3>RVs & Motorhomes</h3>
+            <h3>INTERIOR &<br>EXTERIOR</h3>
 
-            <p>Mobile detailing options for recreational vehicles
+            <p>From careful washing to interior refreshes and deeper cleaning, we'll discuss what your vehicle needs.</p>
 
-              and larger vehicles that need extra attention.</p>
-
-            <a class="service-link" href="#contact">Request a quote ↗</a>
+            <a class="service-link" href="#contact">BUILD YOUR DETAIL ↗</a>
 
           </div>
 
         </article>
-
-
 
       </div>
 
@@ -2638,691 +754,294 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
   </section>
 
+  <section class="experience" id="experience">
 
+    <div class="container experience-grid">
 
-  <!-- OUR APPROACH -->
+      <div class="experience-image reveal">
 
+        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=85" alt="Close-up of hands-on automotive detailing" loading="lazy">
 
-
-  <section class="process" id="process">
-
-    <div class="container">
-
-      <div class="process-header reveal">
-
-        <div class="eyebrow">Straightforward from start to finish</div>
-
-        <h2 class="section-heading">
-
-          SIMPLE PLAN.<br>
-
-          <span>SHARP RESULTS.</span>
-
-        </h2>
-
-        <p class="section-copy">
-
-          No guessing games. Tell us about your vehicle, discuss
-
-          your expectations, and get a quote before the work begins.
-
-        </p>
+        <div class="experience-stamp">DETAIL<br>MATTERS<small>BB · MIAMI</small></div>
 
       </div>
 
+      <div class="experience-copy reveal">
 
+        <div class="eyebrow">NOT CUTTING CORNERS</div>
+
+        <h2 class="section-title">THE LITTLE<br>THINGS MAKE<br><span>THE DIFFERENCE.</span></h2>
+
+        <p class="section-copy">Real detailing is about how the vehicle is treated, not just how it looks when the water dries. Our approach is built around careful work, the right process, and respect for your finish.</p>
+
+        <div class="feature-list">
+
+          <div class="feature">
+
+            <div class="feature-icon">✳</div>
+
+            <div><h4>CARE IN EVERY PASS</h4><p>A careful wash process and clean microfiber towels to help reduce avoidable surface marring.</p></div>
+
+          </div>
+
+          <div class="feature">
+
+            <div class="feature-icon">◇</div>
+
+            <div><h4>BEYOND THE FIRST IMPRESSION</h4><p>Attention to wheels, glass, interior touchpoints, door jambs, and the details easy to overlook.</p></div>
+
+          </div>
+
+          <div class="feature">
+
+            <div class="feature-icon">↗</div>
+
+            <div><h4>YOUR VEHICLE, YOUR NEEDS</h4><p>We discuss the condition, desired finish, and appropriate services before quoting the job.</p></div>
+
+          </div>
+
+        </div>
+
+        <a href="#contact" class="btn" style="margin-top:28px">LET'S DETAIL YOUR RIDE ↗</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="miami">
+
+    <div class="miami-bg"></div>
+
+    <div class="container miami-inner reveal">
+
+      <div class="eyebrow">NORTH MIAMI · SOUTH FLORIDA</div>
+
+      <h2>THE CITY<br>IS THE <span>VIBE.</span></h2>
+
+      <p>Ocean air. Palm-lined streets. Late-night city lights. Beachboyz brings a little Miami attitude and a premium detailing experience right to your driveway, home, or workplace.</p>
+
+      <a href="#area" class="btn">FIND YOUR SERVICE AREA ↗</a>
+
+    </div>
+
+  </section>
+
+  <section class="process">
+
+    <div class="container">
+
+      <div class="reveal">
+
+        <div class="eyebrow">STRAIGHTFORWARD FROM START TO FINISH</div>
+
+        <h2 class="section-title">EASY DOES IT.</h2>
+
+        <p class="section-copy">No guesswork. No one-size-fits-all pricing. Just a straightforward conversation about your vehicle and what you're looking to achieve.</p>
+
+      </div>
 
       <div class="process-grid">
 
-        <article class="process-step reveal">
+        <div class="process-step reveal"><div class="num">01</div><h3>GET IN TOUCH</h3><p>Call or email with your vehicle, location, and the kind of detail you're looking for.</p></div>
 
-          <div class="process-num">01</div>
+        <div class="process-step reveal"><div class="num">02</div><h3>GET YOUR QUOTE</h3><p>We discuss the vehicle's condition and service requirements before confirming a quote.</p></div>
 
-          <h3>Tell Us About Your Ride</h3>
+        <div class="process-step reveal"><div class="num">03</div><h3>BOOK YOUR DETAIL</h3><p>Coordinate a time and location that works for your schedule and service needs.</p></div>
 
-          <p>Share your vehicle, location, condition, and whether
-
-            you're looking for an interior detail, exterior wash,
-
-            or a more complete service.</p>
-
-        </article>
-
-
-
-        <article class="process-step reveal">
-
-          <div class="process-num">02</div>
-
-          <h3>Get Your Personal Quote</h3>
-
-          <p>We'll discuss the work requested, vehicle condition,
-
-            availability, and pricing before confirming your appointment.</p>
-
-        </article>
-
-
-
-        <article class="process-step reveal">
-
-          <div class="process-num">03</div>
-
-          <h3>Enjoy the Experience</h3>
-
-          <p>Once the appointment is confirmed, we'll coordinate
-
-            the service location and take care of the agreed detailing work.</p>
-
-        </article>
+        <div class="process-step reveal"><div class="num">04</div><h3>ENJOY THE FINISH</h3><p>Let us take care of the details while you get back to enjoying your day.</p></div>
 
       </div>
 
     </div>
 
   </section>
-
-
-
-  <!-- MIAMI BRAND MOMENT -->
-
-
-
-  <section class="signature">
-
-    <div class="signature-bg"></div>
-
-    <div class="container">
-
-      <div class="signature-content reveal">
-
-        <div class="eyebrow">A little Miami in everything we do</div>
-
-        <h2 class="section-heading">
-
-          PULL UP<br>
-
-          CLEAN.<br>
-
-          <span>LEAVE A<br>STATEMENT.</span>
-
-        </h2>
-
-        <p class="section-copy">
-
-          Palm-lined streets. City lights. That fresh-detail feeling.
-
-          Beachboyz brings mobile detailing together with the spirit
-
-          of South Florida — with your vehicle at the center of it all.
-
-        </p>
-
-        <a href="#contact" class="btn">
-
-          Get Your Quote <span class="btn-arrow">↗</span>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- SERVICE AREA -->
-
-
 
   <section class="area" id="area">
 
     <div class="container area-grid">
 
-      <div class="reveal">
+      <div class="area-map reveal">
 
-        <div class="eyebrow">Your neighborhood detailer</div>
+        <div class="map-label">BEACHBOYZ · MOBILE DETAILING</div>
 
-        <h2 class="section-heading">
+        <div class="map-pin"><div class="pin-icon">⌖</div><div><strong>NORTH MIAMI</strong><small>YOUR LOCATION. OUR DETAIL.</small></div></div>
 
-          MIAMI<br>
-
-          <span>IS OUR</span><br>
-
-          TERRITORY.
-
-        </h2>
-
-        <p class="section-copy">
-
-          Mobile detailing centered around North Miami and the
-
-          surrounding coastal communities. Not sure if we cover
-
-          your location? Reach out and let's check.
-
-        </p>
-
-        <div style="margin-top:28px">
-
-          <a href="#contact" class="btn">Check Your Location ↗</a>
-
-        </div>
+        <div class="area-tags"><span>Sunny Isles Beach</span><span>Bal Harbour</span><span>Golden Beach</span><span>North Miami</span></div>
 
       </div>
 
+      <div class="area-copy reveal">
 
+        <div class="eyebrow">WE COME TO YOU</div>
 
-      <div class="area-panel reveal">
+        <h2 class="section-title">YOUR DRIVEWAY<br>OR <span>OURS?</span><br>WE COME TO YOU.</h2>
 
-        <div class="area-label">Our service area</div>
+        <p class="section-copy">Based in the North Miami area, Beachboyz Detailing serves Sunny Isles Beach, Bal Harbour, Golden Beach, North Miami, and surrounding communities.</p>
 
-        <div class="area-list">
+        <p class="section-copy">Our typical service radius is approximately 15–20 miles, depending on the appointment. Contact us to confirm availability for your location.</p>
 
-          <div>North Miami</div>
-
-          <div>Sunny Isles Beach</div>
-
-          <div>Bal Harbour</div>
-
-          <div>Golden Beach</div>
-
-          <div>Aventura area</div>
-
-          <div>Surrounding Miami</div>
-
-        </div>
-
-        <p class="area-note">
-
-          We generally aim to serve locations within approximately
-
-          15–20 miles, depending on the appointment and service requested.
-
-          Please confirm your address with us before booking.
-
-        </p>
+        <a href="#contact" class="btn" style="margin-top:25px">CHECK YOUR LOCATION ↗</a>
 
       </div>
 
     </div>
 
   </section>
-
-
-
-  <!-- QUOTE / CONTACT -->
-
-
 
   <section class="contact" id="contact">
 
     <div class="container contact-grid">
 
+      <div class="reveal">
 
+        <div class="eyebrow">YOUR NEXT DETAIL STARTS HERE</div>
 
-      <div class="contact-copy reveal">
+        <h2>LET'S MAKE<br>IT <span>SHINE.</span></h2>
 
-        <div class="eyebrow">Let's get your ride right</div>
+        <p class="section-copy">Tell us what you drive. Tell us what you need. We'll take it from there. Contact Beachboyz for a personalized quote and appointment availability.</p>
 
-        <h2 class="section-heading">
+        <div class="contact-details">
 
-          READY FOR<br>
+          <a class="contact-row" href="tel:+17864744880"><span class="symbol">↗</span><span>786-474-4880</span></a>
 
-          <span>THAT</span><br>
+          <a class="contact-row" href="mailto:info@beachboyzdetailing.com"><span class="symbol">✉</span><span>info@beachboyzdetailing.com</span></a>
 
-          MIAMI FINISH?
-
-        </h2>
-
-        <p class="section-copy">
-
-          Send us the details and we'll follow up to discuss your
-
-          vehicle, service options, and a personalized quote.
-
-          No package prices posted — just a conversation about
-
-          what your ride actually needs.
-
-        </p>
-
-
-
-        <div class="contact-detail">
-
-          <div class="detail-symbol">↗</div>
-
-          <div>
-
-            <small>Call or text</small>
-
-            <strong><a href="tel:+17864744880">(786) 474-4880</a></strong>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="contact-detail">
-
-          <div class="detail-symbol">⌖</div>
-
-          <div>
-
-            <small>Mobile detailing</small>
-
-            <strong>North Miami & surrounding areas</strong>
-
-          </div>
+          <div class="contact-row"><span class="symbol">⌖</span><span>North Miami & surrounding South Florida communities</span></div>
 
         </div>
 
       </div>
 
+      <div class="contact-panel reveal">
 
+        <div class="eyebrow">MAKE YOUR MOVE</div>
 
-      <form class="quote-form reveal" id="quoteForm">
+        <h3>READY WHEN YOU ARE.</h3>
 
-        <h3 class="form-heading">Request a Quote</h3>
+        <p>Reach out with your vehicle make and model, the services you're interested in, and your location. We'll discuss the next steps and your quote.</p>
 
-        <p class="form-intro">
+        <a class="btn" href="tel:+17864744880">CALL BEACHBOYZ ↗</a>
 
-          Give us a few details about your vehicle.
+        <a class="btn btn-outline" href="mailto:info@beachboyzdetailing.com?subject=Beachboyz%20Detailing%20Quote%20Request">EMAIL FOR A QUOTE ↗</a>
 
-          We'll open a prefilled text message for you to send.
+        <div class="contact-small">All services are quoted based on vehicle type, size, condition, and requested work. Boat, RV, fleet, and specialty vehicle appointments are subject to availability.</div>
 
-        </p>
-
-
-
-        <div class="form-grid">
-
-          <div class="field">
-
-            <label for="customerName">Your name *</label>
-
-            <input id="customerName" name="name" autocomplete="name"
-
-              placeholder="Full name" required>
-
-          </div>
-
-
-
-          <div class="field">
-
-            <label for="customerPhone">Your phone *</label>
-
-            <input id="customerPhone" name="phone" type="tel"
-
-              autocomplete="tel" placeholder="Best contact number" required>
-
-          </div>
-
-
-
-          <div class="field">
-
-            <label for="vehicleType">Vehicle type *</label>
-
-            <select id="vehicleType" name="vehicle" required>
-
-              <option value="">Choose vehicle</option>
-
-              <option>Car / Daily Driver</option>
-
-              <option>Luxury / Exotic Car</option>
-
-              <option>Classic Car</option>
-
-              <option>Truck / SUV</option>
-
-              <option>Fleet</option>
-
-              <option>Boat</option>
-
-              <option>RV / Motorhome</option>
-
-              <option>Other</option>
-
-            </select>
-
-          </div>
-
-
-
-          <div class="field">
-
-            <label for="serviceType">Service requested *</label>
-
-            <select id="serviceType" name="service" required>
-
-              <option value="">Choose service</option>
-
-              <option>Exterior Wash</option>
-
-              <option>Interior Detail</option>
-
-              <option>Full Detail</option>
-
-              <option>Paint Protection / Sealant</option>
-
-              <option>Pet Hair / Sand Removal</option>
-
-              <option>Fleet Detailing</option>
-
-              <option>Boat / RV Detailing</option>
-
-              <option>Not Sure Yet</option>
-
-            </select>
-
-          </div>
-
-
-
-          <div class="field field-full">
-
-            <label for="customerLocation">Service location *</label>
-
-            <input id="customerLocation" name="location"
-
-              autocomplete="street-address"
-
-              placeholder="City or ZIP code" required>
-
-          </div>
-
-
-
-          <div class="field field-full">
-
-            <label for="customerNotes">Tell us more</label>
-
-            <textarea id="customerNotes" name="notes"
-
-              placeholder="Vehicle year, make, model, condition, and what you'd like done..."></textarea>
-
-          </div>
-
-        </div>
-
-
-
-        <button type="submit" class="btn">
-
-          Continue to Text Message <span class="btn-arrow">↗</span>
-
-        </button>
-
-
-
-        <p class="form-note">
-
-          Your message will open in your texting app.
-
-          Review it and press Send to submit your request.
-
-        </p>
-
-      </form>
-
-
+      </div>
 
     </div>
 
   </section>
 
-
-
 </main>
 
+<footer>
 
+  <div class="container footer-row">
 
-<footer class="footer">
+    <a href="#home" class="logo">
 
-  <div class="container">
+      <div class="logo-mark">BB</div>
 
-    <div class="footer-top">
+      <div class="logo-text">BEACHBOYZ<small>DETAILING · SOUTH FLORIDA</small></div>
 
-      <div>
+    </a>
 
-        <a class="brand" href="#home">
+    <div class="footer-copy">© <span id="year"></span> Beachboyz Detailing.<br>The Miami Experience.</div>
 
-          <div class="brand-mark">B</div>
+    <div class="footer-links">
 
-          <div>
+      <a href="#services">Services</a>
 
-            <div class="brand-name">BEACHBOYZ</div>
+      <a href="#experience">Our Standard</a>
 
-            <div class="brand-sub">DETAILING · MIAMI</div>
+      <a href="#area">Service Area</a>
 
-          </div>
-
-        </a>
-
-        <p class="footer-tagline">
-
-          Premium mobile detailing. Personal service.
-
-          The Miami experience, brought to you.
-
-        </p>
-
-      </div>
-
-
-
-      <nav class="footer-links" aria-label="Footer navigation">
-
-        <a href="#experience">About</a>
-
-        <a href="#services">Services</a>
-
-        <a href="#area">Service Area</a>
-
-        <a href="#contact">Get a Quote</a>
-
-        <a href="tel:+17864744880">Call Us</a>
-
-      </nav>
+      <a href="#contact">Contact</a>
 
     </div>
 
-
-
-    <div class="footer-bottom">
-
-      <span>© <span id="year"></span> Beachboyz Detailing. All rights reserved.</span>
-
-      <span>North Miami, Florida · The Miami Experience.</span>
-
-    </div>
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
 
   </div>
 
 </footer>
 
-
-
 <script>
 
-(function () {
+const header = document.getElementById('header');
 
-  "use strict";
+const toggle = document.getElementById('menuToggle');
 
+const nav = document.getElementById('navLinks');
 
+function updateHeader(){
 
-  // MOBILE NAVIGATION
+  header.classList.toggle('scrolled', window.scrollY > 30);
 
-  const menuToggle = document.getElementById("menuToggle");
+}
 
-  const navLinks = document.getElementById("navLinks");
+window.addEventListener('scroll', updateHeader, {passive:true});
 
+updateHeader();
 
+toggle.addEventListener('click', () => {
 
-  menuToggle.addEventListener("click", function () {
+  const open = nav.classList.toggle('open');
 
-    const isOpen = navLinks.classList.toggle("open");
+  toggle.setAttribute('aria-expanded', String(open));
 
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
 
-    menuToggle.setAttribute("aria-label",
+  toggle.textContent = open ? '✕' : '☰';
 
-      isOpen ? "Close navigation" : "Open navigation");
+});
 
-    menuToggle.textContent = isOpen ? "×" : "☰";
+nav.querySelectorAll('a').forEach(link => {
 
-  });
+  link.addEventListener('click', () => {
 
+    nav.classList.remove('open');
 
+    toggle.setAttribute('aria-expanded','false');
 
-  navLinks.querySelectorAll("a").forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-      navLinks.classList.remove("open");
-
-      menuToggle.setAttribute("aria-expanded", "false");
-
-      menuToggle.setAttribute("aria-label", "Open navigation");
-
-      menuToggle.textContent = "☰";
-
-    });
+    toggle.textContent = '☰';
 
   });
 
+});
 
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  // SCROLL REVEAL
+if ('IntersectionObserver' in window) {
 
-  const revealElements = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
 
+    entries.forEach(entry => {
 
+      if (entry.isIntersecting) {
 
-  if ("IntersectionObserver" in window) {
+        entry.target.classList.add('visible');
 
-    const observer = new IntersectionObserver(function (entries) {
+        observer.unobserve(entry.target);
 
-      entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("visible");
-
-          observer.unobserve(entry.target);
-
-        }
-
-      });
-
-    }, { threshold: 0.12 });
-
-
-
-    revealElements.forEach(function (element) {
-
-      observer.observe(element);
+      }
 
     });
 
-  } else {
+  }, {threshold:0.12});
 
-    revealElements.forEach(function (element) {
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-      element.classList.add("visible");
+} else {
 
-    });
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
 
-  }
-
-
-
-  // AUTOMATIC COPYRIGHT YEAR
-
-  document.getElementById("year").textContent =
-
-    new Date().getFullYear();
-
-
-
-  // QUOTE REQUEST VIA TEXT MESSAGE
-
-  // This works without a paid form service or a backend.
-
-  const quoteForm = document.getElementById("quoteForm");
-
-
-
-  quoteForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-
-
-    if (!quoteForm.reportValidity()) return;
-
-
-
-    const name = document.getElementById("customerName").value.trim();
-
-    const phone = document.getElementById("customerPhone").value.trim();
-
-    const vehicle = document.getElementById("vehicleType").value;
-
-    const service = document.getElementById("serviceType").value;
-
-    const location = document.getElementById("customerLocation").value.trim();
-
-    const notes = document.getElementById("customerNotes").value.trim();
-
-
-
-    const message = [
-
-      "Hey Beachboyz Detailing! I'd like a quote.",
-
-      "",
-
-      "Name: " + name,
-
-      "My phone: " + phone,
-
-      "Vehicle: " + vehicle,
-
-      "Service: " + service,
-
-      "Location: " + location,
-
-      "Details: " + (notes || "Not provided"),
-
-      "",
-
-      "Please let me know availability. Thank you!"
-
-    ].join("\n");
-
-
-
-    const smsURL = "sms:+17864744880?body=" + encodeURIComponent(message);
-
-
-
-    window.location.href = smsURL;
-
-  });
-
-})();
+}
 
 </script>
-
-
 
 </body>
 
 </html>
-
